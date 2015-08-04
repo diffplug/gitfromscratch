@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [I don't know anything about git or version control](DontKnowAnything)
+* [I don't know anything about git or version control](DontKnowAnything/README.md)
    * [Basic navigation](DontKnowAnything/BasicNavigation.md)
    * [Create a new repository](DontKnowAnything/CreateNew.md)
    * [Clone an existing repository](DontKnowAnything/CloneExisting.md)
