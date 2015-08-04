@@ -22,4 +22,13 @@ Once you're at the working copy, the *Changed files* section will show you which
 
 ![Refresh changed files](/01_DontKnowAnything/04_Commit/MakeCommit_ShowChanges.gif)
 
+To make a commit, you need to check the box for which files you'd like to commit, and type in a commit message which explains the reasoning behind your changes.  Once you have done those two things, you can hit the "Commit" button, you'll have made your very first commit!
+
+![Refresh changed files](/01_DontKnowAnything/04_Commit/MakeCommit_MakeTheCommit.gif)
+
+### Set your username
+
+Every time you make a commit, it will be tagged with your name and email.  That way when you share your commits, your colleagues will be able to know who to contact if they'd like to discuss a particular change.  You only have to set your username once, and it will be set for all the commits you make to every repository, but if this is your first time using Git, then you will have to set it.
+
+From the top menu bar, go to *Help -> Preferences*, then *DiffPlug -> Filesystems -> Git*. Hit the *Edit* button to the right of committer and type in your name and email.  Now it will be attached to all the commits you make from now on.
 
