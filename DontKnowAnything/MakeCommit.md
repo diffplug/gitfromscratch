@@ -6,13 +6,13 @@ The commits that are already in your repository are shown down here.  If you jus
 
 ![Click a commit](MakeCommit_ClickCommit.gif)
 
-If you click a commit, you can see all the files that were created, deleted, or changed between that commit and its previous files.
+If you click a commit, you can see all the files that were created, deleted, or changed between that commit and the previous commit.
 
 ![Created, deleted, and changed files](MakeCommit_CreatedDeletedChanged.gif)
 
 You can also see metadata about who made the commit, when, and why.
 
-![Who, what, when, where, why](/01_DontKnowAnything/04_Commit/Who_what_when_where_why.gif)
+![Who, what, when, why](MakeCommit_WhoWhatWhenWhy.gif)
 
 Now, you're going to make your own commit.  In the list of commits at the bottom, there is always a special row for the "working copy".  *The working copy is a draft of the next commit you're going to make*.  If you're looking at the working copy, then this button will say "Commit".  If it doesn't say "Commit", then it will say "Go to WC", and if you click it, it will take you to the working copy.
 
