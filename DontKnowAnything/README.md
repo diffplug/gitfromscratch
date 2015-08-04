@@ -1,9 +1,7 @@
 ## I don't know anything about git or version control
 
-You will soon!  In this section we're going to take you through:
+You will soon!  We'll take you from the very beginning.
 
-* [Basic navigation](BasicNavigation.md)
-* [Create a new repository](CreateNew.md)
-* [Clone an existing repository](CloneExisting.md)
-* [Make a commit](MakeCommit.md)
+First we'll show you the [basics of navigating DiffPlug](BasicNavigation.md).  Then, we'll either show you how to [create a new repository](CreateNew.md) or [clone an existing repository](CloneExisting.md), depending on whether you want to start a new project or work on an existing one.
 
+Once you've got a project, you'll [make a commit](MakeCommit.md), and voila!  You've made your very own history.
