@@ -4,7 +4,7 @@ Git tracks all of the files which are contained by a folder (including sub-direc
 
 ![Dragging to the DiffManager](CreateNew_Drag.gif)
 
-Then `right-click -> Git -> Create new`.
+Then *right-click -> Git -> Create new*.
 
 ![Right-click and create a new repository](CreateNew_Create.gif)
 
