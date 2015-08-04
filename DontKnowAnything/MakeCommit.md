@@ -1,3 +1,5 @@
+### Make a commit
+
 **A commit is a snapshot of every single file in your project folder**, along with some information like when the commit was made, who made it, and a short message describing the work that was done.  **A repository is just a pile of commits** - you can compare the files in one commit to another, search through the commits to see when a certain change was made, whatever!
 
 The commits that are already in your repository are shown down here.  If you just created an empty repository, then you won't have much to look at yet, but you will soon!
