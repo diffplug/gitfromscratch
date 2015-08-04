@@ -1,6 +1,10 @@
 # Gradle cache
 .gradle/
 
+# Gradle build
+build/
+node_modules/
+
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
