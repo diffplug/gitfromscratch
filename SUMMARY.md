@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [Introduction](INTRO.md)
 * [I don't know anything about git or version control](DontKnowAnything/README.md)
    * [Basic navigation](DontKnowAnything/BasicNavigation.md)
    * [Create a new repository](DontKnowAnything/CreateNew.md)
