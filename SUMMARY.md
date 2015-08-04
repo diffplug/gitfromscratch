@@ -18,7 +18,3 @@
 * What's this "timeless" nonsense about?
    * Move a single commit
    * Move a branch
-* Work styles
-   * Merge per idea
-   * Linear history
-   * Git flow / Github
