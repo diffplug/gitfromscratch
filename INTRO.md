@@ -13,8 +13,8 @@ Git is a tool that does two main things:
 
 There are lots of tutorials on how to get started with git.  There are two things that make this one different:
 
-1. *This tutorial will show you how to use git on text, pictures, spreadsheets, or any other kind of document, using DiffPlug.*  It used to be that you could only use git using a text-based interface, but now there's nothing stopping us from using git on anything.
-2. *This tutorial will show you how to move your work through time.*  Many introductory tutorials skip powerful features like rebase, cherry-pick, and the reflog because they are "advanced", but using a graphical client makes them easy to use.
+1. **This tutorial will show you how to use git on text, pictures, spreadsheets, or any other kind of document, using DiffPlug.**  It used to be that you could only use git using a text-based interface, but now there's nothing stopping us from using git on anything.
+2. **This tutorial will show you how to move your work through time.**  Many introductory tutorials skip powerful features like rebase, cherry-pick, and the reflog because they are "advanced", but using a graphical client makes them easy to use.
 
 So, once you've [downloaded DiffPlug](http://www.diffplug.com/versions/latest), let's begin.
 
