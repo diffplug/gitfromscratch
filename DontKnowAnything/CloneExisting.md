@@ -1,3 +1,5 @@
+### Clone an existing repository
+
 If you just want to make a new repository, you can skip this section and go straight to [making commits](#MakeACommit).  If you'd like to try cloning any arbitrary project, the [source code to this website](https://github.com/diffplug/gitfromscratch) is a good simple example.
 
 Git tracks all of the files which are contained by a folder (including sub-directories, sub-sub-directories, etc).  To start working on an existing repository, you'll need to grab a copy of that folder and all of its history.  This is called *cloning*.
