@@ -18,31 +18,32 @@ There are lots of tutorials on how to get started with git.  There are two thing
 
 So, once you've [downloaded DiffPlug](http://www.diffplug.com/versions/latest), let's begin.
 
-1) I don't know anything about git or version control.
-- Basic navigation
-- Create a new repository
-- Clone an existing repository
-- Make a commit
-2) I know how to commit, but I don't know how branches work.
-- Branches in git
-- History of a branch
-- Permanent branches (a.k.a. tags)
-- Merging branches
-- Save work for later
-3) I've got commits and branches, how do I share?
-- Remotes and remote branches
-- Downloading and uploading
-4) How do I move my commits?
-- Move a single commit
-- Move a branch
-5) Work styles
-- Merge per idea
-- Linear history
-- Free-form
+* [Introduction](INTRO.md)
+* [I don't know anything about git or version control](DontKnowAnything/README.md)
+   * [Basic navigation](DontKnowAnything/BasicNavigation.md)
+   * [Create a new repository](DontKnowAnything/CreateNew.md)
+   * [Clone an existing repository](DontKnowAnything/CloneExisting.md)
+   * [Make a commit](DontKnowAnything/MakeCommit.md)
+* I know how to commit, but I don't know how branches work.
+   * Branches in git
+   * History of a branch
+   * Permanent branches (a.k.a. tags)
+   * Merging branches
+   * Save work for later
+* I've got commits and branches, how do I share?
+   * Remotes and remote branches
+   * Downloading and uploading
+* What's this "timeless" nonsense about?
+   * Move a single commit
+   * Move a branch
+* Work styles
+   * Merge per idea
+   * Linear history
+   * Git flow / Github
 
-Appendix
-- Mapping DiffPlug to the command line
-- Departures from the command line
-	+ No staging area / index
-	+ No stash
-	+ No pull
+* Appendix
+   * Mapping DiffPlug to the command line
+   * Departures from the command line
+      * No staging area / index
+      * No stash
+      * No pull
