@@ -2,7 +2,7 @@
 
 * [Introduction](INTRO.md)
 * [I don't know anything about git or version control](DontKnowAnything/README.md)
-   * [Basic navigation](DontKnowAnything/BasicNavigation.md)
+   * [Basic navigation](DontKnowAnything/BasicNav.md)
    * [Create a new repository](DontKnowAnything/CreateNew.md)
    * [Clone an existing repository](DontKnowAnything/CloneExisting.md)
    * [Make a commit](DontKnowAnything/MakeCommit.md)

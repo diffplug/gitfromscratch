@@ -4,8 +4,8 @@ Git tracks all of the files which are contained by a folder (including sub-direc
 
 ![Dragging to the DiffManager](CreateNew_Drag.gif)
 
-Then right-click -> Git -> Create new repository.
+Then `right-click -> Git -> Create new`.
 
 ![Right-click and create a new repository](CreateNew_Create.gif)
 
-Now that you've got an empty repository, you can start [making commits](#MakeACommit).
+Now that you've got an empty repository, you can start [making commits](MakeCommit.md).
