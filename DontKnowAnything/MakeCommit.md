@@ -14,7 +14,7 @@ You can also see metadata about who made the commit, when, and why.
 
 ![Who, what, when, why](MakeCommit_WhoWhatWhenWhy.gif)
 
-Now you're going to make your own commit.  In the list of commits at the bottom, there is always a special row for the "working copy".  **The working copy is a draft of the next commit you're going to make**.  If you're looking at the working copy, then this button will say "Commit".  If it doesn't say "Commit", then it will say "Go to WC", and if you click it, it will take you to the working copy.
+Now you're going to make your own commit.  In the list of commits at the bottom, there is always a special row for the *working copy*.  **The working copy is a draft of the next commit you're going to make**.  If you're looking at the working copy, then this button will say "Commit".  If it doesn't say "Commit", then it will say "Go to WC", and if you click it, it will take you to the working copy.
 
 ![Go to the WC](/01_DontKnowAnything/04_Commit/Go_to_WC.gif)
 
