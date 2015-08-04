@@ -12,4 +12,4 @@ There are two things you're going to need:
 
 Go to wherever you'd like to put your clone, and *right-click -> Git -> Clone*.  This will open a dialog where you can put the URL, and DiffPlug is happy to make a new destination folder for you if you want.  Once the download completes, you'll have your shiny new clone.
 
-![Right-click and clone an existing repository](Clone_Start.gif)
+![Right-click and clone an existing repository](CloneExisting.gif)
