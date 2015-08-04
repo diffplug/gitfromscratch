@@ -6,12 +6,12 @@
    * [Create a new repository](DontKnowAnything/CreateNew.md)
    * [Clone an existing repository](DontKnowAnything/CloneExisting.md)
    * [Make a commit](DontKnowAnything/MakeCommit.md)
-* I know how to commit, but I don't know how branches work.
-   * Branches in git
-   * History of a branch
-   * Permanent branches (a.k.a. tags)
-   * Merging branches
-   * Save work for later
+* [I know how to commit, but I don't know how branches work.](Branches/README.md)
+   * [Branches in git](Branches/Branches.md)
+   * [History of a branch](Branches/Reflog.md)
+   * [Permanent branches (a.k.a. tags)](Branches/Tags.md)
+   * [Merging branches](Branches/Merging.md)
+   * [Save work for later](Branches/SaveForLater.md)
 * I've got commits and branches, how do I share?
    * Remotes and remote branches
    * Downloading and uploading
