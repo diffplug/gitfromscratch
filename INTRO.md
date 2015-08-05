@@ -14,22 +14,22 @@ Git is a tool that does two main things:
 There are lots of tutorials on how to get started with git.  There are two things that make this one different:
 
 1. **This tutorial will show you how to use git on text, pictures, spreadsheets, or any other kind of document, using DiffPlug.**  It used to be that you could only use git using a text-based interface, but now there's nothing stopping us from using git on anything.
-2. **This tutorial will show you how to move your work through time.**  Many introductory tutorials skip powerful features like rebase, cherry-pick, and the reflog because they are "advanced", but using a graphical client makes them easy to use.
+2. **This tutorial will show you how to move your work through time.**  Many introductory tutorials skip powerful features like rebase, cherry-pick, and the reflog because they are "for advanced users", but a good graphical client makes them easy to use.
 
 So, once you've [downloaded DiffPlug](http://www.diffplug.com/versions/latest), let's begin.
 
 * [Introduction](INTRO.md)
 * [I don't know anything about git or version control](DontKnowAnything/README.md)
-   * [Basic navigation](DontKnowAnything/BasicNavigation.md)
+   * [Basic navigation](DontKnowAnything/BasicNav.md)
    * [Create a new repository](DontKnowAnything/CreateNew.md)
    * [Clone an existing repository](DontKnowAnything/CloneExisting.md)
    * [Make a commit](DontKnowAnything/MakeCommit.md)
-* I know how to commit, but I don't know how branches work.
-   * Branches in git
-   * History of a branch
-   * Permanent branches (a.k.a. tags)
-   * Merging branches
-   * Save work for later
+* [I know how to commit, but I don't know how branches work.](Branches/README.md)
+   * [Branches in git](Branches/Branches.md)
+   * [History of a branch](Branches/Reflog.md)
+   * [Permanent branches (a.k.a. tags)](Branches/Tags.md)
+   * [Merging branches](Branches/Merging.md)
+   * [Save work for later](Branches/SaveForLater.md)
 * I've got commits and branches, how do I share?
    * Remotes and remote branches
    * Downloading and uploading
