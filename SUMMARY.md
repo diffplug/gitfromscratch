@@ -6,15 +6,18 @@
    * [Create a new repository](DontKnowAnything/CreateNew.md)
    * [Clone an existing repository](DontKnowAnything/CloneExisting.md)
    * [Make a commit](DontKnowAnything/MakeCommit.md)
-* [I know how to commit, but I don't know how branches work.](Branches/README.md)
-   * [Branches in git](Branches/Branches.md)
+* [I know how to commit, but I don't know how branches work](Branches/README.md)
+   * [Branches are paintbrushes](Branches/Branches.md)
    * [History of a branch](Branches/Reflog.md)
-   * [Permanent branches (a.k.a. tags)](Branches/Tags.md)
    * [Merging branches](Branches/Merging.md)
    * [Save work for later](Branches/SaveForLater.md)
-* I've got commits and branches, how do I share?
-   * Remotes and remote branches
-   * Downloading and uploading
-* What's this "timeless" nonsense about?
+   * [Permanent branches (a.k.a. tags)](Branches/Tags.md)
+* Move work through time? What?
    * Move a single commit
    * Move a branch
+* I did some work.  How do I share it?
+   * Remotes and remote branches
+   * Downloading and uploading
+* Appendix
+   * Departures from the command line
+   * Mapping DiffPlug to the command line
