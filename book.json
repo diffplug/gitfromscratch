@@ -1,7 +1,12 @@
 {
     "plugins": [
-        "autosize-iframe"
+        "ga"
     ],
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-31528021-4"
+        }
+    },
     "structure": {
         "readme": "INTRO.md"
     },
