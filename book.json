@@ -1,11 +1,13 @@
 {
-	"plugins": ["autosize-iframe"],
-	"structure": {
-		"readme": "INTRO.md"
-	},
-	"links": {
-		"sidebar": {
-			"Offer / receive help on gitter live chat": "https://gitter.im/diffplug/gitfromscratch"
-		}
-	}
+    "plugins": [
+        "autosize-iframe"
+    ],
+    "structure": {
+        "readme": "INTRO.md"
+    },
+    "links": {
+        "sidebar": {
+            "Offer / receive help on gitter live chat": "https://gitter.im/diffplug/gitfromscratch"
+        }
+    }
 }
