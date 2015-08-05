@@ -3,7 +3,7 @@
 Git is a tool that does two main things:
 
 1. **Git tracks the history of your files**, so you can compare your files from a week ago with what you have today.
-2. **Git helps you share and collaborate on files**, so you can compare your files with your friend's files.
+2. **Git helps you share and collaborate on files**, so you can compare your files with your team's files.
 
 **But git's most valuable ability is underappreciated - normally, work only counts if you do it on the latest version of a document.**  If you fix a typo, but somebody published a new version while you were fixing the typo, then you'll have to manually fix the typo all over again.  **With git, you can take the work that you did on an older version, and automatically apply it to a newer version.**
 
