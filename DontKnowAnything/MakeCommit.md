@@ -2,7 +2,7 @@
 
 **A commit is a snapshot of every single file in your project folder**, along with some metadata such as when the commit was made, who made it, and a short message describing the reasoning behind the work.  **A repository is just a pile of commits** - you can compare the files in one commit to another, search through the commits to see when a certain change was made, whatever!
 
-The commits that are already in your repository are shown down here.  If you just created an empty repository, then you won't have much to look at yet, but you will soon!
+The commits that are already in your repository are shown towards the bottom.  If you just created an empty repository, then you won't have much to look at yet, but you will soon!
 
 ![Click a commit](MakeCommit_ClickCommit.gif)
 
@@ -15,6 +15,8 @@ You can also see metadata about who made the commit, when, and why.
 ![Who, what, when, why](MakeCommit_WhoWhatWhenWhy.gif)
 
 Now you're going to make your own commit.  In the list of commits at the bottom, there is always a special row for something called the "working copy".  **The working copy is a draft of the next commit you're going to make**.  If you're looking at the working copy, then this button will say `Commit`.  If it doesn't say `Commit`, then it will say `Go to WC`, and if you click it, it will take you to the working copy.
+
+*Hint: It doesn't matter you how you change your files, but this is how I did it in this video: I double-click the project folder (which opens the folder), and then double-click a file (which opens that file).  After making some edits, I hit `Ctrl + S` to save.*
 
 ![Go to the WC](MakeCommit_GoToWc.gif)
 
