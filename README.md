@@ -1,5 +1,7 @@
 # git from scratch
 
+[![Join the chat at https://gitter.im/diffplug/gitfromscratch](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/diffplug/gitfromscratch?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This repo contains the source for a [gitbook](https://www.gitbook.com/) which describes how to learn git from scratch.
 
 * You can read this book at [gitfromscratch.com](http://www.gitfromscratch.com)
