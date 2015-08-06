@@ -7,7 +7,7 @@
    * [Clone an existing repository](DontKnowAnything/CloneExisting.md)
    * [Make a commit](DontKnowAnything/MakeCommit.md)
 * [I know how to commit, but I don't know how branches work](Branches/README.md)
-   * [Branches are paintbrushes](Branches/Branches.md)
+   * [Sticky-notes and paintbrushes](Branches/Branches.md)
    * [History of a branch](Branches/Reflog.md)
    * [Merging branches](Branches/Merging.md)
    * [Save work for later](Branches/SaveForLater.md)
