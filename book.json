@@ -1,6 +1,6 @@
 {
     "plugins": [
-        "ga", "layout"
+        "ga", "layout", "anchors"
     ],
     "pluginsConfig": {
         "ga": {
