@@ -27,18 +27,17 @@ So, once you've [downloaded DiffPlug](http://www.diffplug.com/versions/latest), 
    * [Clone an existing repository](DontKnowAnything/CloneExisting.md)
    * [Make a commit](DontKnowAnything/MakeCommit.md)
 * [I know how to commit, but I don't know how branches work](Branches/README.md)
-   * [Branches are paintbrushes](Branches/Branches.md)
-   * [History of a branch](Branches/Reflog.md)
-   * [Merging branches](Branches/Merging.md)
+   * [Sticky-notes and paintbrushes](Branches/Overview.md)
+   * [Deleting and restoring a commit](Branches/Reflog.md)
    * [Save work for later](Branches/SaveForLater.md)
-   * [Permanent branches (a.k.a. tags)](Branches/Tags.md)
-* Move work through time? What?
-   * Move a single commit
-   * Move a branch
-* I did some work.  How do I share it?
-   * Remotes and remote branches
-   * Downloading and uploading
+* [I did some work.  How do I share it?](Share/README.md)
+   * [Establish a connection](Share/Remotes.md)
+   * [Permanent branches (a.k.a. tags)](Share/Tags.md)
+   * [Collaborating on a moving target](Share/Branches.md)
+* [Move work through time? What?](Move/README.md)
+   * [Merge your work](Move/Merge.md)
+   * [Move a single commit](Move/Commit.md)
+   * [Move a whole branch](Move/Branch.md)
 * Appendix
-   * Departures from the command line
-   * Mapping DiffPlug to the command line
-
+   * [Departures from the command line](Appendix/Departures.md)
+   * Mapping to the command line

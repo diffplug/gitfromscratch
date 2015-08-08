@@ -7,17 +7,17 @@
    * [Clone an existing repository](DontKnowAnything/CloneExisting.md)
    * [Make a commit](DontKnowAnything/MakeCommit.md)
 * [I know how to commit, but I don't know how branches work](Branches/README.md)
-   * [Sticky-notes and paintbrushes](Branches/Branches.md)
+   * [Sticky-notes and paintbrushes](Branches/Overview.md)
    * [Deleting and restoring a commit](Branches/Reflog.md)
-   * [Permanent branches (a.k.a. tags)](Branches/Tags.md)
-   * [Merging branches](Branches/Merging.md)
-* Move work through time? What?
-   * Move a single commit
-   * Move a branch
-   * Save work for later
-* I did some work.  How do I share it?
-   * Remotes and remote branches
-   * Downloading and uploading
+   * [Save work for later](Branches/SaveForLater.md)
+* [I did some work.  How do I share it?](Share/README.md)
+   * [Establish a connection](Share/Remotes.md)
+   * [Permanent branches (a.k.a. tags)](Share/Tags.md)
+   * [Collaborating on a moving target](Share/Branches.md)
+* [Move work through time? What?](Move/README.md)
+   * [Merge your work](Move/Merge.md)
+   * [Move a single commit](Move/Commit.md)
+   * [Move a whole branch](Move/Branch.md)
 * Appendix
    * [Departures from the command line](Appendix/Departures.md)
    * Mapping to the command line

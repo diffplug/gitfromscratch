@@ -2,7 +2,7 @@
 
 What's a branch, you ask?  Well, you might think this is a branch:
 
-![Feature branch](Branches_SimpleBranch.png)
+![Feature branch](Overview_SimpleBranch.png)
 
 ...but a branch is actually *much* simpler than that.  **A branch is a name that points to a commit**.  Commits have weird names - `518a9d2blahblahblah`.  Branches let us use an easy-to-read name to mark a commit.
 
@@ -12,7 +12,7 @@ We use branches in two ways:
 
 In the history table, they look like this:
 
-![Branch, remote branch, and tag](BranchRemoteAndTag.gif)
+![Branch, remote branch, and tag](Overview_BranchRemoteAndTag.gif)
 
 Branches have two cousins: remote branches and tags.  They all work the same way - a name that points to a commit - but they have different rules for how they can move.
 
@@ -24,7 +24,7 @@ Branches have two cousins: remote branches and tags.  They all work the same way
 
 Branches are easy to manipulate.  Right-click a commit to create a new branch.  You can drag-and-drop to move it around.  Right-click the branch again to delete it.
 
-![Dragging a branch](Branches_Dragging.gif)
+![Dragging a branch](Overview_Dragging.gif)
 
 ### Using a branch as a paintbrush
 
@@ -34,7 +34,7 @@ Remember that a commit is a snapshot of every single file in your project folder
 
 **The HEAD branch determines what the starting point for the next commit will be.**  When the next commit is made, the HEAD branch will automatically move so that it points to the new commit.  Here's an example of what that looks like in practice:
 
-![Dragging a branch](Branches_123_ABC.gif)
+![Dragging a branch](Overview_123_ABC.gif)
 
 Here's what happened in the video above:
 1. We start off with six new files in our working copy, named 1, 2, 3, A, B, C.
@@ -55,8 +55,8 @@ As far as the files in your working copy are concerned, the only commits that ma
 
 The tips section is useful for searching for branches and navigating history.  When you hover the mouse over a branch, it will scroll the history window to show you where that branch is.  When you stop hovering, it will scroll back to where you were.
 
-![Hover to scroll temporarily.](Branches_ScrollTemp.gif)
+![Hover to scroll temporarily.](Overview_ScrollTemp.gif)
 
 If you click a branch, it will scroll the history window there and stop.
 
-![Click to scroll permanently.](Branches_ScrollPermanent.gif)
+![Click to scroll permanently.](Overview_ScrollPermanent.gif)
