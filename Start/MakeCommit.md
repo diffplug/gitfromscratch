@@ -20,11 +20,11 @@ If you double-click a commit, it will open the snapshot as a folder, so that you
 
 Now you're going to make your own commit.  In the list of commits at the bottom, there is always a special row for something called the "working copy".  **The working copy is a draft of the next commit you're going to make**.  If you're looking at the working copy, then this button will say `Commit`.  If it doesn't say `Commit`, then it will say `Go to WC`, and if you click it, it will take you to the working copy.
 
-*Hint: It doesn't matter you how you change your files, but this is how I did it in this video: I double-click the project folder (which opens the folder), and then double-click a file (which opens that file).  After making some edits, I hit `Ctrl + S` to save.*
-
 ![Go to the WC](MakeCommit_GoToWc.gif)
 
-Once you're at the working copy, the *Changed files* section will show you which files you have modified in your project directory.  To make sure that it is up-to-date, you can hit the refresh button.
+Once you're at the working copy, the `Changed files` section will show you which files you have modified in your project directory.  To make sure that it is up-to-date, you can hit the refresh button.
+
+*Hint: It doesn't matter how you change your files, but this is how I did it in this video: I double-click the project folder (which opens the folder), and then double-click a file (which opens that file).  After making some edits, I hit `Ctrl + S` to save.*
 
 ![Refresh changed files](MakeCommit_ShowChanges.gif)
 
