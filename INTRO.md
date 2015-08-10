@@ -16,16 +16,16 @@ There are lots of tutorials on how to get started with git.  There are two thing
 1. **This tutorial will show you how to use git on text, pictures, spreadsheets, or any other kind of document, using DiffPlug.**  It used to be that you could only use git using a text-based interface, but now there's nothing stopping us from using git on anything.
 2. **This tutorial will show you how to move your work through time.**  Many introductory tutorials skip powerful features like rebase, cherry-pick, and the reflog because they are "advanced", but using a graphical client makes them easy to use.
 
-So, once you've [downloaded DiffPlug](http://www.diffplug.com/versions/latest), let's begin.
+So, once you have [downloaded DiffPlug](http://www.diffplug.com/versions/latest), let's begin.  If you get stuck, you can ask for help in our [live chatroom](https://gitter.im/diffplug/gitfromscratch).  This book will be updated over time, so you might want to [subscribe to be notified of updates](https://www.gitbook.com/book/diffplug/gitfromscratch/details).   And of course, the source which generates this book is [available for branching or modification on GitHub](https://github.com/diffplug/gitfromscratch).
 
-# Summary
+## Summary
 
 * [Introduction](INTRO.md)
-* [I don't know anything about git or version control](DontKnowAnything/README.md)
-   * [Basic navigation](DontKnowAnything/BasicNav.md)
-   * [Create a new repository](DontKnowAnything/CreateNew.md)
-   * [Clone an existing repository](DontKnowAnything/CloneExisting.md)
-   * [Make a commit](DontKnowAnything/MakeCommit.md)
+* [I don't know anything about git or version control](Start/README.md)
+   * [Basic navigation](Start/BasicNav.md)
+   * [Create a new repository](Start/CreateNew.md)
+   * [Clone an existing repository](Start/CloneExisting.md)
+   * [Make a commit](Start/MakeCommit.md)
 * [I know how to commit, but I don't know how branches work](Branches/README.md)
    * [Sticky-notes and paintbrushes](Branches/Overview.md)
    * [Deleting and restoring a commit](Branches/Reflog.md)
@@ -38,6 +38,5 @@ So, once you've [downloaded DiffPlug](http://www.diffplug.com/versions/latest), 
    * [Merge your work](Move/Merge.md)
    * [Move a single commit](Move/Commit.md)
    * [Move a whole branch](Move/Branch.md)
-* Appendix
-   * [Departures from the command line](Appendix/Departures.md)
-   * Mapping to the command line
+* [Epilogue](Epilogue/README.md)
+   * [Departures from the command line](Epilogue/Departures.md)

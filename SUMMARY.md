@@ -1,11 +1,11 @@
 # Summary
 
 * [Introduction](INTRO.md)
-* [I don't know anything about git or version control](DontKnowAnything/README.md)
-   * [Basic navigation](DontKnowAnything/BasicNav.md)
-   * [Create a new repository](DontKnowAnything/CreateNew.md)
-   * [Clone an existing repository](DontKnowAnything/CloneExisting.md)
-   * [Make a commit](DontKnowAnything/MakeCommit.md)
+* [I don't know anything about git or version control](Start/README.md)
+   * [Basic navigation](Start/BasicNav.md)
+   * [Create a new repository](Start/CreateNew.md)
+   * [Clone an existing repository](Start/CloneExisting.md)
+   * [Make a commit](Start/MakeCommit.md)
 * [I know how to commit, but I don't know how branches work](Branches/README.md)
    * [Sticky-notes and paintbrushes](Branches/Overview.md)
    * [Deleting and restoring a commit](Branches/Reflog.md)
@@ -18,6 +18,5 @@
    * [Merge your work](Move/Merge.md)
    * [Move a single commit](Move/Commit.md)
    * [Move a whole branch](Move/Branch.md)
-* Appendix
-   * [Departures from the command line](Appendix/Departures.md)
-   * Mapping to the command line
+* [Epilogue](Epilogue/README.md)
+   * [Departures from the command line](Epilogue/Departures.md)

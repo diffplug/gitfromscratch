@@ -2,7 +2,7 @@
 
 It is common for a team to have a central repository - a single "source of truth" can be helpful for keeping a team in sync.  However, insofar as git is concerned, your local repository is just as good as the team repository.  **There's nothing special about the team server, it works exactly the same way that the repository on your computer works.**  Any repository can talk to any other once it establishes a connection.
 
-In DiffPlug, you can see which servers you can communicate with by clicking *Sync* and then looking at the *Remotes* section.  Each server has its own button.  If you click the button, you can see the details for that server.
+In DiffPlug, you can see which servers you can communicate with by clicking `Sync` and then looking at the `Remotes` section.  Each server has its own button.  If you click the button, you can see the details for that server.
 
 ![Browse remotes](Remotes_Browse.png)
 
@@ -24,6 +24,6 @@ You can have as many remotes as you'd like, but usually there will be just one c
 
 In the following sections, we're going to show how you can synchronize your commits with a remote.  While you're learning, it can be helpful to make a "dummy" remote that you can tinker with.  To make a dummy remote, just copy-paste your whole git repository to a new folder.  This will behave just like any other remote, but you can manipulate it directly to test various situations.
 
-To add a new remote (dummy or otherwise), click the *+* button in the *remotes* section.  Type in a name and the URL, and the remote will be added.  If you click *Download all*, it will download all the information in the given remote repository.
+To add a new remote (dummy or otherwise), click the `+` button in the `Remotes` section.  Type in a name and the URL, and the remote will be added.  If you click `Download all`, it will download all the information in the given remote repository.
 
-![Browse remotes](Remotes_Browse.png)
+![Add a new remote](Remotes_Add.png)
