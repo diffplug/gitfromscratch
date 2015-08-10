@@ -1,6 +1,8 @@
 # git from scratch
 
-[![Join the chat at https://gitter.im/diffplug/gitfromscratch](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/diffplug/gitfromscratch?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Published on gitbook](https://img.shields.io/badge/gitbook-read-ff69b4.svg)](https://www.gitbook.com/book/diffplug/gitfromscratch/details)
+[![Join the chat at https://gitter.im/diffplug/gitfromscratch](https://img.shields.io/badge/gitter-live_chat-brightgreen.svg)](https://gitter.im/diffplug/gitfromscratch)
+[![License](https://img.shields.io/badge/license-Apache-blue.svg)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0))
 
 This repo contains the source for a [gitbook](https://www.gitbook.com/) which describes how to learn git from scratch.
 
