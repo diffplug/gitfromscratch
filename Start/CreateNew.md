@@ -1,4 +1,4 @@
-### Create a new repository
+# Create a new repository
 
 *Hint: If you've never touched git before, it's easier to learn by tinkering with an existing repository, which is described in the [next section](../CloneExisting.md).*
 

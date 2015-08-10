@@ -1,4 +1,4 @@
-### Collaborating on a moving target
+# Collaborating on a moving target
 
 In [an earlier section](../Branches/Overview.md) we discussed what a branch actually was - a name that points to a commit.  When synchronizing with teammates, its important to also remember the intent behind publishing a branch.  **The purpose of publishing a branch is to synchronize and integrate work around a given objective**.  You can use your own convention, but the following are common:
 

@@ -1,4 +1,4 @@
-### Establish a connection
+# Establish a connection
 
 It is common for a team to have a central repository - a single "source of truth" can be helpful for keeping a team in sync.  However, insofar as git is concerned, your local repository is just as good as the team repository.  **There's nothing special about the team server, it works exactly the same way that the repository on your computer works.**  Any repository can talk to any other once it establishes a connection.
 
@@ -20,7 +20,7 @@ If you just started a new project, then this section will be empty.  If you clon
 
 You can have as many remotes as you'd like, but usually there will be just one central server named "origin".  If you and Joan are working closely together, you might connect to her repository and call it "joan".
 
-### Creating a new remote
+## Creating a new remote
 
 In the following sections, we're going to show how you can synchronize your commits with a remote.  While you're learning, it can be helpful to make a "dummy" remote that you can tinker with.  To make a dummy remote, just copy-paste your whole git repository to a new folder.  This will behave just like any other remote, but you can manipulate it directly to test various situations.
 

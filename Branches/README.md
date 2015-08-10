@@ -1,4 +1,4 @@
-## I know how to commit, but I don't know how branches work.
+# I know how to commit, but I don't know how branches work.
 
 Branches are way simpler than commits, so you're in good shape.
 

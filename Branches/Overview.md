@@ -1,4 +1,4 @@
-### Sticky-notes and paintbrushes
+# Sticky-notes and paintbrushes
 
 What's a branch, you ask?  Well, you might think this is a branch:
 
@@ -26,7 +26,7 @@ Branches are easy to manipulate.  Right-click a commit to create a new branch.  
 
 ![Dragging a branch](Overview_Dragging.gif)
 
-### Using a branch as a paintbrush
+## Using a branch as a paintbrush
 
 Remember that a commit is a snapshot of every single file in your project folder.  Surprisingly, when you click a commit, you won't see all the files in the snapshot - you'll see changes.  X was added, Y was deleted, Z was changed.  That's because **every commit knows who its parent is, so that you know what to compare it to.**  When you click a commit, it shows you what files have changed relative to its parent.
 
@@ -47,7 +47,7 @@ Here's what happened in the video above:
 
 You'll find all kinds of advice on how you should name your branches.  Remember this: **just as a painting is made of paint rather than brushes, so too is a repository made of commits rather than branches.**  Naming conventions are important when you're sharing work with a team, but for branches that are just for yourself, don't spend any more time on their names than you would on any other sticky-note - they're not a part of your project's permanent history.
 
-### Using a branch as a sticky note
+## Using a branch as a sticky note
 
 In the previous example, something surprising happened when we checked out ABC.  123 disappeared!  But when we added it back as a "tip", it just magically came back!  What's going on?
 

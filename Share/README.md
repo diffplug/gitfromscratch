@@ -1,4 +1,4 @@
-## I did some work.  How do I share it?
+# I did some work.  How do I share it?
 
 Git is a powerful way to track the history of your files, but it's an even more powerful way to share and collaborate on files.
 

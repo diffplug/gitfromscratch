@@ -1,4 +1,4 @@
-### Make a commit
+# Make a commit
 
 **A commit is a snapshot of every single file in your project folder**, along with some metadata such as when the commit was made, who made it, and a short message describing the reasoning behind the work.  **A repository is just a pile of commits** - you can compare the files in one commit to another, search through the commits to see when a certain change was made, whatever!
 
@@ -32,7 +32,7 @@ To make a commit, you need to check the box for which files you'd like to commit
 
 ![Make the commit](MakeCommit_MakeTheCommit.gif)
 
-### Set your username
+## Set your username
 
 Every time you make a commit, it will be tagged with your name and email.  That way when you share your commits, your colleagues will be able to know who to contact if they'd like to discuss a particular change.  You only have to set your username once, and it will be set for all the commits you make to every repository.
 

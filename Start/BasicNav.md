@@ -1,4 +1,4 @@
-### Basic navigation
+# Basic navigation
 
 This tutorial is about git.  But if you want to use git on files that aren't code, or even if you work with code but you just don't want to learn all the command-line flags, then we recommend DiffPlug.  DiffPlug is a piece of software that's similar to your operating system's file browser, except that it's built from the ground-up for looking at the *history* of files and comparing them.  Before you can work with git, there are just a couple things you need to know about basic navigation in DiffPlug first.
 

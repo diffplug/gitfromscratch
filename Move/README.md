@@ -1,4 +1,4 @@
-## Move work through time? What?
+# Move work through time? What?
 
 Normally, work only counts if you base it on the latest version of a document.  In the introduction, I claimed that git would allow you to move work through time to the latest version, which would allow you to structure your work in new and productive ways.  In this section, we'll explore the mechanics which make moving work possible.
 

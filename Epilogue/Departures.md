@@ -1,10 +1,10 @@
-### Departures from the command line
+# Departures from the command line
 
 Most of the silent movies that will ever be made have already been made.  Most of the people who have something to gain from using git aren't using it yet.  So rather than focusing on the people who already use git, we have made some small departures from standard git usage in order to make adoption easier for people who haven't used git or version control before.
 
 Here are some of the ways we've departed:
 
-### No staging area
+## No staging area
 
 In vanilla git, the working copy consists of **three** trees of files:
 
@@ -25,7 +25,7 @@ In DiffPlug, we ignore the index entirely.  If a file is checked in the commit w
 
 ![DiffPlug's staging area alternative](Departures_Staging.png)
 
-### No stash
+## No stash
 
 It's common to have a situation where you've done a bunch of work that you'd like to save, but you're not ready for it to be a real commit yet - you just want to keep it for later.
 
@@ -39,13 +39,13 @@ Because it doesn't make a regular branch with regular commits, you can't use reg
 
 Rather than introducing an entirely new mechanism for users to learn, DiffPlug handles this use case with the [save for later](../MoveWork/SaveForLater.md) functionality.
 
-### No detached head
+## No detached head
 
 Vanilla git supports a "detached head" mode, which allows a user to not have a branch.  Rather than support this exceptional case, DiffPlug converts it into a nominal case by automatically creating and checking out a new branch named `detachedHead-deleteme`.  If that is already a branch, DiffPlug adds a suffix to make the name unique.
 
 A user is never able to enter the "detached head" mode from within DiffPlug, but this ensures nominal operation in case they use DiffPlug within another tool (e.g. the command line) that results in a detached head state.
 
-### Renamed `cherry-pick` to `apply` and `revert` to `unapply`
+## Renamed `cherry-pick` to `apply` and `revert` to `unapply`
 
 TBD.
 

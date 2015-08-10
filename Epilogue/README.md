@@ -1,4 +1,4 @@
-## Epilogue
+# Epilogue
 
 You can now take advantage of all that git has to offer - not just the trivial parts, but the good parts too!
 

@@ -1,4 +1,4 @@
-## I don't know anything about git or version control
+# I don't know anything about git or version control
 
 You will soon!  We'll start from the very beginning.
 

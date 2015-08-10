@@ -1,4 +1,4 @@
-### Clone an existing repository
+# Clone an existing repository
 
 Git tracks all of the files which are contained by a folder (including sub-directories, sub-sub-directories, etc).  To start working on an existing repository, you'll need to grab a copy of that folder and all of its history.  This is called *cloning*.
 
