@@ -24,9 +24,9 @@ Here are the possible cases:
 | ![Synced](Branches_Synced.png) | The local and remote branches are synchronized. | ![Synced actions](Branches_SyncedActions.png) |
 | ![Local has new](Branches_LocalHasNew.png) | The local branch has new commits. | ![Local has new actions](Branches_LocalHasNewActions.png) |
 | ![Remote has new](Branches_RemoteHasNew.png) | The remote branch has new commits. | ![Remote has new actions](Branches_LocalHasNewActions.png) |
-| ![Both have new](Branches_BothHaveNew.png) | Local and remote both have new commits. | ![Both have new actions](Branches_BothHaveNewActions.png) |
+| ![Both have new](Branches_BothHaveNew.png) | Local and remote branches both have new commits. | ![Both have new actions](Branches_BothHaveNewActions.png) |
 
-If both the local and remote have new commits, then you face the classic conundrum - you've done some work, someone else published a new version, and now you've got to redo your work on the new version.  Git has a smorgasbord of options available to you, which we cover in the [move your work through time](../Move/README.md) section.
+If both the local and remote branches have new commits, then you face the classic conundrum - you've done some work, someone else published a new version, and now you've got to redo your work on the new version.  Git has a smorgasbord of options available to you, which we cover in the [move your work through time](../Move/README.md) section.
 
 ## Onwards, ever onwards
 
