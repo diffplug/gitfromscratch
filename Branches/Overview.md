@@ -34,7 +34,7 @@ Remember that a commit is a snapshot of every single file in your project folder
 
 **The HEAD branch determines what the starting point for the next commit will be.**  When the next commit is made, the HEAD branch will automatically move so that it points to the new commit.  Here's an example of what that looks like in practice:
 
-![Dragging a branch](Overview_123_ABC.gif)
+![Create 123 ABC](Overview_123_ABC.gif)
 
 Here's what happened in the video above:
 1. We start off with six new files in our working copy, named 1, 2, 3, A, B, C.
