@@ -11,9 +11,10 @@ This repo contains the source for a [gitbook](https://www.gitbook.com/) which de
 
 ## To edit this book locally
 
-`gradlew buildDocs` will build it and `gradlew serveDocs` will serve it.
-
-The production version on `gitfromscratch.com` is built by gitbooks' infrastructure, which uses the latest version.  The local build is stuck on 1.3.2, as shown in `package.json`.  Only known issue is that the local build uses README.md as the intro instead of INTRO.md.
+* [Install npm](https://nodejs.org/download/)
+* `npm install -g gitbook-cli` to install GitBook
+* `gitbook install` to install the plugins in our particular gitbook
+* `gitbook serve` to display our particular gitbook
 
 ## Acknowledgements
 
