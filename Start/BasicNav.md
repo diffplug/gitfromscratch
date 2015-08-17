@@ -12,4 +12,17 @@ Alternatively, you can find a file using fuzzy search in the browse bar.
 
 Anywhere that you see a file in DiffPlug, you can right-click it to get a context menu of history and comparison-related actions.  In the browse bar, you can get this context menu by pressing `Enter`, or by clicking the check mark.
 
-![Navigating with the browse bar](BasicNav_ContextMenu.gif)
+![Opening the context menu](BasicNav_ContextMenu.gif)
+
+If you double-click a file or folder, DiffPlug will open it in a new tab.
+
+![Opening a file](BasicNav_Open.gif)
+
+To compare files, you can:
+- drag one file onto another
+- select multiple files by holding `ctrl` and then right-clicking
+- select one file, then hold `ctrl` while double-clicking a second file
+
+![Comparing a file](BasicNav_Compare.gif)
+
+Now that you've got the basics of navigating the DiffPlug interface, on to the main event - Git!
