@@ -17,5 +17,6 @@ The production version on `gitfromscratch.com` is built by gitbooks' infrastruct
 
 ## Acknowledgements
 
+* Many thanks to Krasimir Tsonev for [gifffer](https://github.com/krasimir/gifffer/).
 * Many thanks to Jozef Vilcek for his [gitbook gradle example](https://github.com/JozoVilcek/gitbook-example/blob/master/package.json).
 * Many thanks to the Gitbook team for their fantastic product.
