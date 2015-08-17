@@ -2,3 +2,14 @@
 	<a href="https://gitter.im/diffplug/gitfromscratch"><img src="https://img.shields.io/badge/gitter-live_chat-brightgreen.svg" style="max-width:100%;"></a>
 	<a href="https://www.gitbook.com/book/diffplug/gitfromscratch/details"><img src="https://img.shields.io/badge/living_doc-subscribe-blue.svg" style="max-width:100%;"></a>
 </div>
+<script src="js/gifffer.min.js"></script> -->
+<script>
+	var imgs = document.images;
+	for (var i=0, iLen=imgs.length; i<iLen; i++) {
+		if (imgs[i].src.endsWith(".gif")) {
+			imgs[i].setAttribute("data-gifffer", imgs[i].src);
+			imgs[i].removeAttribute("src");
+		}
+	}
+	Gifffer();
+</script>
