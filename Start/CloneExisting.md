@@ -9,7 +9,7 @@ There are two things you're going to need:
 	+ If you want a toy project, use `https://github.com/diffplug/gitfromscratch` as your URL - it's the actual source to this website!
 2. The folder on your computer where you're going to put the clone
 
-Go to wherever you'd like to put your clone, and *right-click -> Git -> Clone*.  This will open a dialog where you can put the URL, and DiffPlug is happy to make a new destination folder for you if you want.  Once the download completes, you'll have your shiny new clone.
+Go to wherever you'd like to put your clone, and `right-click -> Git -> Clone`.  This will open a dialog where you can put the URL, and DiffPlug is happy to make a new destination folder for you if you want.  Once the download completes, you'll have your shiny new clone.
 
 ![Right-click and clone an existing repository](CloneExisting.gif)
 

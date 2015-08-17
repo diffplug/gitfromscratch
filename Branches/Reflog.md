@@ -1,6 +1,6 @@
 # Deleting and restoring a commit
 
-Have you ever slid your finger around a roll of tape, feeling for the little edge you can pry up?  If you wanna be sure to find it, you can put a sticky note on the tip, to make sure you don't lose it.  Branches serve exactly that function in git.
+Have you ever slid your finger around a roll of tape, feeling for the little edge you can pry up?  If you wanna be sure to find it, you can put a sticky note on the tip.  Branches serve exactly that function in git.
 
 If you lose the tip of a string of commits in git, they are effectively "deleted".  As an example, let's delete our life's work.
 
@@ -23,7 +23,7 @@ Any commit that the process above can touch is reachable.  Everything else is un
 
 ## My work is still gone...
 
-Git has a mechanism called the reflog.  **Every change to a branch is logged to the reflog**.  This means that you can go into the reflog and see where a branch used to be.  Let's use the reflog to get back your life's work.
+Not for long!  Git has a mechanism called the reflog.  **Every change to a branch is logged to the reflog**.  This means that you can go into the reflog and see where a branch used to be.  Let's use the reflog to get back your life's work.
 
 ![How to restore your life's work](Reflog_LifesWorkRestore.gif)
 

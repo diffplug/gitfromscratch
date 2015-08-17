@@ -10,11 +10,9 @@ We use branches in two ways:
 1. As sticky-notes to mark a certain spot in history.
 2. As paintbrushes for making new commmits.
 
-In the history table, they look like this:
+Branches have two cousins: remote branches and tags.  They all work the same way - a name that points to a commit - but they have different rules for how they can move.  In the history table, they look like this:
 
 ![Branch, remote branch, and tag](Overview_BranchRemoteAndTag.gif)
-
-Branches have two cousins: remote branches and tags.  They all work the same way - a name that points to a commit - but they have different rules for how they can move.
 
 | Kind of ref                      | What does it do?            |
 |--                                |--                           |
@@ -32,7 +30,7 @@ Remember that a commit is a snapshot of every single file in your project folder
 
 **When you make a new commit, you can choose any commit in the whole repository to be the starting point.**  You can even make a commit with no parents, or two parents, or ten parents, but we'll get to that later.  99% of the commits you make will have just one parent.
 
-**The HEAD branch determines what the starting point for the next commit will be.**  When the next commit is made, the HEAD branch will automatically move so that it points to the new commit.  Here's an example of what that looks like in practice:
+**The HEAD branch determines the starting point for the next commit.**  When the next commit is made, the HEAD branch will automatically move so that it points to the new commit.  Here's an example of what that looks like in practice:
 
 ![Create 123 ABC](Overview_123_ABC.gif)
 
@@ -51,7 +49,7 @@ You'll find all kinds of advice on how you should name your branches.  Remember 
 
 In the previous example, something surprising happened when we checked out ABC.  123 disappeared!  But when we added it back as a "tip", it just magically came back!  What's going on?
 
-As far as the files in your working copy are concerned, the only commits that matter are the ancestors of the HEAD commit - none of the other commits have any effect.  As you'll see when you learn more about moving commits around, it's really common to make a bunch of messy commits and later throw them away.  You don't want a bunch of discarded commits cluttering up your history table, which is why we only show you the ancestor commits.  **If you want to see commits which aren't ancestors of HEAD, you have to explicitly add a branch to tips which does have those commits as ancestors.**
+As far as the files in your working copy are concerned, the only commits that matter are the ancestors of the HEAD commit - none of the other commits have any effect.  As you'll see when you learn more about moving commits around, it's really common to make a bunch of messy commits and later throw them away.  You don't want a bunch of discarded commits cluttering up your history table, so DiffPlug only shows you the ancestor commits.  **If you want to see commits which aren't ancestors of HEAD, you have to explicitly add a branch to tips which does have those commits as ancestors.**
 
 The tips section is useful for searching for branches and navigating history.  When you hover the mouse over a branch, it will scroll the history window to show you where that branch is.  When you stop hovering, it will scroll back to where you were.
 

@@ -22,7 +22,7 @@ Note that after the merge is complete, "our" branch (123) includes the merge, wh
 
 The previous example hinted a little at what's going on under the hood.  When we asked git to merge ABC into 123, git searched through history to find the first commit which was shared by both branches (in this case, the `branchexample` commit).  Then it asked "what did we (ABC) change relative to this common parent?", and "what did they (123) change relative to this common parent?".
 
-If both sides of the merge changed different files, then the merge is pretty easy - for files that only ABC changed, git takes the ABC side - for files that only 123 changed, git can take the 123 side.  But what if both sides changed the same file?
+If both sides of the merge changed different files, then the merge is easy - for files that only ABC changed, git takes the ABC side - for files that only 123 changed, git takes the 123 side.  But what if both sides changed the same file?
 
 ## Merge conflicts and resolution
 

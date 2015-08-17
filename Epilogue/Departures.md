@@ -15,11 +15,11 @@ In vanilla git, the working copy consists of **three** trees of files:
 When you do `git commit`, the index gets turned into a new commit.  In order to make a commit, you need to move files from the working directory into the index.  You can continue to make edits after putting a file in the index, so you end up with three different versions - one in your history, one in your working folder, and one in the index.
 
 Here are just a few of the commands needed to manage this "index" mechanism:
-* `git add <filename>` - adds a file to the working index
-* `git add --patch <filename>` - adds hunks of a file to the index
-* `git reset --mixed` - sets the index to match the parent commit
-* `git ls-index` - for looking at files in the index
-* `git diff-index` - for diffing files in the index
+* `git add <filename>` adds a file to the working index
+* `git add --patch <filename>` adds hunks of a file to the index
+* `git reset --mixed` sets the index to match the parent commit
+* `git ls-index` for looking at files in the index
+* `git diff-index` for diffing files in the index
 
 In DiffPlug, we ignore the index entirely.  If a file is checked in the commit window, then it will be put into the commit.  Simple as that.
 
@@ -43,13 +43,15 @@ Rather than introducing an entirely new mechanism for users to learn, DiffPlug h
 
 Vanilla git supports a "detached head" mode, which allows a user to not have a branch.  Rather than support this exceptional case, DiffPlug converts it into a nominal case by automatically creating and checking out a new branch named `detachedHead-deleteme`.  If that is already a branch, DiffPlug adds a suffix to make the name unique.
 
-A user is never able to enter the "detached head" mode from within DiffPlug, but this ensures nominal operation in case they use DiffPlug within another tool (e.g. the command line) that results in a detached head state.
+A user is never able to enter the "detached head" mode from within DiffPlug, but this ensures nominal operation in case they use DiffPlug with another tool (e.g. the command line) that results in a detached head state.
 
-## Renamed `cherry-pick` to `apply` and `revert` to `unapply`
+## Renamed the commit manipulation commands
 
-TBD.
+* `cherry-pick` is now `apply delta`
+* `revert` is now `unapply delta`
+* `checkout <paths>` is now `apply content`
 
-When a user clicks a commit, the tool shows them the changes which it introduced.  When they right click that commit and see `cherry-pick"`as an option, they ask themselves, "what does this do?"  And the answer is: it applies the changes in this commit.  The natural thing is to just call it apply.
+When a user clicks a commit, the tool shows them the changes which it introduced.  When they right click that commit and see `cherry-pick` as an option, they ask themselves, "what does this do?"  And the answer is: it applies the changes in this commit.  The natural thing is to just call it apply.
 
 Of course, this causes some conflicts with the CLI.  `git apply` takes changes from an external source and applies them to HEAD.  `git cherry-pick` extracts changes from the history, and applies them to HEAD.
 
