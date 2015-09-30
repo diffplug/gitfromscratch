@@ -19,7 +19,7 @@ As it turns out, your life's work isn't deleted, it's just *unreachable*.  And t
 2. Follow its commits, parent to parent, until you reach the very first commit.
 3. Repeat steps 1 and 2 on every branch.
 
-Any commit that the process above can touch is reachable.  Everything else is unreachable.  The unreachable commits are still there, on your computer, there's just no way to find them, because there's no sticky note on their tip.
+Any commit that the process above can touch is reachable.  Everything else is unreachable.  The unreachable commits are still there on your computer, there's just no way to find them, because there's no sticky note on their tip.
 
 ## My work is still gone...
 

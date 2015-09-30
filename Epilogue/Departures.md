@@ -1,6 +1,6 @@
 # Departures from the command line
 
-Most of the silent movies that will ever be made have already been made.  Most of the people who have something to gain from using git aren't using it yet.  So rather than focusing on the people who already use git, we have made some small departures from standard git usage in order to make adoption easier for people who haven't used git or version control before.
+Most of the silent movies that will ever be made have already been made.  Most of the people who have something to gain from using git aren't using it yet.  So rather than focusing on the people who already use git, we have made some departures from standard git usage in order to make adoption easier for people who haven't used git or version control before.
 
 Here are some of the ways we've departed:
 
@@ -56,5 +56,3 @@ When a user clicks a commit, the tool shows them the changes which it introduced
 Of course, this causes some conflicts with the CLI.  `git apply` takes changes from an external source and applies them to HEAD.  `git cherry-pick` extracts changes from the history, and applies them to HEAD.
 
 One of the problems with a CLI is that it's hard for the user to express context.  When a user right-clicks a commit or right-clicks a patch file, the GUI program knows what the context is.  In a CLI, the user would either have to pass some kind of flag `git apply --from-commit`, or you could just make a whole new command to handle this case, as was done with `git cherry-pick`.
-
-Also symmetry of names.

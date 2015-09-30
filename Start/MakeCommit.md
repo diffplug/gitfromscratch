@@ -24,7 +24,11 @@ Now you're going to make your own commit.  In the list of commits at the bottom,
 
 Once you're at the working copy, the `Changed files` section will show you which files you have modified in your project directory.  To make sure that it is up-to-date, you can hit the refresh button.
 
-*Hint: It doesn't matter how you change your files, but this is how I did it in the video below: I double-click the project folder (which opens the folder), and then double-click a file (which opens that file).  After making some edits, I hit `Ctrl + S` to save.*
+You can change your files however you'd like, but here's how the video below does it:
+
+* double-click the project folder (which opens the folder)
+* double-click a file (which opens that file)
+* make some edits, then hit `Ctrl + S` to save.
 
 ![Refresh changed files](MakeCommit_ShowChanges.gif)
 

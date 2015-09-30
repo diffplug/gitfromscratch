@@ -1,6 +1,6 @@
 # Merge your work
 
-To merge two lines of commits back into a single line, you must create a merge commit.  **A merge commit is a commit which has more than one parent**.  When you click a commit with one parent, you see a comparison between the snapshot of that commit and its parent.  But what about when you click a commit with multiple parents?  There are multiple ways to look at this, but the simplest is to pick which parent you want to compare against.
+To merge two lines of commits back into a single line, you must create a merge commit.  **A merge commit is a commit which has more than one parent**.  When you click a commit with one parent, you see a comparison between the snapshot of that commit and its parent.  But what about when you click a commit with multiple parents?  At first, you're looking at the difference between the commit and its first parent, but you can compare against other commits by clicking the `+` to view the other parents.
 
 ![Picking the parent to view](Merge_PickParent.gif)
 
