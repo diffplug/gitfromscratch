@@ -37,7 +37,7 @@ It stores these as "refs/stash".  If you call `git stash` a second time, it uses
 
 Because it doesn't make a regular branch with regular commits, you can't use regular commands to get the changes back.  Instead, you have to learn the various flags and subcommands of [`git stash`](http://git-scm.com/docs/git-stash).
 
-Rather than introducing an entirely new mechanism for users to learn, DiffPlug handles this use case with the [save for later](../MoveWork/SaveForLater.md) functionality.
+Rather than introducing an entirely new mechanism for users to learn, DiffPlug handles this use case with the [save for later](../Branches/SaveForLater.md) functionality.
 
 ## No detached head
 
