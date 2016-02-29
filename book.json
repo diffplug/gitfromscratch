@@ -1,9 +1,12 @@
 {
     "gitbook": "2.x.x",
     "plugins": [
-        "layout", "anchors"
+        "ga", "layout", "anchors"
     ],
     "pluginsConfig": {
+        "ga": {
+            "token": "UA-31528021-4"
+        },
         "layout": {
             "footerPath" : "footer.html"
         }
