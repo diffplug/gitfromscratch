@@ -7,7 +7,7 @@ There are lots of ways to move a branch.  This makes them great for tracking a m
 There are two kinds of tag:
 
 | Kind of tag | How to make one             | What they look like |
-|--           |--                           |--                   |
+| ---         | ---                         | ---                 |
 | Lightweight | ![Lightweight tag dialog](Tags_LightweightDialog.png) | ![Lightweight tag right-click](Tags_LightweightRightClick.png) |
 | Annotated   | ![Annotated tag dialog](Tags_AnnotatedDialog.png) | ![Annotated tag right-click](Tags_AnnotatedRightClick.png) |
 

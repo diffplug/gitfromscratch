@@ -1,23 +1,19 @@
-# git from scratch
+# Git from scratch
 
-[![Published on gitbook](https://img.shields.io/badge/gitbook-read-ff69b4.svg)](https://www.gitbook.com/book/diffplug/gitfromscratch/details)
-[![Join the chat at https://gitter.im/diffplug/gitfromscratch](https://img.shields.io/badge/gitter-live_chat-brightgreen.svg)](https://gitter.im/diffplug/gitfromscratch)
-[![License](https://img.shields.io/badge/license-Apache-blue.svg)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0))
+Git is a tool that does two main things:
 
-This repo contains the source for a [gitbook](https://www.gitbook.com/) which describes how to learn git from scratch.
+1. **Git tracks the history of your files**, so you can compare your files from a week ago with what you have today.
+2. **Git helps you share and collaborate on files**, so you can compare your files with your team's files.
 
-* You can read this book at [gitfromscratch.com](http://www.gitfromscratch.com)
-* You can subscribe to changes in this book at [gitbook.com](https://www.gitbook.com/book/diffplug/gitfromscratch/details)
+**But git's most valuable ability is underappreciated - normally, work only counts if you do it on the latest version of a document.**  If you fix a typo, but somebody published a new version while you were fixing the typo, then you'll have to manually fix the typo all over again.  **With git, you can take the work that you did on an older version, and automatically apply it to a newer version.**
 
-## To edit this book locally
+**Because you don't have to base your work on the latest version, you're free to experiment**, let an idea simmer, and construct an argument over time - no need to keep it synchronized every step of the way.  If your experiment produces a valuable result after a few weeks, it doesn't matter that the project has moved on in the meantime.  You don't need to redo your whole experiment - git can do most of the work for you.
 
-* [Install npm](https://nodejs.org/download/)
-* `npm install -g gitbook-cli` to install GitBook
-* `gitbook install` to install the plugins in our particular gitbook
-* `gitbook serve` to display our particular gitbook
+**This also means that you can work on each of your ideas in parallel.**  It doesn't matter what order you finish them in, or if one of them never works out - when an idea is done, you can apply its changes to the latest version.
 
-## Acknowledgements
+There are lots of tutorials on how to get started with git.  There are two things that make this one different:
 
-* Many thanks to Krasimir Tsonev for [gifffer](https://github.com/krasimir/gifffer/).
-* Many thanks to Jozef Vilcek for his [gitbook gradle example](https://github.com/JozoVilcek/gitbook-example/blob/master/package.json).
-* Many thanks to the Gitbook team for their fantastic product.
+1. **This tutorial will show you how to use git on text, pictures, spreadsheets, or any other kind of document, using DiffPlug.**  It used to be that you could only use git using a text-based interface, but now there's nothing stopping us from using git on anything.
+2. **This tutorial will show you how to move your work through time.**  Many introductory tutorials skip powerful features like rebase, cherry-pick, and the reflog because they are "advanced", but using a graphical client makes them easy to use.
+
+So, once you have [downloaded DiffPlug](http://www.diffplug.com/versions/latest), let's begin.  If you get stuck, you can ask for help in our [live chatroom](https://gitter.im/diffplug/gitfromscratch).  This book will be updated over time, so you might want to [subscribe to be notified of updates](https://www.gitbook.com/book/diffplug/gitfromscratch/details).   And of course, the source which generates this book is [available for branching or modification on GitHub](https://github.com/diffplug/gitfromscratch).
