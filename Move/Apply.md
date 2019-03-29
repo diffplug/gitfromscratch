@@ -17,4 +17,4 @@ If you right-click a commit, DiffPlug will give you these options:
 
 ## Moving the changes in a commit
 
-## Moving the *inverse* of the 
+## Moving the *inverse* of the

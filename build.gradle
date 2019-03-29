@@ -85,4 +85,10 @@ spotless {
 		trimTrailingWhitespace()
 		endWithNewline()
 	}
+	format 'markdown', {
+		target '**/*.md'
+		indentWithTabs()
+		trimTrailingWhitespace()
+		endWithNewline()
+	}
 }
