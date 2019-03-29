@@ -23,14 +23,25 @@ if (ALLOW_SNAPSHOT.toBoolean()) {
 }
 
 configurations {
-	compileGitBookClasspath
+	compile
 }
 dependencies {
-	compileGitBookClasspath 'com.diffplug.dpframework:com.diffplug.blockdoc:2.0.2'
+	compile 'com.diffplug.dpframework:com.diffplug.blockdoc:2.0.2'
+
+	// failed transitives while using included-build
+	compile 'com.diffplug.dpframework:com.diffplug.closet:2.0.2'
+	compile 'com.diffplug.dpframework:com.diffplug.entity:2.0.2'
+
+	compile 'com.github.spullara.mustache.java:compiler:0.9.6'
+	String VER_COMMONMARK = '0.12.1'
+	compile "com.atlassian.commonmark:commonmark:$VER_COMMONMARK"
+	compile "com.atlassian.commonmark:commonmark-ext-gfm-tables:$VER_COMMONMARK"
+	compile "com.atlassian.commonmark:commonmark-ext-gfm-strikethrough:$VER_COMMONMARK"
+	compile "com.atlassian.commonmark:commonmark-ext-yaml-front-matter:$VER_COMMONMARK"
 }
 
 class CompileGitBook extends DefaultTask {
-	@Classpath      Object cp = project.configurations.compileGitBookClasspath
+	@Classpath      Object cp = project.configurations.compile
 	@InputDirectory File   input
 	@InputDirectory File   template
 	@Input          String prefix
@@ -38,13 +49,13 @@ class CompileGitBook extends DefaultTask {
 	@OutputDirectory File  output
 
 	CompileGitBook() {
-		
+		//dependsOn(':com.diffplug.blockdoc:jar')
 	}
 
 	@TaskAction
 	void compileGitBook() {
 		project.javaexec({
-			classpath = project.configurations.compileGitBookClasspath
+			classpath = project.configurations.compile
 			main = 'com.diffplug.blockdoc.markdown.DiffPlugManualFormat'
 			args = [
 				input.absolutePath,
@@ -68,8 +79,8 @@ task compileWeb(type: CompileGitBook) {
 }
 
 spotless {
-	format 'manual', {
-		target 'web/*.html', 'markdown/**/*.md'
+	format 'build', {
+		target '*.gradle'
 		indentWithTabs()
 		trimTrailingWhitespace()
 		endWithNewline()
