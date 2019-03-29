@@ -4,7 +4,7 @@ It is common for a team to have a central repository - a single "source of truth
 
 In DiffPlug, you can see which servers you can communicate with by clicking the `Sync` tab and then looking at the `Remotes` section.  Each server has its own button.  If you click the button, you can see the details for that server.
 
-![Browse remotes](Remotes_Browse.png)
+![Browse remotes](TODO.png)
 
 If you just started a new project, then this section will be empty.  If you cloned the project from a central server, then there's probably one remote named `origin`.  **A remote is just a URL with a nickname.**  There are three kinds of address:
 
@@ -26,4 +26,4 @@ In the following sections, we're going to show how you can synchronize your comm
 
 To add a new remote (dummy or otherwise), click the `+` button in the `Remotes` section.  Type in a name and the URL, and the remote will be added.  If you click `Download all`, it will download all the information in the given remote repository.
 
-![Add a new remote](Remotes_Add.png)
+![Add a new remote](TODO.png)

@@ -8,9 +8,9 @@ If you right-click a commit, DiffPlug will give you these options:
 
 | Options     | What does it do?            |
 |--                                |--                           |
-| ![Apply files](Commit_Files.png) Branch | Marks a moveable spot in history and makes new commits. There are lots of ways to use a branch, and we'll show you all of them. |
-| ![Remote branch](vcs_BranchRemote.png) Remote branch | Keeps track of where a friend's branch is. You can't move it directly - it gets moved automatically when you download or upload from your friend's repository. |
-| ![Tags](vcs_Tag.png) Tag (a.k.a. permanent branch) | Marks a permanent spot in history.   |
+| ![Apply files](TODO.png) Branch | Marks a moveable spot in history and makes new commits. There are lots of ways to use a branch, and we'll show you all of them. |
+| ![Remote branch](TODO.png) Remote branch | Keeps track of where a friend's branch is. You can't move it directly - it gets moved automatically when you download or upload from your friend's repository. |
+| ![Tags](TODO.png) Tag (a.k.a. permanent branch) | Marks a permanent spot in history.   |
 
 
 ## Moving the files in a commit

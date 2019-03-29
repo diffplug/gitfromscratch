@@ -2,7 +2,7 @@
 
 To merge two lines of commits back into a single line, you must create a merge commit.  **A merge commit is a commit which has more than one parent**.  When you click a commit with one parent, you see a comparison between the snapshot of that commit and its parent.  But what about when you click a commit with multiple parents?  At first, you're looking at the difference between the commit and its first parent, but you can compare against other commits by clicking the `+` to view the other parents.
 
-![Picking the parent to view](Merge_PickParent.gif)
+![Picking the parent to view](TODO.png)
 
 Answering the question "What changed in this commit?" is tricky for a merge commit - which is why you don't want to use them to make changes!  **A merge commit should not introduce new changes; it should only combine the work of existing commits.**  A merge commit which violates this rule is known as an "evil merge".
 
@@ -10,11 +10,11 @@ Answering the question "What changed in this commit?" is tricky for a merge comm
 
 Usually, merging is easy.  Let's take the [example where we created a branch `123` and `ABC`](../Branches/Overview.html#using-a-branch-as-a-paintbrush).
 
-![123ABC.png](Merge_BeforeMerge.png)
+![123ABC.png](TODO.png)
 
 To perform a merge, we checkout the branch that we would consider to be "our" side of the merge (more on that later).  Then we right-click the branch that we would like to merge into that branch (which we will call "their" side), and select `Merge`.
 
-![123ABC.png](Merge_PerformMerge.gif)
+![123ABC.png](TODO.png)
 
 Note that after the merge is complete, "our" branch (123) includes the merge, while "their" branch (ABC) hasn't changed.  If we look at the change relative to its first parent ("our" side, 123), we can see the combined changes in the ABC branch.  If we look at the change relative to its second parent ("their" side, ABC), we can see the combined changes in the 123 branch.
 

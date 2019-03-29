@@ -2,11 +2,11 @@
 
 Lets say you have a series of changes like this:
 
-![Branch before rebasing](Branch_BeforeRebase.png)
+![Branch before rebasing](TODO.png)
 
 And you would prefer that they looked like this:
 
-![Branch after rebasing](Branch_AfterRebase.png)
+![Branch after rebasing](TODO.png)
 
 Since you already know how to [move the changes in one commit](../Commit.html#dslkjfhsa), you could apply the changes in each of the commits one at a time.  That's sorta feasible for this case where the branch has only three commits, but for longer branches that could be a huge pain.
 
@@ -16,4 +16,4 @@ What you'd really like is a way to automatically take the `ABC` branch which is 
 
 As usual, in order to change a branch, you must first check it out.  Then, you right click the branch which you would like to be the new base of this branch, and select `Rebase`.
 
-![Branch after rebasing](Branch_EasyRebase.gif)
+![Branch after rebasing](TODO.png)

@@ -23,7 +23,7 @@ Here are just a few of the commands needed to manage this "index" mechanism:
 
 In DiffPlug, we ignore the index entirely.  If a file is checked in the commit window, then it will be put into the commit.  Simple as that.
 
-![DiffPlug's staging area alternative](Departures_Staging.png)
+![DiffPlug's staging area alternative](TODO.png)
 
 ## No stash
 

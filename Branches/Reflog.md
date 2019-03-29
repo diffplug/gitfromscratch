@@ -4,7 +4,7 @@ Have you ever slid your finger around a roll of tape, feeling for the little edg
 
 If you lose the tip of a string of commits in git, they are effectively "deleted".  As an example, let's delete our life's work.
 
-![How to delete your life's work](Reflog_LifesWorkDelete.gif)
+![How to delete your life's work](TODO.png)
 
 1. Do your life's work.
 2. Commit it into git for safe keeping.
@@ -25,7 +25,7 @@ Any commit that the process above can touch is reachable.  Everything else is un
 
 Not for long!  Git has a mechanism called the reflog.  **Every change to a branch is logged to the reflog**.  This means that you can go into the reflog and see where a branch used to be.  Let's use the reflog to get back your life's work.
 
-![How to restore your life's work](Reflog_LifesWorkRestore.gif)
+![How to restore your life's work](TODO.png)
 
 This demonstrates that **if you committed it, you can get it back**.  So commit often!  You can always make new, cleaner commits later, if you want to.
 

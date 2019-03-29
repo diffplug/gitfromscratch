@@ -12,17 +12,17 @@ We use branches in two ways:
 
 Branches have two cousins: remote branches and tags.  They all work the same way - a name that points to a commit - but they have different rules for how they can move.  In the history table, they look like this:
 
-![Branch, remote branch, and tag](Overview_BranchRemoteAndTag.gif)
+![Branch, remote branch, and tag](Overview_BranchRemoteAndTag.png)
 
 | Kind of ref                      | What does it do?            |
 |--                                |--                           |
 | ![Branch](vcs_Branch.png) Branch | Marks a moveable spot in history and makes new commits. There are lots of ways to use a branch, and we'll show you all of them. |
-| ![Remote branch](vcs_BranchRemote.png) Remote branch | Keeps track of where a friend's branch is. You can't move it directly - it gets moved automatically when you download or upload from your friend's repository. |
+| ![Remote branch](TODO.png) Remote branch | Keeps track of where a friend's branch is. You can't move it directly - it gets moved automatically when you download or upload from your friend's repository. |
 | ![Tags](vcs_Tag.png) Tag (a.k.a. permanent branch) | Marks a permanent spot in history.   |
 
 Branches are easy to manipulate.  Right-click a commit to create a new branch.  You can drag-and-drop to move it around.  Right-click the branch again to delete it.
 
-![Dragging a branch](Overview_Dragging.gif)
+![Dragging a branch](TODO.png)
 
 ## Using a branch as a paintbrush
 
@@ -32,7 +32,7 @@ Remember that a commit is a snapshot of every single file in your project folder
 
 **The HEAD branch determines the starting point for the next commit.**  When the next commit is made, the HEAD branch will automatically move so that it points to the new commit.  Here's an example of what that looks like in practice:
 
-![Create 123 ABC](Overview_123_ABC.gif)
+![Create 123 ABC](TODO.png)
 
 Here's what happened in the video above:
 1. We start off with six new files in our working copy, named 1, 2, 3, A, B, C.
@@ -53,8 +53,8 @@ As far as the files in your working copy are concerned, the only commits that ma
 
 The tips section is useful for searching for branches and navigating history.  When you hover the mouse over a branch, it will scroll the history window to show you where that branch is.  When you stop hovering, it will scroll back to where you were.
 
-![Hover to scroll temporarily.](Overview_ScrollTemp.gif)
+![Hover to scroll temporarily.](TODO.png)
 
 If you click a branch, it will scroll the history window there and stop.
 
-![Click to scroll permanently.](Overview_ScrollPermanent.gif)
+![Click to scroll permanently.](TODO.png)
