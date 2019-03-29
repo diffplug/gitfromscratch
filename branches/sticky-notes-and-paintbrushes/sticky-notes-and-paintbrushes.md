@@ -2,7 +2,7 @@
 
 What's a branch, you ask?  Well, you might think this is a branch:
 
-![Feature branch](Overview_SimpleBranch.png)
+![Feature branch](simple-branch.png)
 
 ...but a branch is actually *much* simpler than that.  **A branch is a name that points to a commit**.  Commits have weird names - `518a9d2blahblahblah`.  Branches let us use an easy-to-read name to mark a commit.
 
@@ -12,13 +12,13 @@ We use branches in two ways:
 
 Branches have two cousins: remote branches and tags.  They all work the same way - a name that points to a commit - but they have different rules for how they can move.  In the history table, they look like this:
 
-![Branch, remote branch, and tag](Overview_BranchRemoteAndTag.png)
+![Branch, remote branch, and tag](local-branch-remote-branch-tag.png)
 
 | Kind of ref                      | What does it do?            |
 |--                                |--                           |
-| ![Branch](vcs_Branch.png) Branch | Marks a moveable spot in history and makes new commits. There are lots of ways to use a branch, and we'll show you all of them. |
-| ![Remote branch](TODO.png) Remote branch | Keeps track of where a friend's branch is. You can't move it directly - it gets moved automatically when you download or upload from your friend's repository. |
-| ![Tags](vcs_Tag.png) Tag (a.k.a. permanent branch) | Marks a permanent spot in history.   |
+| ![Branch](local-branch.png) Branch | Marks a moveable spot in history and makes new commits. There are lots of ways to use a branch, and we'll show you all of them. |
+| ![Remote branch](remote-branch.png) Remote branch | Keeps track of where a friend's branch is. You can't move it directly - it gets moved automatically when you download or upload from your friend's repository. |
+| ![Tags](tag.png) Tag (a.k.a. permanent branch) | Marks a permanent spot in history.   |
 
 Branches are easy to manipulate.  Right-click a commit to create a new branch.  You can drag-and-drop to move it around.  Right-click the branch again to delete it.
 

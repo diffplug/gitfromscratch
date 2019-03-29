@@ -1,6 +1,6 @@
 # Collaborating on a moving target
 
-In [an earlier section](../Branches/Overview.md) we discussed what a branch actually was - a name that points to a commit.  When synchronizing with teammates, it is important to also remember the intent behind publishing a branch.  **The purpose of publishing a branch is to synchronize and integrate work around a specific objective**.  You can use your own convention, but the following are common:
+In [an earlier section](../branches/) we discussed what a branch actually was - a name that points to a commit.  When synchronizing with teammates, it is important to also remember the intent behind publishing a branch.  **The purpose of publishing a branch is to synchronize and integrate work around a specific objective**.  You can use your own convention, but the following are common:
 
 * **master** holds the latest working version of the integrated project
 * **feature/&lt;feature name&gt;** holds the work-in-progress towards a specific feature
