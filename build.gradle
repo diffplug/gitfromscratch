@@ -1,33 +1,77 @@
 plugins {
-	id 'com.moowork.node' version '0.10'
+	id 'com.diffplug.gradle.spotless' version '3.21.0'
 }
 
-apply plugin: 'com.moowork.node'
-
-node {
-	// Version of node to use.
-	version = '0.12.7'
-
-	// Version of npm to use.
-	npmVersion = '2.1.5'
-
-	// Base URL for fetching node distributions (change if you have a mirror).
-	distBaseUrl = 'http://nodejs.org/dist'
-
-	// If true, it will download node using above parameters.
-	// If false, it will try to use globally installed node.
-	download = true
-	workDir = file("${project.buildDir}/nodejs")
+repositories {
+	// for buildcloset
+	maven {
+		url 'http://artifactory.diffplug.local/artifactory/libs-release-local/'
+		content {
+			includeGroup 'com.diffplug.dpframework'
+		}
+	}
+	jcenter()
+	if (ALLOW_SNAPSHOT.toBoolean()) {
+		maven { url 'http://artifactory.diffplug.local/artifactory/libs-snapshot-local/' }
+		maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+	}
+}
+if (ALLOW_SNAPSHOT.toBoolean()) {
+	configurations.all {
+		resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+	}
 }
 
-task buildDocs(type: NodeTask, dependsOn: 'npmInstall') {
-	inputs.dir('${project.projectDir}')
-	script = file('node_modules/gitbook/bin/gitbook.js')
-	args = ['build', '.', "--output=${project.buildDir}/docs", "--verbose"]
+configurations {
+	compileGitBookClasspath
+}
+dependencies {
+	compileGitBookClasspath 'com.diffplug.dpframework:com.diffplug.blockdoc:2.0.2'
 }
 
-task serveDocs(type: NodeTask, dependsOn: 'npmInstall') {
-	inputs.dir('${project.projectDir}')
-	script = file('node_modules/gitbook/bin/gitbook.js')
-	args = ['serve', '.', "--output=${project.buildDir}/docs", '--verbose']
+class CompileGitBook extends DefaultTask {
+	@Classpath      Object cp = project.configurations.compileGitBookClasspath
+	@InputDirectory File   input
+	@InputDirectory File   template
+	@Input          String prefix
+	@Input          String mode = 'FULL'
+	@OutputDirectory File  output
+
+	CompileGitBook() {
+		
+	}
+
+	@TaskAction
+	void compileGitBook() {
+		project.javaexec({
+			classpath = project.configurations.compileGitBookClasspath
+			main = 'com.diffplug.blockdoc.markdown.DiffPlugManualFormat'
+			args = [
+				input.absolutePath,
+				output.absolutePath,
+				template.absolutePath,
+				prefix,
+				mode
+				]
+		})
+	}
+}
+
+// pip install rangehttpserver
+// cd build/web
+// python -m RangeHTTPServer
+task compileWeb(type: CompileGitBook) {
+	input file('.')
+	output file('build/web')
+	template file('_template')
+	prefix = "/"
+}
+
+spotless {
+	format 'manual', {
+		target 'web/*.html', 'markdown/**/*.md'
+		indentWithTabs()
+		trimTrailingWhitespace()
+		endWithNewline()
+	}
 }
