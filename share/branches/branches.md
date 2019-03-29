@@ -26,12 +26,12 @@ Here are the possible cases:
 | ![Remote has new](TODO.png) | The remote branch has new commits. | ![Remote has new actions](TODO.png) |
 | ![Both have new](TODO.png) | Local and remote branches both have new commits. | ![Both have new actions](TODO.png) |
 
-If both the local and remote branches have new commits, then you face the classic conundrum - you've done some work, someone else published a new version, and now you've got to redo your work on the new version.  Git has a smorgasbord of options available to you, which we cover in the [move your work through time](../Move/README.md) section.
+If both the local and remote branches have new commits, then you face the classic conundrum - you've done some work, someone else published a new version, and now you've got to redo your work on the new version.  Git has a smorgasbord of options available to you, which we cover in the [move your work through time](../move/) section.
 
 ## Onwards, ever onwards
 
 **A published branch should only move forward.**  Once a branch has been published, anyone might base their work on the contents of that branch.  If you move a branch backwards, then other people who have based their work on the commits in that branch have lost their foundation.
 
-**If you find that you need to remove or undo some changes that have already been published, you should do that [using new commits](../Move/Apply.md).**  This gives you the opportunity to explain in the commit messages why some previously published commits were faulty.  If you move a branch backwards, there's no way to tell your teammates why, so it will be very distressing to them when they find that the commits which they based their work on are gone without any explanation.
+**If you find that you need to remove or undo some changes that have already been published, you should do that [using new commits](../move/apply/).**  This gives you the opportunity to explain in the commit messages why some previously published commits were faulty.  If you move a branch backwards, there's no way to tell your teammates why, so it will be very distressing to them when they find that the commits which they based their work on are gone without any explanation.
 
 At various points, the "not recommended" section will give you the option to move a remote branch backwards.  It can be useful when you're working by yourself and using a remote repository only as a personal backup mechanism.  **If you're working with other people, you should never use the "not recommended" section.**
