@@ -3,5 +3,7 @@
 *.jar binary
 *.png binary
 *.jpg binary
+*.gif binary
 *.zip binary
 *.mp4 binary
+*.fbr binary
