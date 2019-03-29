@@ -16,5 +16,5 @@
 	* [Merge your work](move/merge/_.md)
 	* [Move a single commit](move/apply/_.md)
 	* [Move a whole branch](move/rebase/_.md)
-* [Epilogue](Epilogue/README.md)
-	* [Departures from the command line](Epilogue/Departures.md)
+* [Epilogue](epilogue/_.md)
+	* [Departures from the command line](epilogue/departures/_.md)

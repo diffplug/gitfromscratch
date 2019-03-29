@@ -31,7 +31,7 @@ It's common to have a situation where you've done a bunch of work that you'd lik
 
 Vanilla git handles this with `git stash`.  Because there are two places where changes can be - the working folder and the index - it has to do something pretty complicated.  It makes one commit to save the index, and a second merge commit which saves the working copy and references the index commit.
 
-![git stash](Departures_Stash.png)
+![git stash](stash.png)
 
 It stores these as "refs/stash".  If you call `git stash` a second time, it uses the reflog to keep the first stash around for a while.
 
