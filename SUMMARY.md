@@ -15,7 +15,6 @@
 * [Move work through time? What?](move/_.md)
 	* [Merge your work](move/merge/_.md)
 	* [Patches are the "flux capacitor" of work](move/patch/_.md)
-	* [Move a single commit](move/apply/_.md)
-	* [Move a whole branch](move/rebase/_.md)
+	* [Turning commits and branches into patches](move/cherry-pick-and-rebase/_.md)
 * [Epilogue](epilogue/_.md)
 	* [Departures from the command line](epilogue/departures/_.md)

@@ -107,22 +107,14 @@ But the less evil they are, the better.  Remember our summary commit?  Because i
 
 > See all the commits towards my 2nd (right) parent?  They're sorta interesting, you can browse through them if you want.  But the sum total of all that effort?  You can see it all at once, right here, just by clicking me.  There's no change in those intermediate commits that you can't see summarized in this merge, and there's no changes in this merge except for the final result of the incremental changes of those intermediate commits.
 
-And a non-evil merge, with no conflicts, can say the same thing, symmetrically, about each of its parents.
+And a non-evil merge (aka a merge which had no conflicts), can say the same thing - symmetrically - about each of its parents:
 
 > See all those commits in my 1st and 2nd (left and right) parents?  They're sorta interesting, but their changes are completely independent.  You can see the sum total of all the changes in either branch, just by clicking me and picking which parent you care about.  There's no change in those intermediate commits that you can't see summarized in this merge.
 
-But evil merge can make no such guarantees.
+But with an evil merge, it's difficult to tell who is responsible for which change.  Was it branch 123?  Branch ABC?  Or was the first time the change ever happened right here, in this merge commit, jumbled up with all the automatic changes of the merge?
 
-Sometimes, both sides of a merge have changed the same file.  This is called a "merge conflict".  It can play out in one of two ways:
+## Who should merge into whom?
 
-1. If your tools are able to parse the file, and the deltas
+When you have multiple people working on one project, merge conflicts are inevitable, and they're not a big deal.  However, it's important to be methodical about whether those evil merges end up in "team" branches or in "personal" branches.
 
-2. If the changes are in the same part of the file, then you'll have to resolve this conflict ourself.
-
-## Automatic resolution
-
-Let's say we've got a file 100 lines long.  On one side of a merge, we changed a few lines at the top, and on the other side, a few lines at the bottom.  Because the changes are so far apart, it's relatively easy for git to combine the two.  But this relies on the fact that git is able to understand the guts of the file - it knows how to open a text file, parse out the lines, and recombine the lines from different files back into one coherent whole.
-
-What about files
-
-As we learned back when we [made our first commit](../../intro/make-a-commit/), **a commit is a snapshot of every single file in your project folder**.  Just like a zip file!  Since jgit
+A "team" branch is BLAH
