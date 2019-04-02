@@ -11,9 +11,9 @@ Git is a tool that does two main things:
 
 **This also means that you can work on each of your ideas in parallel.**  It doesn't matter what order you finish them in, or if one of them never works out - when an idea is done, you can apply its changes to the latest version.
 
-There are lots of tutorials on how to get started with git.  There are two things that make this one different:
+There are lots of tutorials on how to get started with git.  There are two things that make this tutorial different:
 
-1. **This tutorial will show you how to use git on text, pictures, spreadsheets, or any other kind of document, using DiffPlug.**  It used to be that you could only use git using a text-based interface, but now there's nothing stopping us from using git on anything.
+1. **This tutorial will show you how to use git on text and on Simulink, using DiffPlug.**  It used to be that you could only use git using a text-based interface, but now there's nothing stopping us from using git on anything.
 2. **This tutorial will show you how to move your work through time.**  Many introductory tutorials skip powerful features like rebase, cherry-pick, and the reflog because they are "advanced", but using a graphical client makes them easy to use.
 
-So, once you have [downloaded DiffPlug](http://www.diffplug.com/versions/latest), let's begin.  If you get stuck, you can ask for help in our [live chatroom](https://gitter.im/diffplug/gitfromscratch).  This book will be updated over time, so you might want to [subscribe to be notified of updates](https://www.gitbook.com/book/diffplug/gitfromscratch/details).   And of course, the source which generates this book is [available for branching or modification on GitHub](https://github.com/diffplug/gitfromscratch).
+So, once you have [downloaded DiffPlug](http://www.diffplug.com/versions/latest), let's begin.  If you get stuck, you can ask for help in our [live chatroom](https://gitter.im/diffplug/gitfromscratch).  The source which generates this book is [available on GitHub](https://github.com/diffplug/gitfromscratch), so you can subcribe to updates or branch and modify it.

@@ -1,4 +1,4 @@
-# Deleting and restoring a commit
+# Delete a commit, then get it back
 
 Have you ever slid your finger around a roll of tape, feeling for the little edge you can pry up?  If you wanna be sure to find it, you can put a sticky note on the tip.  Branches serve exactly that function in git.
 
@@ -11,7 +11,7 @@ If you lose the tip of a string of commits in git, they are effectively "deleted
 3. Move the branch back by one commit, thus losing the "tip" that pointed to your life's work.
 4. Mission accomplished!
 
-## Why the hell am I using git then?
+## ... why am I using git, again?
 
 As it turns out, your life's work isn't deleted, it's just *unreachable*.  And there's an easy way to make it *reachable* again.  Here's how to know if a commit is reachable or not:
 
