@@ -2,27 +2,26 @@
 
 This tutorial is about git.  But if you want to use git on files that aren't code, or even if you work with code but you just don't want to learn all the command-line flags, then we recommend DiffPlug.  DiffPlug is a piece of software that's similar to your operating system's file browser, except that it's built from the ground-up for looking at the *history* of files and comparing them.  Before you can work with git, there are just a couple things you need to know about basic navigation in DiffPlug first.
 
-The ![DiffManager](BasicNav_DiffManagerIcon.png) icon brings up the *DiffManager*.  This is a scratchpad where you can put files that you're interested in for comparing them later.  To put a file on the DiffList, drag it there from your desktop.  You can also drag files to the "D" icon and they'll be added to the DiffList.
+## Entity console
 
-![Dragging to the DiffManager](BasicNav_DragToDiffManager.gif)
+The **entity console** is the text box at top.  You can use it to navigate your files.  `Ctrl+P` will move the cursor there.
 
-Alternatively, you can find a file using fuzzy search in the browse bar.
+![Entity console in action](entity-console.mp4)
 
-![Navigating with the browse bar](BasicNav_BrowseBar.gif)
+## Diff list
 
-Anywhere that you see a file in DiffPlug, you can right-click it to get a context menu of history and comparison-related actions.  In the browse bar, you can get this context menu by pressing `Enter`, or by clicking the check mark.
+Click the ![DiffPlug icon](DiffPlugLogo_16.png) (or press `Ctrl+D`) to open the **diff list**.  When you move the mouse off of the diff list, it will close automatically.  If you drag a file onto the **diff list**, it will open automatically.
 
-![Opening the context menu](BasicNav_ContextMenu.gif)
+![Diff list in action](diff-list.mp4)
 
-If you double-click a file or folder, DiffPlug will open it in a new tab.
+## Command console (where is the toolbar?)
 
-![Opening a file](BasicNav_Open.gif)
+Press `Ctrl+Shift+P` to open the **command console**.  The actions available are context-sensitive, based on the currently active pane.
 
-To compare files, you can:
-- drag one file onto another
-- select multiple files by holding `ctrl` and then right-clicking
-- select one file, then hold `ctrl` while double-clicking a second file
+![Command console in action](command-console.mp4)
 
-![Comparing a file](BasicNav_Compare.gif)
+## Diff schemas
 
-Now that you've got the basics of navigating the DiffPlug interface, on to the main event - Git!
+DiffPlug has multiple ways to compare files.  To change which file in a diff is the `before` and which file is the `after`, drag their labels to swap.  If you'd like to change the type of the comparison, right-click the label.
+
+![Diff schemas](diff-schemas.mp4)
