@@ -1,4 +1,4 @@
-# Make a commit
+# Make and edit a commit
 
 **A commit is a snapshot of every single file in your project folder**, along with some metadata such as when the commit was made, who made it, and a short message describing the reasoning behind the work.  **A repository is just a pile of commits**. Some of git's more powerful features can make it seem like there must be something more complex happening, but it really is that simple.
 
