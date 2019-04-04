@@ -51,10 +51,6 @@ In the previous example, something surprising happened when we checked out ABC. 
 
 As far as the files in your working copy are concerned, the only commits that matter are the ancestors of the HEAD commit - none of the other commits have any effect.  As you'll see when you learn more about moving commits around, it's common to make a bunch of messy commits and later throw them away.  You don't want a bunch of discarded commits cluttering up your history table, so DiffPlug only shows you the ancestor commits.  **If you want to see commits which aren't ancestors of HEAD, you have to explicitly add a branch to tips which does have those commits as ancestors.**
 
-The tips section is useful for searching for branches and navigating history.  When you hover the mouse over a branch, it will scroll the history window to show you where that branch is.  When you stop hovering, it will scroll back to where you were.
+The tips section is useful for searching for branches and navigating history.  When you hover the mouse over a branch, it will scroll the history window to show you where that branch is.  When you stop hovering, it will scroll back to where you were.  When you click a branch, it will scroll the history window there and stop.
 
-![Hover to scroll temporarily.](TODO.png)
-
-If you click a branch, it will scroll the history window there and stop.
-
-![Click to scroll permanently.](TODO.png)
+![Scroll around branches and tags.](branch-hover-vs-click.mp4)
