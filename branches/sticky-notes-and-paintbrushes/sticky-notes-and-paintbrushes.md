@@ -32,7 +32,7 @@ Remember that a commit is a snapshot of every single file in your project folder
 
 **The HEAD branch determines the starting point for the next commit.**  When the next commit is made, the HEAD branch will automatically move so that it points to the new commit.  Here's an example of what that looks like in practice:
 
-![Create 123 ABC](TODO.png)
+![Create a fork](branch-create-fork.mp4)
 
 Here's what happened in the video above:
 1. We start off with six new files in our working copy, named 1, 2, 3, A, B, C.
@@ -49,7 +49,7 @@ You'll find all kinds of advice on how you should name your branches.  Remember 
 
 In the previous example, something surprising happened when we checked out ABC.  123 disappeared!  But when we added it back as a "tip", it just magically came back!  What's going on?
 
-As far as the files in your working copy are concerned, the only commits that matter are the ancestors of the HEAD commit - none of the other commits have any effect.  As you'll see when you learn more about moving commits around, it's really common to make a bunch of messy commits and later throw them away.  You don't want a bunch of discarded commits cluttering up your history table, so DiffPlug only shows you the ancestor commits.  **If you want to see commits which aren't ancestors of HEAD, you have to explicitly add a branch to tips which does have those commits as ancestors.**
+As far as the files in your working copy are concerned, the only commits that matter are the ancestors of the HEAD commit - none of the other commits have any effect.  As you'll see when you learn more about moving commits around, it's common to make a bunch of messy commits and later throw them away.  You don't want a bunch of discarded commits cluttering up your history table, so DiffPlug only shows you the ancestor commits.  **If you want to see commits which aren't ancestors of HEAD, you have to explicitly add a branch to tips which does have those commits as ancestors.**
 
 The tips section is useful for searching for branches and navigating history.  When you hover the mouse over a branch, it will scroll the history window to show you where that branch is.  When you stop hovering, it will scroll back to where you were.
 
