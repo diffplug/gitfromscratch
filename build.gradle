@@ -46,7 +46,7 @@ class CompileGitBook extends DefaultTask {
 	@InputDirectory File   template
 	@Input          String prefix
 	@Input          String mode = 'FULL'
-	@OutputDirectory File  output
+	File  output
 
 	CompileGitBook() {
 		//dependsOn(':com.diffplug.blockdoc:jar')
