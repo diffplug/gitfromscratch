@@ -24,13 +24,13 @@ Now you're going to make your own commit.  In the list of commits at the bottom,
 
 Once you're at the working copy, the `Changed files` section will show you which files you have modified in your project directory.  To make sure that it is up-to-date, you can hit the refresh button.  To make a commit, all you need to do is check the box for which files you'd like to commit, and type in a commit message which explains the reasoning behind your changes.
 
-![Make a commit](TODO.png)
+![Make a commit](commit-make.mp4)
 
 ## Edit your commit
 
 Pedants will tell you that it's impossible to edit a commit.  Pedantically speaking that is true - however, you *can* make a brand new commit with the same snapshot of files but a different commit message, which sure feels a lot like an edit.  Right-click a commit and select **edit** to do this.
 
-![Edit a commit](TODO.png)
+![Edit a commit](commit-edit.mp4)
 
 There are some rules about when you should and shouldn't change commits in this way, which luckily will turn out to be obvious when you understand git a little more.  For now, pretend that you can only change your most recent commit.  If you stick with us for a little longer then you'll understand fully when you can and can't "change" a commit.
 
@@ -40,4 +40,4 @@ Every time you make a commit, it will be tagged with your name and email.  That 
 
 From the top menu bar, go to *Help -> Preferences*, then *DiffPlug -> Filesystems -> Git*. Hit the *Edit* button to the right of committer and type in your name and email.  Now it will be attached to all the commits you make from now on.
 
-![Refresh changed files](TODO.png)
+![Set username](commit-set-username.mp4)
