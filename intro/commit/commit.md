@@ -4,37 +4,27 @@
 
 Each row in the `History` table (the bottom of the screen) represents a commit.  If you just created an empty repository, then you won't have much to look at yet, but you will soon!  If you click a commit, you can see the names of files that were created, deleted, or changed between that commit and the previous commit.
 
-![Click a commit](MakeCommit_ClickCommit.gif)
+![Click a commit](commit-browse-commits.mp4)
 
 If you click one of the changed files, you can see the actual contents of the file and how it changed.
 
-![Created, deleted, and changed files](MakeCommit_CreatedDeletedChanged.gif)
+![Created, deleted, and changed files](commit-browse-files.mp4)
 
 You can also see metadata about who made the commit, when, and why.
 
-![Who, what, when, why](MakeCommit_WhoWhatWhenWhy.gif)
+![Who, what, when, why](commit-who-when-what-why.mp4)
 
 If you double-click a commit, it will open the snapshot as a folder, so that you can see exactly what the project folder looked like when the snapshot was taken.
 
-![Open as a folder](MakeCommit_DoubleClick.gif)
+![Open as a folder](commit-open-folder.mp4)
 
 Now you're going to make your own commit.  In the list of commits at the bottom, there is always a special row for something called the "working copy", often abbreviated "WC".  **The working copy is a draft of the next commit you're going to make**.  If you're looking at the working copy, then this button will say `Commit`.  If it doesn't say `Commit`, then it will say `Go to WC`, and if you click it, it will take you to the working copy.
 
-![Go to the WC](MakeCommit_GoToWc.gif)
+![Go to the WC](commit-goto-wc.mp4)
 
-Once you're at the working copy, the `Changed files` section will show you which files you have modified in your project directory.  To make sure that it is up-to-date, you can hit the refresh button.
+Once you're at the working copy, the `Changed files` section will show you which files you have modified in your project directory.  To make sure that it is up-to-date, you can hit the refresh button.  To make a commit, all you need to do is check the box for which files you'd like to commit, and type in a commit message which explains the reasoning behind your changes.
 
-You can change your files however you'd like, but here's how the video below does it:
-
-* double-click the project folder (which opens the folder)
-* double-click a file (which opens that file)
-* make some edits, then hit `Ctrl + S` to save.
-
-![Refresh changed files](MakeCommit_ShowChanges.gif)
-
-To make a commit, you need to check the box for which files you'd like to commit, and type in a commit message which explains the reasoning behind your changes.  Once your commit is ready, hit the "Commit" button and you'll make your very first commit!
-
-![Make the commit](MakeCommit_MakeTheCommit.gif)
+![Make a commit](TODO.png)
 
 ## Edit your commit
 
@@ -50,4 +40,4 @@ Every time you make a commit, it will be tagged with your name and email.  That 
 
 From the top menu bar, go to *Help -> Preferences*, then *DiffPlug -> Filesystems -> Git*. Hit the *Edit* button to the right of committer and type in your name and email.  Now it will be attached to all the commits you make from now on.
 
-![Refresh changed files](MakeCommit_SetUsername.gif)
+![Refresh changed files](TODO.png)
