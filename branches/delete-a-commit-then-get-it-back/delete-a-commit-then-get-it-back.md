@@ -4,12 +4,12 @@ Have you ever slid your finger around a roll of tape, feeling for the little edg
 
 If you lose the tip of a string of commits in git, they are effectively "deleted".  As an example, let's delete our life's work.
 
-![How to delete your life's work](TODO.png)
-
 1. Do your life's work.
 2. Commit it into git for safe keeping.
 3. Move the branch back by one commit, thus losing the "tip" that pointed to your life's work.
 4. Mission accomplished!
+
+![How to delete your life's work](reflog-delete.mp4)
 
 ## ... why am I using git, again?
 
@@ -25,9 +25,15 @@ Any commit that the process above can touch is reachable.  Everything else is un
 
 Not for long!  Git has a mechanism called the reflog.  **Every change to a branch is logged to the reflog**.  This means that you can go into the reflog and see where a branch used to be.  Let's use the reflog to get back your life's work.
 
-![How to restore your life's work](TODO.png)
+![How to restore your life's work](reflog-branch.mp4)
 
 This demonstrates that **if you committed it, you can get it back**.  So commit often!  You can always make new, cleaner commits later, if you want to.
+
+## My branch's reflog is gone!
+
+There's a hiccup, which is that when you delete a branch, it also deletes that branch's reflog!  There's an easy fix, which is `HEAD`.  When you checkout a branch, it becomes the `HEAD`.  Every new commit that you create is to the `HEAD` branch.  And lucky for us, git keeps a reflog for `HEAD`, so that even if the branch we were using is now gone, we still have a record of those commits in `HEAD`.
+
+![How to restore your life's work after you've deleted a branch](reflog-head.mp4)
 
 ## Do commits ever get *actually* deleted?
 
