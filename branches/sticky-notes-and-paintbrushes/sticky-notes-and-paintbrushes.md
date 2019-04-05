@@ -16,9 +16,11 @@ Branches have two cousins: remote branches and tags.  They all work the same way
 
 | Kind                                              | What does it do?            |
 |--                                                 |--                           |
-| ![Branch](local-branch.png) Branch                | Marks a moveable spot in history and makes new commits. There are lots of ways to use a branch, and we'll show you all of them. |
+| ![Branch](local-branch.png) Local branch          | Marks a moveable spot in history and makes new commits. There are lots of ways to use a branch, and we'll show you all of them. |
 | ![Remote branch](remote-branch.png) Remote branch | Keeps track of where a friend's branch is. You can't move it directly - it gets moved automatically when you download or upload from your friend's repository. |
 | ![Tags](tag.png) Tag (a.k.a. permanent branch)    | Marks a permanent spot in history. |
+
+Remote branches and tags are both primarily about team communication, so we'll wait until we talk about [sharing](../../share/) before we delve into their details.  For now we'll stick to just regular local branches.
 
 Branches are easy to manipulate.  Right-click a commit to create a new branch.  You can drag-and-drop to move it around.  Right-click the branch again to delete it.
 
