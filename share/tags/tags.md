@@ -2,18 +2,16 @@
 
 There are lots of ways to move a branch.  This makes them great for tracking a moving target, such as progress on a new feature, but unreliable for keeping track of a fixed instant in time, such as a published release.  That is why git has tags.  Tags work the same way as a branch (a name that points to a commit) - the only difference is that there's no easy way to move them.
 
-![Create a tag](TODO.png)
+There are two kinds of tag, and you can make either one by right-clicking the commit you want to tag.
 
-There are two kinds of tag:
-
-| Kind of tag | How to make one             | What they look like |
-| ---         | ---                         | ---                 |
-| Lightweight | ![Lightweight tag dialog](TODO.png) | ![Lightweight tag right-click](TODO.png) |
-| Annotated   | ![Annotated tag dialog](TODO.png) | ![Annotated tag right-click](TODO.png) |
+| Kind of tag | How to make one                                       | What they look like |
+| ---         | ---                                                   | ---                 |
+| Lightweight | ![Lightweight tag dialog](tag-dialog-lightweight.png) | ![Lightweight tag right-click](tag-view-lightweight.png) |
+| Annotated   | ![Annotated tag dialog](tag-dialog-annotated.png)     | ![Annotated tag right-click](tag-view-annotated.png) |
 
 ## Sharing tags
 
-Collaborating on a fixed target is a little easier than collaborating on a moving target, so tags are a great place to learn about sharing.  To upload a tag, `right-click -> Sync -> Upload to origin`.  This will upload the tag and all of its parent commits to the remote named "origin".
+Collaborating on a fixed target is a little easier than collaborating on a moving target, so tags are a great place to learn about sharing.  To upload a tag, right-click it then `Sync -> Upload to origin`.  This will upload the tag and all of its parent commits to the remote named "origin".
 
 Whenever you upload a tag or branch, git will ensure that every single ancestor commit of the tag or branch also gets uploaded.  This will usually happen very quickly, because git will only have to upload new commits which the server doesn't have yet.
 
