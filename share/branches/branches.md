@@ -11,20 +11,20 @@ You can use whatever convention you want, but the important thing is that publis
 
 **Each time you download from a remote, your repository will have a remote branch placed wherever the equivalent branch is on the remote.**  In the example below, the remote `dummy` is on the left.  As its `test` branch is moved around, the move is reflected on the right each time that a download happens.
 
-![Moving a branch](TODO.png)
+![Moving a branch](share-branches.mp4)
 
 If you have a local branch with the same name as the remote branch, then DiffPlug can automatically help you keep these two in sync.  If you right-click a branch (either the local branch or a remote branch), DiffPlug can show you what must be done to synchronize one with the other.
 
 Here are the possible cases:
 
-| Situation                        | Description     | Available actions |
-|--                                |--               | --                |
-| ![Local only](TODO.png) | The local branch doesn't have a remote counterpart. | ![Local only actions](TODO.png) |
-| ![Remote only](TODO.png) | The remote branch doesn't have a local counterpart. | ![Remote only actions](TODO.png) |
-| ![Synced](TODO.png) | The local and remote branches are synchronized. | ![Synced actions](TODO.png) |
-| ![Local has new](TODO.png) | The local branch has new commits. | ![Local has new actions](TODO.png) |
-| ![Remote has new](TODO.png) | The remote branch has new commits. | ![Remote has new actions](TODO.png) |
-| ![Both have new](TODO.png) | Local and remote branches both have new commits. | ![Both have new actions](TODO.png) |
+| Situation                              | Description                                         | Available actions                                      |
+|--                                      |--                                                   | --                                                     |
+| ![Local only](case-local-only.png)     | The local branch doesn't have a remote counterpart. | ![Local only actions](case-local-only-actions.png)     |
+| ![Remote only](case-remote-only.png)   | The remote branch doesn't have a local counterpart. | ![Remote only actions](case-remote-only-actions.png)   |
+| ![Synced](case-synced.png)             | The local and remote branches are synchronized.     | ![Synced actions](case-synced-actions.png)             |
+| ![Local has new](case-local-new.png)   | The local branch has new commits.                   | ![Local has new actions](case-local-new-actions.png)   |
+| ![Remote has new](case-remote-new.png) | The remote branch has new commits.                  | ![Remote has new actions](case-remote-new-actions.png) |
+| ![Both have new](case-both.png)        | Local and remote branches both have new commits.    | ![Both have new actions](case-both-actions.png)        |
 
 If both the local and remote branches have new commits, then you face the classic conundrum - you've done some work, someone else published a new version, and now you've got to redo your work on the new version.  Git has a smorgasbord of options available to you, which we cover in the [move your work through time](../move/) section.
 
