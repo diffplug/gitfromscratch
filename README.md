@@ -20,4 +20,4 @@ So, once you have [downloaded DiffPlug](http://www.diffplug.com/versions/latest)
 
 TODO:
 
-- [ ] `branches/save-work-for-later/`
+- [ ] `branches/stash/`
