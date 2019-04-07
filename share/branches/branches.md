@@ -26,7 +26,7 @@ Here are the possible cases:
 | ![Remote has new](case-remote-new.png) | The server has some new commits which you haven't accepted yet. | ![Remote has new actions](case-remote-new-actions.png) |
 | ![Both have new](case-both.png)        | Both you and the server have some new commits.  Congratulations!  You're going to have to redo your work on top of the new latest version from the team.  Git has a smorgasbord of options available to you, which we cover in the [time travel](../time-travel/) section. | ![Both have new actions](case-both-actions.png)        |
 
-# Warning!  Do not back up!  Severe tire damage!
+## Warning!  Do not back up!  Severe tire damage!
 
 **A published branch should only move forward.**  Once a branch has been published, anyone might base their work on the contents of that branch.  If you move a branch backwards, then other people who have based their work on the commits in that branch have lost their foundation.
 
