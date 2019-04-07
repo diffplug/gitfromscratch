@@ -19,16 +19,14 @@ Here are the possible cases:
 
 | Situation                              | Description                                         | Available actions                                      |
 |--                                      |--                                                   | --                                                     |
-| ![Local only](case-local-only.png)     | The local branch doesn't have a remote counterpart. | ![Local only actions](case-local-only-actions.png)     |
-| ![Remote only](case-remote-only.png)   | The remote branch doesn't have a local counterpart. | ![Remote only actions](case-remote-only-actions.png)   |
 | ![Synced](case-synced.png)             | The local and remote branches are synchronized.     | ![Synced actions](case-synced-actions.png)             |
-| ![Local has new](case-local-new.png)   | The local branch has new commits.                   | ![Local has new actions](case-local-new-actions.png)   |
-| ![Remote has new](case-remote-new.png) | The remote branch has new commits.                  | ![Remote has new actions](case-remote-new-actions.png) |
-| ![Both have new](case-both.png)        | Local and remote branches both have new commits.    | ![Both have new actions](case-both-actions.png)        |
+| ![Local only](case-local-only.png)     | You have a branch that the server doesn't have.     | ![Local only actions](case-local-only-actions.png)     |
+| ![Remote only](case-remote-only.png)   | The server has a branch that you don't have.        | ![Remote only actions](case-remote-only-actions.png)   |
+| ![Local has new](case-local-new.png)   | You made some commits and haven't uploaded them yet. | ![Local has new actions](case-local-new-actions.png)   |
+| ![Remote has new](case-remote-new.png) | The server has some new commits which you haven't accepted yet. | ![Remote has new actions](case-remote-new-actions.png) |
+| ![Both have new](case-both.png)        | Both you and the server have some new commits.  Congratulations!  You're going to have to redo your work on top of the new latest version from the team.  Git has a smorgasbord of options available to you, which we cover in the [time travel](../move/) section. | ![Both have new actions](case-both-actions.png)        |
 
-If both the local and remote branches have new commits, then you face the classic conundrum - you've done some work, someone else published a new version, and now you've got to redo your work on the new version.  Git has a smorgasbord of options available to you, which we cover in the [move your work through time](../move/) section.
-
-## Onwards, ever onwards
+# Warning!  Do not back up!  Severe tire damage!
 
 **A published branch should only move forward.**  Once a branch has been published, anyone might base their work on the contents of that branch.  If you move a branch backwards, then other people who have based their work on the commits in that branch have lost their foundation.
 

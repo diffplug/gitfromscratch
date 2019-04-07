@@ -15,7 +15,7 @@ Collaborating on a fixed target is a little easier than collaborating on a movin
 
 Whenever you upload a tag or branch, git will ensure that every single ancestor commit of the tag or branch also gets uploaded.  This will usually happen very quickly, because git will only have to upload new commits which the server doesn't have yet.
 
-Now, the next time one of your colleagues clicks "Download all" on their repository, they will download this new tag.
+Now, the next time one of your colleagues clicks `Download all` on their repository, they will download this new tag.
 
 ## Moving a tag
 

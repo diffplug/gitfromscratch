@@ -4,7 +4,7 @@ It is common for a team to have a central repository - a single "source of truth
 
 In DiffPlug, you can see which servers you can communicate with by clicking the `Sync` tab and then looking at the `Remotes` section.  Each server has its own button.  If you click the button, you can see the details for that server.
 
-![Browse remotes](TODO.png)
+![Browse remotes](remotes-browse.mp4)
 
 If you just started a new project, then this section will be empty.  If you cloned the project from a central server, then there's probably one remote named `origin`.  **A remote is just a URL with a nickname.**  There are three kinds of address:
 
@@ -24,6 +24,8 @@ You can have as many remotes as you'd like, but usually there will be just one c
 
 In the following sections, we're going to show how you can synchronize your commits with a remote.  While you're learning, it can be helpful to make a "dummy" remote that you can tinker with.  To make a dummy remote, just copy-paste your whole git repository to a new folder.  This will behave just like any other remote, but you can manipulate it directly to test various situations.
 
-To add a new remote (dummy or otherwise), click the `+` button in the `Remotes` section.  Type in a name and the URL, and the remote will be added.  If you click `Download all`, it will download all the information in the given remote repository.
+![Add a local remote](remotes-local.mp4)
 
-![Add a new remote](TODO.png)
+To add a normal `HTTPS` or `SSH/GIT`, remote, just click the plus.
+
+![Add a remote](remotes-add.png)
