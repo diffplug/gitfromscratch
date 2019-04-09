@@ -1,26 +1,28 @@
 # Merge your work
 
-To merge two lines of commits back into a single line, you must create a merge commit.  **A merge commit is a commit which has more than one parent**.  When you click a commit with one parent, you see a comparison between the snapshot of that commit and its parent.  But what about when you click a commit with multiple parents?  At first, you're looking at the difference between the commit and its first parent, but you can compare against other commits by clicking the `+` to view the other parents.
+To merge two lines of commits back into a single line, you must create a merge commit.  **A merge commit is a commit which has more than one parent**.  Usually, merging is easy.  Let's take the [example where we created a branch `123` and `ABC`](../branches/sticky-notes-and-paintbrushes).
 
-![Picking the parent to view](TODO.png)
+To perform a merge, first we checkout the branch that we would consider to be "our" side of the merge.  Then we right-click the branch that we would like to merge into that branch (which we will call "their" side), and select `Merge`.
+
+![Create a merge.png](merge-create.mp4)
+
+Remember that the branch that we have checked out, "our" branch, is the paintbrush that we use to make new commits.  That is why it moves to the newly created merge commit, while the other branch is unchanged.  We can always undo a merge by just dragging our branch back to where it was.
+
+![Create a merge.png](merge-undo.mp4)
+
+## How do I look at a merge?
+
+When you click a commit with one parent, you see a comparison between the snapshot of that commit and its parent.  But what about when you click a commit with multiple parents?  At first, you're looking at the difference between the commit and its first parent, but you can compare against other commits by clicking the `+` to view the other parents.
+
+![Picking the parent to view](merge-pick-parent.mp4)
 
 Answering the question "What changed in this commit?" is tricky for a merge commit - which is why you don't want to use them to make changes!  **A merge commit should not introduce new changes; it should only combine the work of existing commits.**  A merge commit which violates this rule is known as an "evil merge".
 
-## How do I merge?
-
-Usually, merging is easy.  Let's take the [example where we created a branch `123` and `ABC`](../Branches/Overview.html#using-a-branch-as-a-paintbrush).
-
-![123ABC.png](TODO.png)
-
-To perform a merge, we checkout the branch that we would consider to be "our" side of the merge (more on that later).  Then we right-click the branch that we would like to merge into that branch (which we will call "their" side), and select `Merge`.
-
-![123ABC.png](TODO.png)
-
-Note that after the merge is complete, "our" branch (123) includes the merge, while "their" branch (ABC) hasn't changed.  If we look at the change relative to its first parent ("our" side, 123), we can see the combined changes in the ABC branch.  If we look at the change relative to its second parent ("their" side, ABC), we can see the combined changes in the 123 branch.
-
 ## How does it work?
 
-The previous example hinted a little at what's going on under the hood.  When we asked git to merge ABC into 123, git searched through history to find the first commit which was shared by both branches (in this case, the `branchexample` commit).  Then it asked "what did we (ABC) change relative to this common parent?", and "what did they (123) change relative to this common parent?".  The final commit will contain:
+In the example above, we can see that depending on whether we're comparing to side `ABC` or side `123`, there is a completely different set of changes, with no overlap at all.  Also, we can seee that the merge doesn't include only the changes from commit `C` or commit `3`, it includes every change all the way back to where the two branches diverged.
+
+This is a good hint as to how git makes a merge work.  The first thing git does is search through history to find the first commit which was shared by both branches.  Then it asked "what did we (ABC) change relative to this common parent?", and "what did they (123) change relative to this common parent?".  The final commit will contain:
 
 - the files from the common parent
 - plus the changes made in 123
@@ -30,11 +32,11 @@ Unfortunately, there's a missing bullet point above - what if 123 and ABC change
 
 ## Summarizing changes, with or without history
 
-As we learned back when we [made our first commit](../../intro/make-a-commit/), **a commit is a snapshot of every single file in your project folder**.  This is true whether a commit has one parent like a normal commit, or multiple parents like a merge commit.  And as we learned at the beginning of this page, when you click a merge commit you're looking at the difference between the snapshot in that commit compared to its first parent - but you can also compare to its other parents if you want.
+As we learned back when we [made our first commit](../../intro/commit/), **a commit is a snapshot of every single file in your project folder**.  This is true whether a commit has one parent like a normal commit, or multiple parents like a merge commit.  And as we learned at the beginning of this page, when you click a merge commit you're looking at the difference between the snapshot in that commit compared to its first parent - but you can also compare to its other parents if you want.
 
 Let's say we have only one branch, and we're doing some quick brainstorming.  Each time we do something vaguely interesting, we make a commit.  After a few such commits, we finally get to something useful.  Because we made a commit each time we did something interesting, whether it was good or bad, we've recorded our entire thought process, but it's a little messy...
 
-![brainstorming](TODO.png)
+![Brainstorming](merge-brainstorm.mp4)
 
 <!---
 - The whale is way better than the squirrel, delete all the squirrel stuff.
@@ -65,14 +67,14 @@ There's a lot about these which are *exactly* the same.
 2. They each end up with the *exact* same first parent.
 3. As a direct consequence of **1** and **2**, when we click the final commit and therefor compare the commit against its first parent, we see the *exact* same change.
 
-The only difference between the two approaches is that in one case, our miscellaneous history is there for us to look at in the future.  Whether that is good or bad is entirely up to you, and you can decide to keep your brainstorming sometimes and discard it other times.
+The only difference between the two approaches is that in one case, our miscellaneous history is there for us to look at in the future.  Whether that is good or bad is entirely up to you - you can decide to keep your brainstorming in some situations and discard it others.
 
 So why are we talking about it now?  Let's go back to our earlier description of what was contained in the file snapshot of a merge commit:
 
 - the files from the common parent
 - plus the changes made in 123
 - plus the changes made in ABC
-- (formerly missing bullet point) incompatible changes to the same files made in both 123 and ABC
+- plus (formerly missing bullet point) incompatible changes to the same files made in both 123 and ABC
 
 In the case of a summary commit, only one side of the merge has any changes at all.  This makes it impossible that 123 and ABC could ever have incompatible changes, because ABC doesn't *have* any changes.
 
