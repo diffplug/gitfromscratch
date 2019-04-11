@@ -1,12 +1,12 @@
 # Merge your work
 
-To merge two lines of commits back into a single line, you must create a merge commit.  **A merge commit is a commit which has more than one parent**.  Usually, merging is easy.  Let's take the [example where we created a branch `123` and `ABC`](../branches/sticky-notes-and-paintbrushes).
+To merge two lines of commits back into a single line, you must create a merge commit.  **A merge commit is a commit which has more than one parent**.  Usually, merging is easy.  Let's take the [example where we created branches `123` and `ABC`](../../branches/sticky-notes-and-paintbrushes).
 
-To perform a merge, first we checkout the branch that we would consider to be "our" side of the merge.  Then we right-click the branch that we would like to merge into that branch (which we will call "their" side), and select `Merge`.
+To perform a merge, first we checkout the branch that we would consider to be "our" side of the merge.  Then we right-click the branch that we would like to merge into that branch (which git calls "their" side), and select `Merge`.
 
 ![Create a merge.png](merge-create.mp4)
 
-Remember that the branch that we have checked out, "our" branch, is the paintbrush that we use to make new commits.  That is why it moves to the newly created merge commit, while the other branch is unchanged.  We can always undo a merge by just dragging our branch back to where it was.
+Remember that the branch that we have checked out, `ABC`, is the paintbrush that we use to make new commits.  That is why it moves to the newly created merge commit, while the other branch is unchanged.  We can always undo a merge by just dragging our branch back to where it was.
 
 ![Create a merge.png](merge-undo.mp4)
 
@@ -20,9 +20,9 @@ Answering the question "What changed in this commit?" is tricky for a merge comm
 
 ## How does it work?
 
-In the example above, we can see that depending on whether we're comparing to side `ABC` or side `123`, there is a completely different set of changes, with no overlap at all.  Also, we can seee that the merge doesn't include only the changes from commit `C` or commit `3`, it includes every change all the way back to where the two branches diverged.
+In the example above, we can see that depending on whether we're comparing to side `ABC` or side `123`, there is a completely different set of changes, with no overlap at all.  Also, we can see that the merge doesn't include only the changes from commit `C` or commit `3`, it includes every change all the way back to where the two branches diverged.
 
-This is a good hint as to how git makes a merge work.  The first thing git does is search through history to find the first commit which was shared by both branches.  Then it asked "what did we (ABC) change relative to this common parent?", and "what did they (123) change relative to this common parent?".  The final commit will contain:
+This is a good hint as to how git makes a merge work.  The first thing git does is search through history to find the first commit which was shared by both branches.  Then it asked "what did we (`ABC`) change relative to this common parent?", and "what did they (`123`) change relative to this common parent?".  The final commit will contain:
 
 - the files from the common parent
 - plus the changes made in `123`
@@ -61,11 +61,11 @@ Let's compare the final result of the "squash" with the final result of the "sum
 
 ![squash vs summary merge](merge-squash-vs-summary.mp4)
 
-There's a lot about these which are *exactly* the same.
+There's a lot about these commits which are *exactly* the same.
 
 1. They end up with the *exact* same snapshot of files.
 2. They each end up with the *exact* same first parent.
-3. As a direct consequence of **1** and **2**, when we click the final commit and therefor compare the commit against its first parent, we see the *exact* same change.
+3. As a direct consequence of **1** and **2**, when we click the final commit and therefore compare the commit against its first parent, we see the *exact* same change.
 
 The only difference between the two approaches is that in one case, our miscellaneous history is there for us to look at in the future.  Whether that is good or bad is entirely up to you - you can decide to keep your brainstorming in some situations and discard it others.
 
@@ -82,7 +82,7 @@ But what if `ABC` *did* have changes, and they happened to be in the exact same 
 
 ## Merge conflicts
 
-If boths sides changed the same file, this is called a merge conflict.  Depending on what kind of changes were made, your tools might be able to fix it automatically without ever showing you a problem.  We'll get into the details of that in the [next section](TODO).
+If boths sides changed the same file, this is called a merge conflict.  Depending on what kind of changes were made, your tools might be able to fix it automatically without ever showing you a problem.  We'll get into the details of that in the [next section](../patch).
 
 Luckily for us, the very worst-case scenario is not that bad.  And you'll have to understand this worst-case scenario first before you can understand how your tools can sometimes fix this for you.
 
@@ -99,11 +99,11 @@ The full commit history producing this situation might be complex, but at the le
 
 At this point, the tools have done everything they can to give you the context for the conflict, and it's your job to figure out what the working copy ought to be.  Once you have made the working copy the way that you want it to be, you declare to git "I have resolved this conflict, accept my gospel" and you can go on with your work.
 
-As of DiffPlug 2.0.2, you will need to use the git command line to fix this, but this will be supported soon!
+As of DiffPlug 2.0.2, you will need to use the [git command line](https://help.github.com/en/articles/resolving-a-merge-conflict-using-the-command-line) to fix this, but this will be supported soon!
 
 ## Merge conflicts create evil merges
 
-But the less evil they are, the better.  Remember our summary commit?  Because it only has changes on one side, it has the magical property that it can say: "See all the commits towards my 2nd (right) parent?  They're sorta interesting, you can browse through them if you want.  But the sum total of all that effort?  You can see it all at once, right here, just by clicking me.  There's no change in those intermediate commits that you can't see summarized in this merge, and there's no changes in this merge except for the final result of the incremental changes of those intermediate commits."
+But the less evil they are, the better.  Remember our summary merge?  Because it only has changes on one side, it has the magical property that it can say: "See all the commits towards my 2nd (right) parent?  They're sorta interesting, and you can browse through them if you want.  But the sum total of all that effort?  You can see it all at once, right here, just by clicking me.  There's no change in those intermediate commits that you can't see summarized in this merge, and there's no changes in this merge except for the final result of the incremental changes of those intermediate commits."
 
 And a non-evil merge (aka a merge which had no conflicts), can say the same thing - symmetrically - about each of its parents: "See all those commits in my 1st and 2nd (left and right) parents?  They're sorta interesting, but their changes are completely independent.  You can see the sum total of all the changes in either branch, just by clicking me and picking which parent you care about.  There's no change in those intermediate commits that you can't see summarized in this merge."
 
@@ -113,7 +113,7 @@ But with an evil merge, it's difficult to tell who is responsible for which chan
 
 When you have multiple people working on one project, merge conflicts are inevitable, and they're not a big deal.  However, it's important to be methodical about whether those evil merges end up in "team" branches (`master`) or in "personal" (`my-feature`) branches.
 
-Because you understand your changes better than anyone else, it's best if you take on the full burden of evil merges.  This way, when you click through the history of a team branch like `master` and only look at the first parents, you'll always see a clean, non-evil merge.  The feature branches (which end up as the second parent in merges to the team branch) will have all the evil branches.
+Because you understand your changes better than anyone else, it's best if you take on the full burden of evil merges.  This way, when you click through the history of a team branch like `master` and only look at the first parents, you'll always see a clean, non-evil merge.  The feature branches (which end up as the second parent in merges to the team branch) will have all the evil merges.
 
 Here's how to do this:
 
@@ -124,3 +124,5 @@ Here's how to do this:
 - Now you can merge `personal` into `team`.
 	+ There won't be any conflicts!
 	+ Therefore `team` doesn't have an evil merge.
+
+If you use a "pull request" or "merge request" workflow, where the final merge happens on your git server itself rather than on your computer, then the server will automatically enforce the workflow described above.  But it's good to understand *why* these servers have been built this way.

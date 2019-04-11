@@ -6,7 +6,7 @@ In DiffPlug, you can see which servers you can communicate with by clicking the 
 
 ![Browse remotes](remotes-browse.mp4)
 
-If you just started a new project, then this section will be empty.  If you cloned the project from a central server, then there's probably one remote named `origin`.  **A remote is just a URL with a nickname.**  There are three kinds of address:
+If you just started a new project, then this section will be empty.  If you cloned the project from a central server, then there's probably one remote named "origin".  **A remote is just a URL with a nickname.**  There are three kinds of URL:
 
 1. **File**  is for a repository on your local hard drive or a shared drive.  You probably won't use this much, but it's great for learning about synchronizing because you can manipulate both sides of the connection.
 	+ `file:///C:/Users/<username>/Documents/gitfromscratch` (windows)
