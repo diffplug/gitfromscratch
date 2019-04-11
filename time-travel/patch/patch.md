@@ -47,11 +47,11 @@ It's pretty easy to see how we can apply this recipe to various projects.  It's 
 
 Applying the recipe is pretty easy, but where does it come from?  Well, let's take a look at each of the before and afters above, and use that to create a diff.
 
-| Before                                      | After                                     | Diff   |
-|--                                           | --                                        | --     |
-| ![Docs before](patch-docs-before.png)       | ![Docs after](patch-docs-after.png)       | ![Docs diff](patch-docs-diff.png)         |
-| ![C before](patch-c-before.png)             | ![C after](patch-c-after.png)             | ![C diff](patch-c-diff.png)               |
-| ![Missing before](patch-missing-before.png) | ![Missing after](patch-missing-after.png) | ![Missing diff](patch-missing-diff.png)   |
+| Before                                        | After                                       | Diff                                       |
+|--                                             | --                                          | --                                         |
+| ![Docs before](patch-docs-before.png)         | ![Docs after](patch-docs-after.png)         | ![Docs diff](patch-docs-diff.png)          |
+| ![C before](patch-c-before.png)               | ![C after](patch-c-after.png)               | ![C diff](patch-c-diff.png)                |
+| ![Conflict before](patch-conflict-before.png) | ![Conflict after](patch-conflict-after.png) | ![Missing diff](patch-conflict-diff.png)   |
 
 Just by looking at the diff, it's pretty easy to write down the recipe, right?
 
