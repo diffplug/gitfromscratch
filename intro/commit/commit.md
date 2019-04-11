@@ -28,7 +28,7 @@ Once you're at the working copy, the `Changed files` section will show you which
 
 ## Edit your commit
 
-Pedants will tell you that it's impossible to edit a commit.  Pedantically speaking that is true - however, you *can* make a brand new commit with the same snapshot of files but a different commit message, which sure feels a lot like an edit.  Right-click a commit and select **edit** to do this.
+Pedants will tell you that it's impossible to edit a commit.  Pedantically speaking that is true - however, you *can* make a brand new commit with the same snapshot of files but a different commit message, which sure feels a lot like an edit.  Right-click a commit and select `Edit metadata` to do this.
 
 ![Edit a commit](commit-edit.mp4)
 
@@ -38,6 +38,6 @@ There are some rules about when you should and shouldn't change commits in this 
 
 Every time you make a commit, it will be tagged with your name and email.  That way when you share your commits, your colleagues will be able to know who to contact if they'd like to discuss a particular change.  You only have to set your username once, and it will be set for all the commits you make to every repository.
 
-From the top menu bar, go to *Help -> Preferences*, then *DiffPlug -> Filesystems -> Git*. Hit the *Edit* button to the right of committer and type in your name and email.  Now it will be attached to all the commits you make from now on.
+Click the command console ![command console icon](command-console.png), then select `Config library`.  Once that is open, select `Git` from the tree at left and type in your name and email in the **Committer** box.
 
 ![Set username](commit-set-username.mp4)
