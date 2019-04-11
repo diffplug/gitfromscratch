@@ -15,6 +15,7 @@
 * [My work can time-travel?](time-travel/_.md)
 	* [The merge](time-travel/merge/_.md)
 	* [Patches are the "flux capacitor" of work](time-travel/patch/_.md)
-	* [Turning commits and branches into patches](time-travel/cherry-pick-and-rebase/_.md)
+	* [Moving commits and strings of commits](time-travel/cherry-pick-and-rebase/_.md)
+	* [Rewrite history](time-travel/rewrite-history/_.md)
 * [Epilogue](epilogue/_.md)
 	* [Departures from the command line](epilogue/departures/_.md)
