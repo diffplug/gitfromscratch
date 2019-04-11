@@ -12,7 +12,7 @@ In vanilla git, the working copy consists of **three** trees of files:
 * The working folder
 * The "index" or "staging area"
 
-When you do `git commit`, the index gets turned into a new commit.  In order to make a commit, you need to move files from the working directory into the index.  You can continue to make edits after putting a file in the index, so you end up with three different versions - one in your history, one in your working folder, and one in the index.
+When you do `git commit`, the index gets turned into a new commit.  In order to make a commit, you need to move files from the working directory into the index.  You can continue to make edits after putting a file in the index, so you end up with three different versions - one in your parent commit, one in your working folder, and one in the index.
 
 Here are just a few of the commands needed to manage this "index" mechanism:
 * `git add <filename>` adds a file to the working index
@@ -23,7 +23,7 @@ Here are just a few of the commands needed to manage this "index" mechanism:
 
 In DiffPlug, we ignore the index entirely.  If a file is checked in the commit window, then it will be put into the commit.  Simple as that.
 
-![DiffPlug's staging area alternative](TODO.png)
+![DiffPlug's staging area alternative](no-index.png)
 
 ## No stash
 
@@ -37,7 +37,7 @@ It stores these as "refs/stash".  If you call `git stash` a second time, it uses
 
 Because it doesn't make a regular branch with regular commits, you can't use regular commands to get the changes back.  Instead, you have to learn the various flags and subcommands of [`git stash`](http://git-scm.com/docs/git-stash).
 
-Rather than introducing an entirely new mechanism for users to learn, DiffPlug handles this use case with the [save for later](../branches/stash/) functionality.
+Rather than introducing an entirely new mechanism for users to learn, DiffPlug handles this use case with the [save for later](../../branches/stash/) functionality.
 
 ## No detached head
 
