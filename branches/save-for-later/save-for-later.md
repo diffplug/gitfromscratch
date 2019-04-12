@@ -14,6 +14,8 @@ This gives you a fresh start, but you still have easy access to your work-in-pro
 
 There *is* a chance that `Apply delta` will fail. That's okay, you'll still have the both versions available, and you can manually copy-paste the work back over. We'll go into the details of when and how this fails in the [time-travel section](../../time-travel/). But first, let's talk about [sharing your work with others](../../share).
 
-*NOTE: To quickly save all files in the working copy, you can use the dropdown next to Commit.*
+*Hint 1: To quickly save all files in the working copy, you can use the dropdown next to Commit.*
 
-![Stash](stash-all.png)
+![Stash](save-all-for-later.png)
+
+*Hint 2: If you're an experienced git user who already uses the "git stash" command, see the [departures from vanilla git](../../epilogue/departures) section for more info.*

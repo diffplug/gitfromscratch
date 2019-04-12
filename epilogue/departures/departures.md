@@ -1,6 +1,6 @@
-# Departures from the command line
+# Departures from vanilla git
 
-Most of the silent movies that will ever be made have already been made.  Most of the people who have something to gain from using git aren't using it yet.  So rather than focusing on the people who already use git, we have made some departures from standard git usage in order to make adoption easier for people who haven't used git or version control before.
+Most of the silent movies that will ever be made have already been made.  But most of the people who will use git aren't using it yet.  So rather than focus on the people who already use git, we have made some departures from "vanilla" git usage in order to make adoption easier for people who haven't used git or version control before.
 
 Here are some of the ways we've departed:
 
@@ -37,7 +37,7 @@ It stores these as "refs/stash".  If you call `git stash` a second time, it uses
 
 Because it doesn't make a regular branch with regular commits, you can't use regular commands to get the changes back.  Instead, you have to learn the various flags and subcommands of [`git stash`](http://git-scm.com/docs/git-stash).
 
-Rather than introducing an entirely new mechanism for users to learn, DiffPlug handles this use case with the [save for later](../../branches/stash/) functionality.
+Rather than introducing an entirely new mechanism for users to learn, DiffPlug handles this use case with the [save for later](../../branches/save-for-later/) functionality.
 
 ## No detached head
 
