@@ -72,7 +72,7 @@ class CompileGitBook extends DefaultTask {
 // cd build/web
 // python -m RangeHTTPServer
 task compileWeb(type: CompileGitBook) {
-	input file('.')
+	input file('manuscript')
 	output file('build/web')
 	template file('_template')
 	prefix = "/"
