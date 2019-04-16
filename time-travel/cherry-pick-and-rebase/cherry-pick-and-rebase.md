@@ -1,6 +1,6 @@
 # Move a single commit
 
-A commit is a snapshot of all the files in a project.  If you compare a commit against its parent, then it becomes a list of files which were created, deleted, and changed.  Wouldn't it be nice if we could take those changes, and apply them somewhere else?  You can do this easily by right-clicking and selecting 
+A commit is a snapshot of all the files in a project.  If you compare a commit against its parent, then it becomes a list of files which were created, deleted, and changed.  Wouldn't it be nice if we could take those changes, and apply them somewhere else?  You can do this easily by right-clicking and selecting
 
 <>
 
