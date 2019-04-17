@@ -16,7 +16,7 @@ Technically, the correct term here is a git "ref", of which there are three type
 | ![Remote branch](remote-branch.png) Remote branch | Keeps track of where a friend's branch is. You can't move it directly - it gets moved automatically when you download or upload from your friend's repository. |
 | ![Tags](tag.png) Tag                               | Marks a permanent spot in history.  Really just a "permanent branch". |
 
-Remote branches and tags are both primarily about team communication, so we'll wait until we talk about [sharing](../../share/) before we delve into their details.  For now we'll stick to just regular local branches, which is what people usually mean when they say "branch".
+Remote branches and tags are both primarily about team communication, so we'll wait until we talk about [sharing](../../share/share.md) before we delve into their details.  For now we'll stick to just regular local branches, which is what people usually mean when they say "branch".
 
 Branches are easy to manipulate.  Right-click a commit to create a new branch.  You can drag-and-drop to move it around.  Right-click the branch again to delete it.
 

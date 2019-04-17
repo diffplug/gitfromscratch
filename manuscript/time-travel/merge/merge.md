@@ -32,7 +32,7 @@ Unfortunately, there's a missing bullet point above - what if `123` and `ABC` ch
 
 ## Summarizing changes, with or without history
 
-As we learned back when we [made our first commit](../../intro/commit/), **a commit is a snapshot of every single file in your project folder**.  This is true whether a commit has one parent like a normal commit, or multiple parents like a merge commit.  And as we learned at the beginning of this page, when you click a merge commit you're looking at the difference between the snapshot in that commit compared to its first parent - but you can also compare to its other parents if you want.
+As we learned back when we [made our first commit](../../intro/commit/commit.md), **a commit is a snapshot of every single file in your project folder**.  This is true whether a commit has one parent like a normal commit, or multiple parents like a merge commit.  And as we learned at the beginning of this page, when you click a merge commit you're looking at the difference between the snapshot in that commit compared to its first parent - but you can also compare to its other parents if you want.
 
 Let's say we have only one branch, and we're doing some quick brainstorming.  Each time we do something vaguely interesting, we make a commit.  After a few such commits, we finally get to something useful.  Because we made a commit each time we did something interesting, whether it was good or bad, we've recorded our entire thought process, but it's a little messy...
 

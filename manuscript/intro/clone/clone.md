@@ -18,4 +18,4 @@ Go to wherever you'd like to put your clone, right-click it and then `Git -> Clo
 
 *Hint 2: Rather than using the text bar at the top of the window, you can use any of the methods described in the [DiffPlug quickstart](https://docs.diffplug.com/2.0.2/getting-started/quickstart/) to get the context-menu for a file.*
 
-Next, [take a look at how DiffPlug handles commits](../commit/).
+Next, [take a look at how DiffPlug handles commits](../commit/commit.md).

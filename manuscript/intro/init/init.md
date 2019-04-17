@@ -8,4 +8,4 @@ To take a folder and start tracking it, just right-click it and then `Git -> Cre
 
 *Hint 2: Rather than using the text bar at the top of the window, you can use any of the methods described in the [DiffPlug quickstart](https://docs.diffplug.com/2.0.2/getting-started/quickstart/) to get the context-menu for a file.*
 
-Now that you've got an empty repository, you can start [making commits](../commit/).
+Now that you've got an empty repository, you can start [making commits](../commit/commit.md).

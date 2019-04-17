@@ -12,7 +12,7 @@ This will create a patch for the changes in this commit, and then apply it as ei
 
 ![Demonstrate apply delta](TODO.png)
 
-*Note: Vanilla git calls this a "cherry-pick".  See [departures from vanilla git](../../epilogue/departures/) for why we use a different name.*
+*Note: Vanilla git calls this a "cherry-pick".  See [departures from vanilla git](../../epilogue/departures/departures.md) for why we use a different name.*
 
 ## Undoing a commit
 
@@ -20,7 +20,7 @@ Given that we can create a patch from a commit to its parent, we can use the exa
 
 ![Demonstrate a revert](TODO.png)
 
-*Note: Vanilla git call this a "revert".  See [departures from vanilla git](../../epilogue/departures/) for why we use a different name.*
+*Note: Vanilla git call this a "revert".  See [departures from vanilla git](../../epilogue/departures/departures.md) for why we use a different name.*
 
 ## Move a string of commits
 
@@ -67,4 +67,4 @@ If you rebase `master`, there will be some duplicated commits!
 
 ![Duplicated commits](TODO.png)
 
-[Merging](../merge/) is never bad, only use rebase when you haven't shared the commits with anyone else.  And be *really* sure you haven't already shared commits when we talk about our next topic: [rewriting history](../rewrite-history/).
+[Merging](../merge/merge.md) is never bad, only use rebase when you haven't shared the commits with anyone else.  And be *really* sure you haven't already shared commits when we talk about our next topic: [rewriting history](../rewrite-history/rewrite-history.md).
