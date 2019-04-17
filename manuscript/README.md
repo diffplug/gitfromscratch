@@ -13,7 +13,7 @@ Git is a tool that does two main things:
 
 There are lots of tutorials on how to get started with git.  There are two things that make this tutorial different:
 
-1. **This tutorial will show you how to use git on text and on Simulink, using DiffPlug.**  It used to be that you could only use git using a text-based interface, but now there's nothing stopping us from using git on anything.
+1. **This tutorial will show you how to use git on text and on Simulink, using DiffPlug.**  It used to be that you could only use git on text files, but now there's nothing stopping us from using git on anything.
 2. **This tutorial will show you how to move your work through time.**  Many introductory tutorials skip powerful features like rebase, cherry-pick, and the reflog because they are "advanced", but using a graphical client makes them easy to use.
 
 So, once you have [downloaded DiffPlug](http://www.diffplug.com/versions/latest), let's begin.  If you get stuck, you can ask for help in our [live chatroom](https://gitter.im/diffplug/gitfromscratch).  The source which generates this book is [available on GitHub](https://github.com/diffplug/gitfromscratch), so you can subcribe to updates or branch and modify it.

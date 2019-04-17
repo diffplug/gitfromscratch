@@ -1,14 +1,14 @@
-# Moving commits and strings of commits
+# Move and undo commits and chains of commits
 
 ## Moving the changes in a commit
 
-When you click a commit, you see the changes that took place between that commit and its parent.  To apply those same changes to your current working-copy, all you have to do is right-click the commit, select ![Apply delta icon](apply_delta.png)`Apply delta`, and then one of its children:
+When you click a commit, you see the changes that took place between that commit and its parent.  To apply those same changes to your working copy, all you have to do is right-click the commit, select ![Apply delta icon](apply_delta.png)`Apply delta`, and then one of its children:
 
 - ![Commit icon](commit.png)`and commit`
 - ![WC icon](blank_folder.png)`all files into WC`
 - ![WC icon](blank_file.png)`some files into WC`
 
-This will create a patch for the changes in this commit, and then apply it as either a new commit (`and commit`), or as an uncommitted change in the working-copy (`all files into WC` and `some files into WC`).  The distinction between `all files` and `some files` is whether you will apply every change, or just some of the changes.
+This will create a patch for the changes in this commit, and then apply it as either a new commit (`and commit`), or as an uncommitted change in the working copy (`all files into WC` and `some files into WC`).  The distinction between `all files` and `some files` is whether you will apply every change, or just some of the changes.
 
 ![Demonstrate apply delta](TODO.png)
 

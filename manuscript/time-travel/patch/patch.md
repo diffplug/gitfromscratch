@@ -3,7 +3,7 @@
 When you try to merge two branches, one of two things will happen:
 
 1. Your tools will magically smush the changes back together.
-2. Your tools will yell out you.
+2. Your tools will yell at you.
 
 The magic that makes this work is a "patch", and now is the time to take away the magic.
 
@@ -18,7 +18,7 @@ The objective of a patch is to **redo your work for you, automatically**.  This 
 
 ## Following a recipe
 
-The second part is easier than the first part, so we'll start there.  Let's say we magically figured out what the recipe was, and it turns out that all of your work simplifies down to `Add 'whale.jpg'`.  Let's apply this patch to some projects.
+The second step is easier than the first step, so we'll start there.  Let's say we magically figured out what the recipe was, and it turns out that all of your work simplifies down to `Add 'whale.jpg'`.  Let's apply this patch to some projects.
 
 | Before                                        | After `Add 'whale.jpg'`                     |
 |--                                             | --                                          |
@@ -45,7 +45,7 @@ It's pretty easy to see how we can apply this recipe to various projects.  It's 
 
 ## Inferring a recipe
 
-Applying the recipe is pretty easy, but where does it come from?  Well, let's take a look at each of the before and afters above, and use that to create a diff.
+Applying the recipe is usually easy, but where does it come from?  Well, let's take a look at each of the before and afters above, and use that to create a diff.
 
 | Before                                        | After                                       | Diff                                       |
 |--                                             | --                                          | --                                         |
@@ -59,19 +59,19 @@ Just by looking at the diff, it's pretty easy to write down the recipe, right?
 
 In the example above, it was easy to apply the recipe so long as there wasn't already a file named `whale.jpg`.  If that file already existed, then it was harder.  Overwriting it automatically is a bad idea - the safest way to do a recipe is to never delete information, only add it.
 
-So now let's look at a sequence:
+:et's look at a new example:
 
 - v1: we add `readme.txt`, whose content is `TODO`.
 - v2: we delete `readme.txt`
 - v3: we add `readme.txt`, whose content is `I hereby bequeath all my worldly posessions to my dog.`
 
-If we create a patch from v1 and v2, we get `Delete 'readme.txt'`.  Then if we apply it to v3, we'll delete a very important document!  Remembering that the safest way to do a recipe is to never delete information, let's make our recipe more specific: `If 'readme.txt' has content 'TODO' then delete it.`.
+If we create a patch from v1 to v2, we get `Delete 'readme.txt'`.  If we then apply this patch to v3, we'll delete a very important document!  Remembering that the safest way to do a recipe is to never delete information, let's make our recipe more specific: `If 'readme.txt' has content 'TODO' then delete it.`.
 
-In order to make sure that a patch never destroys information inadvertently, a patch recipe always asserts what the project needs to be before the recipe can be applied.  Here's how that looks for an addition, removal, or a change:
+In order to make sure that a patch never destroys information inadvertently, a patch recipe always asserts what the project needs to be before the recipe can be applied.  Here's how that looks:
 
-- if `readme.txt` does not exist, create it with content `TODO`
-- if `readme.txt` exists with content `TODO`, delete it
-- if `readme.txt` exists with content `TODO`, repace it with content `I hereby bequeath all my worldly posessions to my dog.`
+- addition: if `readme.txt` does not exist, create it with content `TODO`
+- removal: if `readme.txt` exists with content `TODO`, delete it
+- change: if `readme.txt` exists with content `TODO`, repace it with content `I hereby bequeath all my worldly posessions to my dog.`
 
 ## Recipes that touch the same file
 
@@ -89,7 +89,7 @@ Now, let's say that instead, we have this:
 - animals.zip
 - animals.zip
 
-The merge fails, because both patches require that `animals.zip` needs to be a zip archive with an image of a red squirrel.  If seems pretty clear that we ought to be able to fix this right?  Instead of treating `animals.zip` as an indivisible entity, we ought to be able to refer to its contents just like we refer to the contens of our project, right?
+The merge fails, because both patches require that `animals.zip` needs to be a zip archive with an image of a red squirrel.  If seems pretty clear that we ought to be able to fix this right?  Instead of treating `animals.zip` as an indivisible entity, we ought to be able to refer to its contents just like we refer to the contents of our project, right?
 
 ## Making patches that can share a file
 
@@ -100,7 +100,7 @@ In order for our recipes to be able to share the zip file, we need to:
 - modify that piece to have new content
 - put the zip file back together now that we have changed its content
 
-Regular git treats zip files as indivisible, so it's not able to do this.  But is there something similar we could do for text files?
+Vanilla git treats zip files as indivisible, so it's not able to do this.  But it is able to do this for text files.
 
 ## Text patches
 

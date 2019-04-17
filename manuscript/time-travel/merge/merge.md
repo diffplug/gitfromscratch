@@ -2,17 +2,17 @@
 
 To merge two lines of commits back into a single line, you must create a merge commit.  **A merge commit is a commit which has more than one parent**.  Usually, merging is easy.  Let's take the [example where we created branches `123` and `ABC`](../../branches/sticky-notes-and-paintbrushes).
 
-To perform a merge, first we checkout the branch that we would consider to be "our" side of the merge.  Then we right-click the branch that we would like to merge into that branch (which git calls "their" side), and select `Merge`.
+To perform a merge, first we checkout the branch that we would consider to be "our" side of the merge.  Then we right-click the other branch (which git calls "their" side), and select `Merge`.
 
 ![Create a merge.png](merge-create.mp4)
 
-Remember that the branch that we have checked out, `ABC`, is the paintbrush that we use to make new commits.  That is why it moves to the newly created merge commit, while the other branch is unchanged.  We can always undo a merge by just dragging our branch back to where it was.
+Remember that the branch which we have checked out, `ABC`, is the paintbrush that we use to make new commits.  That is why it moves to the newly created merge commit, while the other branch is unchanged.  We can always undo a merge by just dragging our branch back to where it was.
 
 ![Create a merge.png](merge-undo.mp4)
 
 ## How do I look at a merge?
 
-When you click a commit with one parent, you see a comparison between the snapshot of that commit and its parent.  But what about when you click a commit with multiple parents?  At first, you're looking at the difference between the commit and its first parent, but you can compare against other commits by clicking the `+` to view the other parents.
+When you click a commit with one parent, you see a comparison between the snapshot of that commit and its parent.  But what about when you click a commit with multiple parents?  At first, you're looking at the difference between the commit and its first parent, but you can compare against other commits by clicking the `+`.
 
 ![Picking the parent to view](merge-pick-parent.mp4)
 
@@ -20,15 +20,15 @@ Answering the question "What changed in this commit?" is tricky for a merge comm
 
 ## How does it work?
 
-In the example above, we can see that depending on whether we're comparing to side `ABC` or side `123`, there is a completely different set of changes, with no overlap at all.  Also, we can see that the merge doesn't include only the changes from commit `C` or commit `3`, it includes every change all the way back to where the two branches diverged.
+In the example above, we can see that depending on whether we're comparing to side `ABC` or side `123`, there is a completely different set of changes, with no overlap at all.  Also, we can see that the changes are not limited to only those from commit `C` or commit `3`, it includes every change all the way back to where the two branches diverged.
 
-This is a good hint as to how git makes a merge work.  The first thing git does is search through history to find the first commit which was shared by both branches.  Then it asked "what did we (`ABC`) change relative to this common parent?", and "what did they (`123`) change relative to this common parent?".  The final commit will contain:
+This is a good hint as to how git makes a merge work.  The first thing git does is search through history to find the first commit which was shared by both branches.  Then it asks "what did we (`ABC`) change relative to this common parent?", and "what did they (`123`) change relative to this common parent?".  The final commit will contain:
 
 - the files from the common parent
 - plus the changes made in `123`
 - plus the changes made in `ABC`
 
-Unfortunately, there's a missing bullet point above - what if `123` and `ABC` change the same thing in different and incompatible ways?  These are called **merge conflicts**, and we'll get to them, but first let's think about a special kind of merge which is guaranteed to never have a conflict - the summary merge.
+Unfortunately, we're actually missing a bullet point - what if `123` and `ABC` change the same thing in different and incompatible ways?  These are called **merge conflicts**, and we'll get to them, but first let's think about a special kind of merge which is guaranteed to never have a conflict - the summary merge.
 
 ## Summarizing changes, with or without history
 
@@ -51,9 +51,9 @@ We spent a lot of time making and coloring a squirrel, but in the end we removed
 
 ![Video of squash](merge-squash.mp4)
 
-Our new squashed commit has the exact same snapshot that the `Whale >> squirrel, delete squirrel` commit had.  We just changed the commit message and the commit's parents so that the history tells a more concise summary of our thought process.
+Our new squashed commit has the exact same snapshot that the `Whale >> squirrel, delete squirrel` commit had.  We just changed the commit's message and parents so that the history tells a more concise summary of our thought process.
 
-The only potential problem with this approach is that we've lost the history of our brainstorming.  If we wanted to keep this history, while also summarizing our final result concisely, we can use a **summary merge**.
+The potential problem with this approach is that we've lost the history of our brainstorming.  If we wanted to keep this history, while also summarizing our final result concisely, we can use a **summary merge**.
 
 ![Video of summary merge](merge-summary.mp4)
 
@@ -82,9 +82,9 @@ But what if `ABC` *did* have changes, and they happened to be in the exact same 
 
 ## Merge conflicts
 
-If boths sides changed the same file, this is called a merge conflict.  Depending on what kind of changes were made, your tools might be able to fix it automatically without ever showing you a problem.  We'll get into the details of that in the [next section](../patch).
+When both sides change the same file, the result is a merge conflict.  Depending on the relative location of those changes, your tools might be able to fix it automatically without ever showing you a problem.  We'll get into the details of that later in the [section on patches](../patch).
 
-Luckily for us, the very worst-case scenario is not that bad.  And you'll have to understand this worst-case scenario first before you can understand how your tools can sometimes fix this for you.
+Luckily for us, even the very worst-case scenario is not that bad.  And you'll have to understand this worst-case scenario first before you can understand how your tools can sometimes fix this for you.
 
 In the worst-case, a merge conflict will end up producing *four* versions of the file.  You'll end up with:
 
@@ -93,11 +93,11 @@ In the worst-case, a merge conflict will end up producing *four* versions of the
 3. the version that the other branch had
 4. the working copy version, which is a broken mess of the previous three versions
 
-The full commit history producing this situation might be complex, but at the level of a single conflicted file, we can ignore all the intermediate changes reduce this down to a simple diamond.
+The full commit history producing this situation might be complex, but if we focus on a single conflicted file, we can ignore all the intermediate changes and describe the relationships between the relevant versions in a simple diamond.
 
 ![Merge conflict](merge-conflict.png)
 
-At this point, the tools have done everything they can to give you the context for the conflict, and it's your job to figure out what the working copy ought to be.  Once you have made the working copy the way that you want it to be, you declare to git "I have resolved this conflict, accept my gospel" and you can go on with your work.
+At this point, the tools have done everything they can to give you the context for the conflict, and it's your job to figure out what the working copy ought to be.  Once you have made the working copy the way that you want, you declare to git "I have resolved this conflict, accept my gospel" and you can go on with your work.
 
 As of DiffPlug 2.0.2, you will need to use the [git command line](https://help.github.com/en/articles/resolving-a-merge-conflict-using-the-command-line) to fix this, but this will be supported soon!
 

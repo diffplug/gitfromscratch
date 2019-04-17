@@ -10,7 +10,7 @@ Copying a repository from someone else's computer onto yours is called "cloning"
 		+ [`https://github.com/diffplug/gitfromscratch`](https://github.com/diffplug/gitfromscratch) is the source to this guide
 2. The folder on your computer where you're going to put the clone
 
-Go to wherever you'd like to put your clone, right-click it and then `Git -> Clone`.  This will open a dialog where you can put the URL, and DiffPlug is happy to make a new destination folder for you if you want.  Once the download completes, you'll have your shiny new clone.
+Go to wherever you'd like to put your clone, right-click it and then `Git -> Clone`.  This will open a dialog where you can put the URL, and pick a destination folder on your computer.  Once the download completes, you'll have your shiny new clone.
 
 ![git clone video](clone.mp4)
 

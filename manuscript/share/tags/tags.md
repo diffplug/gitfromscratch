@@ -11,11 +11,9 @@ There are two kinds of tag, and you can make either one by right-clicking the co
 
 ## Sharing tags
 
-Collaborating on a fixed target is a little easier than collaborating on a moving target, so tags are a great place to learn about sharing.  To upload a tag, right-click it then `Sync -> Upload to origin`.  This will upload the tag and all of its parent commits to the remote named "origin".
+Collaborating on a fixed target is a little easier than collaborating on a moving target, so tags are a great place to learn about sharing.  To upload a tag, right-click it then `Sync -> Upload to origin`.  This will upload the tag and all of its parent commits to the remote named "origin".  The next time one of your colleagues clicks `Download all` on their repository, they will download this new tag.
 
-Whenever you upload a tag or branch, git will ensure that every single ancestor commit of the tag or branch also gets uploaded.  This will usually happen very quickly, because git will only have to upload new commits which the server doesn't have yet.
-
-Now, the next time one of your colleagues clicks `Download all` on their repository, they will download this new tag.
+Whenever you upload a tag or branch, git will ensure that every single ancestor commit of the tag or branch also gets uploaded.  This will usually happen very quickly, because git will only need to upload new commits which the server doesn't have yet.
 
 ## Moving a tag
 

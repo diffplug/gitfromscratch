@@ -1,6 +1,6 @@
 ## Init a new repository
 
-To take a folder and start tracking it, just right-click it and then `Git -> Create new`.
+To take a folder and start tracking its changes, just right-click it and then `Git -> Create new`.
 
 ![git init video](init.mp4)
 

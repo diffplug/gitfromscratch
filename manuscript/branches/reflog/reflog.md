@@ -2,7 +2,7 @@
 
 Have you ever slid your finger around a roll of tape, feeling for the little edge you can pry up?  If you wanna be sure to find it, you can put a sticky note on the tip.  Branches serve exactly that function in git.
 
-If you lose the tip of a string of commits in git, they are effectively "deleted".  As an example, let's delete our life's work.
+If you lose the tip of a chain of commits in git, they are effectively "deleted".  As an example, let's delete our life's work.
 
 1. Do your life's work.
 2. Commit it into git for safe keeping.
@@ -27,7 +27,7 @@ Not for long!  Git has a mechanism called the reflog.  **Every change to a branc
 
 ![How to restore your life's work](reflog-branch.mp4)
 
-This demonstrates that **if you committed it, you can get it back**.  So commit often!  Don't be embarrassed by unfinished or broken work - you can always make new, cleaner commits later, which we'll get to later in the [time-travel section](../../time-travel/time-travel.md).
+This demonstrates that **if you committed it, you can get it back**.  So commit often!  Don't be embarrassed by unfinished or broken work - you can always make new, cleaner commits later (we'll show how in the [time-travel section](../../time-travel/time-travel.md)).
 
 ## My branch's reflog is gone!
 

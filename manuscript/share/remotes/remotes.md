@@ -8,13 +8,14 @@ In DiffPlug, you can see which servers you can communicate with by clicking the 
 
 If you just started a new project, then this section will be empty.  If you cloned the project from a central server, then there's probably one remote named "origin".  **A remote is just a URL with a nickname.**  There are three kinds of URL:
 
-1. **File**  is for a repository on your local hard drive or a shared drive.  You probably won't use this much, but it's great for learning about synchronizing because you can manipulate both sides of the connection.
+1. **`file`**  is for a repository on your local hard drive or a shared drive.  You probably won't use this much, but it's great for learning about synchronizing because you can manipulate both sides of the connection.
 	+ `file:///C:/Users/<username>/Documents/gitfromscratch` (windows)
 	+ `file:///Users/<username>/Documents/gitfromscratch` (mac)
 	+ `file:///home/<username>/Documents/gitfromscratch` (linux)
-2. **HTTPS** is for a repository hosted on the internet.  Almost every service which provides git hosting supports the HTTP / HTTPS protocol.
+2. **`https`** is for a repository hosted on the internet.  Almost every service which provides git hosting supports the HTTP / HTTPS protocol.
 	+ `https://github.com/diffplug/gitfromscratch`
-3. **SSH/GIT** is common if you work with lots of linux machines, but you'll probably never use it otherwise.  We won't discuss it in this tutorial.
+	+ Technically, `http` is also an option, but it's easy to hack.  Always use `https`!
+3. **`ssh/git`** is common if you work with lots of linux machines, but you'll probably never use it otherwise.  We won't discuss it in this tutorial.
 	+ `git://github.com/diffplug/gitfromscratch` (insecure, read-only)
 	+ `ssh://github.com/diffplug/gitfromscratch` (secure, read/write)
 
@@ -26,7 +27,7 @@ In the following sections, we're going to show how you can synchronize your comm
 
 ![Add a local remote](remotes-local.mp4)
 
-To add a normal `HTTPS` or `SSH/GIT`, remote, just click the plus.
+To add a normal `https` or `ssh/git` remote, just click the plus.
 
 ![Add a remote](remotes-add.png)
 
