@@ -67,4 +67,12 @@ If you rebase `master`, there will be some duplicated commits!
 
 ![Duplicated commits](TODO.png)
 
-[Merging](../merge/merge.md) is never bad, only use rebase when you haven't shared the commits with anyone else.  And be *really* sure you haven't already shared commits when we talk about our next topic: [rewriting history](../rewrite-history/rewrite-history.md).
+[Merging](../merge/merge.md) is never bad, only use rebase when you haven't shared the commits with anyone else.
+
+## rebase(123, abc) == abc(123, abc)
+
+The final result of rebasing one branch onto another is *exactly* the same as the final result of merging those two branches, except for the history.
+
+![Compare a rebase to a merge](TODO.png)
+
+The *only* difference is in the story that your history will tell.  So whether we like it or not, every time we choose either to merge or to rebase, we have made a subjective, editorial decision about what kind of history will tell a better story.  Which sets us up perfectly for our next topic: [rewriting history](../rewrite-history/rewrite-history.md).

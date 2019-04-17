@@ -22,3 +22,5 @@ Now, the next time one of your colleagues clicks `Download all` on their reposit
 The only way to move a tag is to delete it and create a new tag with the same name.  **Once you have shared a tag by uploading it to a central repository, you should not move it.**  If you have to move it, you should make a new annotated tag called "oldtagname_updated" with an annotation describing why it needed to be updated.
 
 Tags are intended to mark a permanent spot in time, so there isn't a good mechanism for moving them.  If you upload a tag, then delete it and upload the same tag in a different spot, it's very likely that some people in your team will have the tag in the first place, while others will have it in the second place.
+
+Now that we can share a fixed snapshot, we'll look at [collaborating on a moving target](../branches/branches.md).

@@ -29,3 +29,5 @@ In the following sections, we're going to show how you can synchronize your comm
 To add a normal `HTTPS` or `SSH/GIT`, remote, just click the plus.
 
 ![Add a remote](remotes-add.png)
+
+Now that we can connect to another git repository, we'll look at the easiest thing to share: [tags](../tags/tags.md).

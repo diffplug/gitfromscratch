@@ -28,8 +28,10 @@ Here are the possible cases:
 
 ## Warning!  Do not back up!  Severe tire damage!
 
+At various points, the "not recommended" section will give you the option to move a remote branch backwards.  It can be useful when you're working by yourself and using a remote repository only as a personal backup mechanism.  **If you're working with other people, you should never use the "not recommended" section.**
+
 **A published branch should only move forward.**  Once a branch has been published, anyone might base their work on the contents of that branch.  If you move a branch backwards, then other people who have based their work on the commits in that branch have lost their foundation.
 
 **If you find that you need to remove or undo some changes that have already been published, you should do that [using new commits](../../time-travel/cherry-pick-and-rebase/cherry-pick-and-rebase.md).**  This gives you the opportunity to explain in the commit messages why some previously published commits were faulty.  If you move a branch backwards, there's no way to tell your teammates why, so it will be very distressing to them when they find that the commits which they based their work on are gone without any explanation.
 
-At various points, the "not recommended" section will give you the option to move a remote branch backwards.  It can be useful when you're working by yourself and using a remote repository only as a personal backup mechanism.  **If you're working with other people, you should never use the "not recommended" section.**
+We have several ways for git to automatically redo and undo our work for us by creating new commits, and [we'll learn about them next](../../time-travel/time-travel.md).

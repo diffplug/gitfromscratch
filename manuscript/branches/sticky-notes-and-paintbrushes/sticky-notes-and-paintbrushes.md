@@ -57,3 +57,5 @@ As far as the files in your working copy are concerned, the only commits that ma
 The tips section is useful for searching for branches and navigating history.  When you hover the mouse over a branch, it will scroll the history window to show you where that branch is.  When you stop hovering, it will scroll back to where you were.  When you click a branch, it will scroll the history window there and stop.
 
 ![Scroll around branches and tags.](branch-hover-vs-click.mp4)
+
+Now that we can make commits, we'll look at how they can be [deleted and recovered](../reflog/reflog.md).

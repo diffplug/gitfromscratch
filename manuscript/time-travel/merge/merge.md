@@ -126,3 +126,7 @@ Here's how to do this:
 	+ Therefore `team` doesn't have an evil merge.
 
 If you use a "pull request" or "merge request" workflow, where the final merge happens on your git server itself rather than on your computer, then the server will automatically enforce the workflow described above.  But it's good to understand *why* these servers have been built this way.
+
+## Are there any tools that can solve a merge conflict automatically?
+
+There sure are!  And all of them rely on a tool called [the patch](../patch/patch.md).

@@ -1,6 +1,6 @@
 # Make and edit a commit
 
-**A commit is a snapshot of every single file in your project folder**, along with some metadata such as when the commit was made, who made it, and a short message describing the reasoning behind the work.  **A repository is just a pile of commits**. Some of git's more powerful features can make it seem like there must be something more complex happening, but it really is that simple.
+**A commit is a snapshot of every file in your project folder**, along with some metadata such as when the commit was made, who made it, and a short message describing the reasoning behind the work.  **A repository is just a pile of commits**. Some of git's more powerful features can make it seem like there must be something more complex happening, but it really is that simple.
 
 Each row in the `History` table (the bottom of the screen) represents a commit.  If you just created an empty repository, then you won't have much to look at yet, but you will soon!  If you click a commit, you can see the names of files that were created, deleted, or changed between that commit and the previous commit.
 
@@ -41,3 +41,5 @@ Every time you make a commit, it will be tagged with your name and email.  That 
 Click the command console ![command console icon](command-console.png), then select `Config library`.  Once that is open, select `Git` from the tree at left and type in your name and email in the **Committer** box.
 
 ![Set username](commit-set-username.mp4)
+
+Now that you know your way around commits, we can take a look at [branches](../../branches/branches.md).

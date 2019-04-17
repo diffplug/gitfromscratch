@@ -46,3 +46,5 @@ Yes! Every few days, git will do *garbage collection*.  That means that it will 
 ... and then it will permanently delete the unreachable ones that are more than two weeks old.  So if a commit that you care about (such as your life's work) is unreachable and more than two weeks old, then it is eligible for garbage collection, and it could be actually deleted.  So make sure that everything you care about has a branch pointing to it somewhere.
 
 But if you made a mistake and want to revive a commit from a few hours or days ago, no worries - your commit will definitely still be there.
+
+Using the reflog to delete and recover your work should definitely not be plan A.  There's a much better mechanism called "Save for later", which we'll [look at next](../save-for-later/save-for-later.md).

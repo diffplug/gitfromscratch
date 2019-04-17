@@ -48,3 +48,13 @@ You can also pick and choose which commits to include, and in which order.
 (squash)
 - omit adding the human entirely
 -->
+
+## Durability is social
+
+Ancient cathedrals don't stand because stone is immortal - they stand because people understand their history and choose to maintain them.  Undiscovered temples rotting in the wilderness are not rotting because their stone was weak, they rot because humankind has forgotten their story.
+
+It may be that you are the only human that will look at your work, but even a week from now you will forget what you were thinking today.  Each of us is a society unto ourselves, and [when we are tired, we are attacked by ideas we conquered long ago](https://quoteinvestigator.com/2019/02/26/tired/).
+
+Your work has always told a story, but that story was sparse and accidental.  You now have the tools to do better.
+
+[Epilogue](../../epilogue/epilogue.md).

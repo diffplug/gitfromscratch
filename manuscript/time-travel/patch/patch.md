@@ -138,3 +138,5 @@ Great!  In fact, this is exactly how conventional "diff/patch" works, although c
 ## Patching other things
 
 We've already outlined how zip files could be patched, but what about other kinds of file?  Stay tuned to DiffPlug for upcoming announcements!
+
+So far, we've used patches to solve a problem we encountered while merging.  Unsurprisingly, the ability to automatically redo work is useful [for a lot more than just merging](../cherry-pick-and-rebase/cherry-pick-and-rebase.md).

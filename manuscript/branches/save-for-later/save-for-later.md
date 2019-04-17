@@ -65,7 +65,7 @@ When you right-click a changed file or files in your working copy and select `Sa
 
 This gives you a fresh start, but you still have easy access to your work-in-progress. To restore the work, just right-click the commit and select `Apply delta`. Once you are accustomed to throwing work away with the confidence that you can get it back in just a few seconds, you'll find that it's easier to try new things.
 
-There *is* a chance that `Apply delta` will fail. That's okay, you'll still have both versions available, and you can manually copy-paste the work back over. We'll go into the details of when and how this fails in the [time-travel section](../../time-travel/time-travel.md). But first, let's talk about [sharing your work with others](../../share).
+There *is* a chance that `Apply delta` will fail. That's okay, you'll still have both versions available, and you can manually copy-paste the work back over. We'll go into the details of when and how this fails in the [time-travel section](../../time-travel/time-travel.md). But first, let's talk about [sharing your work with others](../../share/share.md).
 
 *Hint 1: To quickly save all files in the working copy, you can use the dropdown next to Commit.*
 

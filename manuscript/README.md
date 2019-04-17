@@ -18,6 +18,4 @@ There are lots of tutorials on how to get started with git.  There are two thing
 
 So, once you have [downloaded DiffPlug](http://www.diffplug.com/versions/latest), let's begin.  If you get stuck, you can ask for help in our [live chatroom](https://gitter.im/diffplug/gitfromscratch).  The source which generates this book is [available on GitHub](https://github.com/diffplug/gitfromscratch), so you can subcribe to updates or branch and modify it.
 
-TODO:
-
-- [ ] `branches/save-for-later/`
+With all that out of the way, let's [get started](intro/intro.md)!
