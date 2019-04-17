@@ -12,6 +12,6 @@ Git's terminology for this is:
 
 That's really all there is to it!  From here, you can start in a couple of ways:
 
-- You can [open an existing working copy](open-working-copy/) if you've already got one setup
-- You can [clone an existing repository](clone/)
-- You can [init a brand new repository](init/) to start a new project
+- You can [open an existing working copy](open-working-copy/open-working-copy.md) if you've already got one setup
+- You can [clone an existing repository](clone/clone.md)
+- You can [init a brand new repository](init/init.md) to start a new project
