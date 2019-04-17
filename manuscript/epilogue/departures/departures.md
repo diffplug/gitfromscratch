@@ -4,18 +4,19 @@ Most of the silent movies that will ever be made have already been made.  But mo
 
 Here are some of the ways we've departed:
 
-## No staging area
+## No index / staging area
 
 In vanilla git, the working copy consists of **three** trees of files:
 
 * The parent commit snapshot
-* The working folder
+* The working copy folder
 * The "index" or "staging area"
 
-When you do `git commit`, the index gets turned into a new commit.  In order to make a commit, you need to move files from the working directory into the index.  You can continue to make edits after putting a file in the index, so you end up with three different versions - one in your parent commit, one in your working folder, and one in the index.
+When you do `git commit`, the index is forged into a new commit.  In order to make a commit, you need to move files from the working copy folder into the index.  You can continue to make edits after putting a file in the index, so you end up with three different versions - one in your parent commit, one in your working copy folder, and one in the index.
 
 Here are just a few of the commands needed to manage this "index" mechanism:
-* `git add <filename>` adds a file to the working index
+
+* `git add <filename>` adds a file to the index
 * `git add --patch <filename>` adds hunks of a file to the index
 * `git reset --mixed` sets the index to match the parent commit
 * `git ls-index` for looking at files in the index
@@ -29,7 +30,7 @@ In DiffPlug, we ignore the index entirely.  If a file is checked in the commit w
 
 It's common to have a situation where you've done a bunch of work that you'd like to save, but you're not ready for it to be a real commit yet - you just want to keep it for later.
 
-Vanilla git handles this with `git stash`.  Because there are two places where changes can be - the working folder and the index - it has to do something pretty complicated.  It makes one commit to save the index, and a second merge commit which saves the working copy and references the index commit.
+Vanilla git handles this with `git stash`.  Because there are two places where changes can be - the working copy folder and the index - git has to do something pretty complicated.  It makes one commit to save the index, and a second merge commit which saves the working copy and references the index commit.
 
 ![git stash](stash.png)
 
@@ -37,7 +38,7 @@ It stores these as "refs/stash".  If you call `git stash` a second time, it uses
 
 Because it doesn't make a regular branch with regular commits, you can't use regular commands to get the changes back.  Instead, you have to learn the various flags and subcommands of [`git stash`](http://git-scm.com/docs/git-stash).
 
-Rather than introducing an entirely new mechanism for users to learn, DiffPlug handles this use case with the [save for later](../../branches/save-for-later/save-for-later.md) functionality.
+Rather than introducing an entirely new mechanism for users to learn, DiffPlug handles this use case with the [save for later](../../branches/save-for-later/save-for-later.md) functionality, which just uses regular branches and commits.
 
 ## No detached head
 

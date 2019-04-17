@@ -12,7 +12,7 @@ This will create a patch for the changes in this commit, and then apply it as ei
 
 ![Demonstrate apply delta](TODO.png)
 
-*Note: Vanilla git calls this a "cherry-pick".  See [departures from vanilla git](../../epilogue/departures/departures.md) for why we use a different name.*
+*Note: Vanilla git calls this "git cherry-pick".  See [departures from vanilla git](../../epilogue/departures/departures.md) for why we use a different name.*
 
 ## Undoing a commit
 
@@ -20,9 +20,9 @@ Given that we can create a patch from a commit to its parent, we can use the exa
 
 ![Demonstrate a revert](TODO.png)
 
-*Note: Vanilla git call this a "revert".  See [departures from vanilla git](../../epilogue/departures/departures.md) for why we use a different name.*
+*Note: Vanilla git calls this "git revert".  See [departures from vanilla git](../../epilogue/departures/departures.md) for why we use a different name.*
 
-## Move a string of commits
+## Move a chain of commits
 
 Lets say you have a series of commits like this:
 
@@ -34,13 +34,14 @@ And you would prefer that they looked like this:
 
 Happens all the time.  The `ABC` branch is based off of the `common` commit, and you would rather it be based on the `3` commit.
 
-One way to do this is to right-click each commit, one at a time, and select `![Apply delta icon](apply_delta.png) Apply delta`.
+One way to do this is to right-click each commit, one at a time, and select ![Apply delta icon](apply_delta.png)`Apply delta`.
 
 ![Demonstrate rebase one-at-a-time](TODO.png)
 
 A faster way to accomplish this is the ![Rebase icon](rebase.png)`rebase` command.  Here's how it works:
 
-- right-click the branch you'd like to change your base to
+- checkout the branch you want to move
+- right-click the branch you'd like to change its base to
 - select ![Rebase icon](rebase.png)`rebase`
 - git will find the last common base between the branch you selected and your checked-out branch
 	- ![Highlight the common base](TODO.png)
@@ -51,15 +52,15 @@ A faster way to accomplish this is the ![Rebase icon](rebase.png)`rebase` comman
 
 ## Rebase onto origin/master
 
-This happens especially often in a team setting - somebody else on the team uploaded their changes before you had a chance.  Because it's so common, there's a shortcut just for this case:
+The scenario above happens especially often in a team setting - somebody else uploaded their changes before you did.  Because it's so common, there's a shortcut for exactly this case:
 
 ![Rebase onto origin/master](TODO.png)
 
-But you need to be careful about rebasing branches which you have shared.  When your branch moves to the new tip after a rebase, your old commits are [lost](../../branches/reflog).
+But you need to be careful about rebasing branches which you have shared.  When your branch moves to the new tip after a rebase, your old commits are [lost](../../branches/reflog/reflog.md).
 
 ![Rebase deletes commits](TODO.png)
 
-That's fine if you haven't shared those commits with anyone else, but it's not good if you have already.  In a situation like this, for example, the commits in `master` have already been published to `origin/sharedFeature`.
+That's fine if you haven't shared those commits with anyone else, but it's not good if you already have.  In the situation below, for example, the commits in `master` have already been published to `origin/sharedFeature`.
 
 ![Not good to rebase](TODO.png)
 
@@ -69,7 +70,7 @@ If you rebase `master`, there will be some duplicated commits!
 
 [Merging](../merge/merge.md) is never bad, only use rebase when you haven't shared the commits with anyone else.
 
-## rebase(123, abc) == abc(123, abc)
+## rebase(123, abc) == merge(123, abc)
 
 The final result of rebasing one branch onto another is *exactly* the same as the final result of merging those two branches, except for the history.
 
