@@ -1,4 +1,4 @@
-# Merge your work
+# The merge
 
 To merge two lines of commits back into a single line, you must create a merge commit.  **A merge commit is a commit which has more than one parent**.  Usually, merging is easy.  Let's take the [example where we created branches `123` and `ABC`](../../branches/sticky-notes-and-paintbrushes).
 

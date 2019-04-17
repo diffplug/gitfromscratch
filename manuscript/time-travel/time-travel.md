@@ -1,4 +1,4 @@
-# Move work through time? What?
+# My work can time-travel?
 
 Normally, work only counts if you base it on the latest version of a document.  Git lets you move work through time, which allows you to structure your work in new and productive ways.  In this section, we'll explore the mechanics which make this possible.
 
