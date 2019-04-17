@@ -2,7 +2,7 @@
 
 *Future years will never know the seething hell and the black infernal background of [implementing this feature]; and it is best they should not -- the real war will never get in the books.*
 
-Walt Whitman was speaking about the American Civil War, not your feature branch, but taking this as advice is just as questionable for either case.  When something goes wrong, in culture or code, we will look to the past to try to understand how we got here.  Assuming you don't intend to deceive future archaeologists, then it is important for your history to be accurate and detailed.  But there may be some value in some amount of condensing and summarizing your changes so that future generations and present collaborators may understand your intent more clearly.
+Walt Whitman was speaking about the American Civil War, not your feature branch, but either way it's not clear if this is good advice.  When something goes wrong, in culture or code, we will look to the past to try to understand how we got here.  Assuming you don't intend to deceive future archaeologists, then it is important for your history to be accurate and detailed.  But there may be some value in some amount of condensing and summarizing your changes so that future generations and present collaborators may understand your intent more clearly.
 
 We've touched on some of these techniques in passing before, but this is our chance to provide a full overview and introduce some new techniques.
 
