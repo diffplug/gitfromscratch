@@ -27,7 +27,7 @@ Not for long!  Git has a mechanism called the reflog.  **Every change to a branc
 
 ![How to restore your life's work](reflog-branch.mp4)
 
-This demonstrates that **if you committed it, you can get it back**.  So commit often!  Don't be embarrassed by unfinished or broken work - you can always make new, cleaner commits later, which we'll get to later in the [time-travel section](../time-travel/).
+This demonstrates that **if you committed it, you can get it back**.  So commit often!  Don't be embarrassed by unfinished or broken work - you can always make new, cleaner commits later, which we'll get to later in the [time-travel section](../../time-travel/).
 
 ## My branch's reflog is gone!
 
