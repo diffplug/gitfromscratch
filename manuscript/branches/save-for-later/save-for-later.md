@@ -4,7 +4,7 @@ It's common to make some changes in your working copy that end up looking like a
 
 ![Save some changes for later, put them back in](save-for-later.mp4)
 
-*Images by Mr. Gray, Morio, Terri Monahan, Rama, and Gmhofmann under various CCSA licenses, see [here for full credits]().*
+*Images by Mr. Gray, Morio, Terri Monahan, Rama, and Gmhofmann under various CCSA licenses, see [here for full credits](https://github.com/diffplug/gitfromscratch/blob/master/manuscript/branches/save-for-later/licenses.md).*
 
 <!---
 Set git user to "Eastman Kodak".
