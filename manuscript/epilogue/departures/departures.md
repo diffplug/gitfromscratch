@@ -1,4 +1,4 @@
-# Departures from vanilla git
+# !
 
 Most of the silent movies that will ever be made have already been made.  But most of the people who will use git aren't using it yet.  So rather than focus on the people who already use git, we have made some departures from "vanilla" git usage in order to make adoption easier for people who haven't used git or version control before.
 
@@ -56,3 +56,11 @@ When a user clicks a commit, the tool shows them the changes which it introduced
 Of course, this causes some conflicts with the CLI.  `git apply` takes changes from an external source and applies them to HEAD.  `git cherry-pick` extracts changes from the history, and applies them to HEAD.
 
 One of the problems with a CLI is that it's hard for the user to express context.  When a user right-clicks a commit or right-clicks a patch file, the GUI program knows what the context is.  In a CLI, the user would either have to pass some kind of flag `git apply --from-commit`, or you could just make a whole new command to handle this case, as was done with `git cherry-pick`.
+
+## No push/pull
+
+Most git guides will say something like "use `git pull` to download changes, and then `git push origin master` to upload them".  Everybody already knows the words "upload" and "download", what's the point of confusing things with "pull" and "push"?
+
+Also, `git pull` doesn't just download, it also merges your branch into whatever branch it is "tracking", unless perhaps you've set one of three global flags which causes pull to perform a rebase instead of merge.
+
+If you can see the history branch at every step, then you don't need complex commands which automatically take local actions, which is why we only teach "upload" and "download".
