@@ -18,13 +18,13 @@ The objective of a patch is to **redo your work for you, automatically**.  This 
 
 ## Following a recipe
 
-The second step is easier than the first step, so we'll start there.  Let's say we magically figured out what the recipe was, and it turns out that all of your work simplifies down to `Add 'whale.jpg'`.  Let's apply this patch to some projects.
+The second step is easier than the first step, so we'll start there.  Let's say we magically figured out what the recipe was, and it turns out that all of your work simplifies down to `Add 'whale.jpg'`.  Let's apply this patch to a few different projects.
 
-| Before                                        | After `Add 'whale.jpg'`                     |
-|--                                             | --                                          |
-| ![Docs before](patch-docs-before.png)         | ![Docs after](patch-docs-after.png)         |
-| ![C before](patch-c-before.png)               | ![C after](patch-c-after.png)               |
-| ![Conflict before](patch-conflict-before.png) | ![Conflict after](patch-conflict-after.png) |
+| Before                                        | After `Add 'whale.jpg'`             |
+|--                                             | --                                  |
+| ![Docs before](patch-docs-before.png)         | ![Docs after](patch-docs-after.png) |
+| ![C before](patch-c-before.png)               | ![C after](patch-c-after.png)       |
+| ![Conflict before](patch-conflict-before.png) | Unclear                             |
 
 <!---
 docs:
@@ -51,7 +51,7 @@ Applying the recipe is usually easy, but where does it come from?  Well, let's t
 |--                                             | --                                          | --                                         |
 | ![Docs before](patch-docs-before.png)         | ![Docs after](patch-docs-after.png)         | ![Docs diff](patch-docs-diff.png)          |
 | ![C before](patch-c-before.png)               | ![C after](patch-c-after.png)               | ![C diff](patch-c-diff.png)                |
-| ![Conflict before](patch-conflict-before.png) | ![Conflict after](patch-conflict-after.png) | ![Missing diff](patch-conflict-diff.png)   |
+| ![Conflict before](patch-conflict-before.png) | Unclear                                     | Unclear                                    |
 
 Just by looking at the diff, it's pretty easy to write down the recipe, right?
 
@@ -59,7 +59,7 @@ Just by looking at the diff, it's pretty easy to write down the recipe, right?
 
 In the example above, it was easy to apply the recipe so long as there wasn't already a file named `whale.jpg`.  If that file already existed, then it was harder.  Overwriting it automatically is a bad idea - the safest way to do a recipe is to never delete information, only add it.
 
-:et's look at a new example:
+Let's look at a new example:
 
 - v1: we add `readme.txt`, whose content is `TODO`.
 - v2: we delete `readme.txt`
@@ -73,16 +73,29 @@ In order to make sure that a patch never destroys information inadvertently, a p
 - removal: if `readme.txt` exists with content `TODO`, delete it
 - change: if `readme.txt` exists with content `TODO`, repace it with content `I hereby bequeath all my worldly posessions to my dog.`
 
+## Combining multiple recipes
+
+Let's try to merge these two branches.
+
+![Fork the animals](animals-split.png)
+
+Using the preconditions we just learned about, we can generate these recipes for each side:
+
+![Recipe for each fork animals](animals-patch.png)
+
+Because the recipes don't touch the same files, we can apply them in either order, and we'll get the same result.  Whether we apply start with the dog
+
+![Apply the dog then the whale](patch-dog-then-whale.png)
+
+or with the whale
+
+![Apply the whale then the dog](patch-whale-then-dog.png)
+
+we get the exact same final result.  This only works if the recipes don't touch the same file.
+
 ## Recipes that touch the same file
 
-So long as two recipes don't affect the same file, it's easy to apply them both.  Let's look at an example:
-
-- original: squirrel.jpg
-- make it blue:
-- add a whale
-- merge
-
-Now, let's say that instead, we have this:
+Let's say that instead, we have this:
 
 - animals.zip
 - animals.zip (add squirrel.jpg)
