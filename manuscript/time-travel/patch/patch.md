@@ -18,7 +18,7 @@ The objective of a patch is to **redo your work for you, automatically**.  This 
 
 ## Following a recipe
 
-The second step is easier than the first step, so we'll start there.  Let's say we magically figured out what the recipe was, and it turns out that all of your work simplifies down to `Add 'whale.jpg'`.  Let's apply this patch to a few different projects.
+Our final goal is to have a recipe we can apply to a newer version of the project, so let's start there.  Somehow, we figure out that all of your work simplifies down to `Add 'whale.jpg'`.  Let's apply that recipe to a few different projects.
 
 | Before                                        | After `Add 'whale.jpg'`             |
 |--                                             | --                                  |
@@ -41,7 +41,7 @@ conflict:
 - whale.jpg
 -->
 
-It's pretty easy to see how we can apply this recipe to various projects.  It's also easy to see that sometimes, the recipe will conflict with what is already in the project - how do we add something if it's already there?
+The first two examples have wildly different content, but we can still easily apply the same recipe to each.  For the last example, the recipe seems to conflict with what's already there.  Maybe we should overwrite the old file?  Let's table that issue for now...
 
 ## Inferring a recipe
 
@@ -51,21 +51,20 @@ Applying the recipe is usually easy, but where does it come from?  Well, let's t
 |--                                             | --                                          | --                                         |
 | ![Docs before](patch-docs-before.png)         | ![Docs after](patch-docs-after.png)         | ![Docs diff](patch-docs-diff.png)          |
 | ![C before](patch-c-before.png)               | ![C after](patch-c-after.png)               | ![C diff](patch-c-diff.png)                |
-| ![Conflict before](patch-conflict-before.png) | Unclear                                     | Unclear                                    |
 
-Just by looking at the diff, it's pretty easy to write down the recipe, right?
+It turns out that a diff *is* a recipe - there's a 1:1 correspondence between the diff and the recipe we followed above.
 
 ## Recipe preconditions
 
-In the example above, it was easy to apply the recipe so long as there wasn't already a file named `whale.jpg`.  If that file already existed, then it was harder.  Overwriting it automatically is a bad idea - the safest way to do a recipe is to never delete information, only add it.
+In the example above, it was easy to apply the recipe so long as there wasn't already a file named `whale.jpg`.  If that file already existed, then we had to decide if we should overwrite what was already there.  The safest option is to not overwrite anything, and instead alert the user that the recipe conflicts with the existing content.  Then the user can look at the existing content and the recipe side-by-side, then decide for herself.
 
-Let's look at a new example:
+Let's look at another example:
 
 - v1: we add `readme.txt`, whose content is `TODO`.
 - v2: we delete `readme.txt`
 - v3: we add `readme.txt`, whose content is `I hereby bequeath all my worldly posessions to my dog.`
 
-If we create a patch from v1 to v2, we get `Delete 'readme.txt'`.  If we then apply this patch to v3, we'll delete a very important document!  Remembering that the safest way to do a recipe is to never delete information, let's make our recipe more specific: `If 'readme.txt' has content 'TODO' then delete it.`.
+If we create a patch from v1 to v2, we get `Delete 'readme.txt'`.  If we then apply this patch to v3, we'll delete a very important document!  In order to make this recipe safer, let's make it more specific: `If 'readme.txt' has content 'TODO' then delete it.`.
 
 In order to make sure that a patch never destroys information inadvertently, a patch recipe always asserts what the project needs to be before the recipe can be applied.  Here's how that looks:
 
@@ -73,45 +72,52 @@ In order to make sure that a patch never destroys information inadvertently, a p
 - removal: if `readme.txt` exists with content `TODO`, delete it
 - change: if `readme.txt` exists with content `TODO`, repace it with content `I hereby bequeath all my worldly posessions to my dog.`
 
-## Combining multiple recipes
+Earlier, we realized that any diff is a recipe that we can follow.  **The defining characterestic that upgrades something from an ordinary diff to a patch is a precondition on the existing content which allows a rigorous guarantee that applying the patch will not cause information to be accidentally overwritten.**
+
+## Combining multiple patches
 
 Let's try to merge these two branches.
 
 ![Fork the animals](animals-split.png)
 
-Using the preconditions we just learned about, we can generate these recipes for each side:
+Using the preconditions we just learned about, we can generate these patches for each side:
 
-![Recipe for each fork animals](animals-patch.png)
+![Patch for each fork](animals-patch.png)
 
-Because the recipes don't touch the same files, we can apply them in either order, and we'll get the same result.  Whether we apply start with the dog
+Because the patches don't touch the same files, their order doesn't matter.  Whether we start with the dog,
 
 ![Apply the dog then the whale](patch-dog-then-whale.png)
 
-or with the whale
+or we start with the whale,
 
 ![Apply the whale then the dog](patch-whale-then-dog.png)
 
-we get the exact same final result.  This only works if the recipes don't touch the same file.
+we get the exact same final result.  This only works if the patches don't touch the same file, and it always works if the patches don't touch the same file.
 
-## Recipes that touch the same file
+## Patches that touch the same file
 
-Let's say that instead, we have this:
+Let's say that instead, we have these branches:
 
-- animals.zip
-- animals.zip (add squirrel.jpg)
-- animals.zip
-- animals.zip
+![Fork the animals.zip](zip-animals-split.png)
 
-The merge fails, because both patches require that `animals.zip` needs to be a zip archive with an image of a red squirrel.  If seems pretty clear that we ought to be able to fix this right?  Instead of treating `animals.zip` as an indivisible entity, we ought to be able to refer to its contents just like we refer to the contents of our project, right?
+Which gives us these patches:
+
+![Patch for each fork](zip-animals-patch.png)
+
+There's no way to apply both patches, because once we have applied one, we have violated the preconditions for the other.  If we can put a man on the moon, we should be able to fix this.  Instead of treating `animals.zip` as an indivisible entity, we ought to be able to refer to its contents just like we refer to the contents of our project, right?
 
 ## Making patches that can share a file
 
-In order for our recipes to be able to share the zip file, we need to:
+In order for our patches to share the zip file, we need to:
 
 - read the individual pieces of the zip file
 - identify a specific piece, and a precondition on its content
 - modify that piece to have new content
 - put the zip file back together now that we have changed its content
+
+Then our patches could look like this:
+
+![Shared patch for each fork](zip-animals-patch-shared.png)
 
 Vanilla git treats zip files as indivisible, so it's not able to do this.  But it is able to do this for text files.
 
