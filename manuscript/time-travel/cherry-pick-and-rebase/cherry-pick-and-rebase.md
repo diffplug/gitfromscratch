@@ -1,12 +1,24 @@
 # Move and undo commits and chains of commits
 
+There's a difference the *content* of a commit and the *changes* between a commit and its parent.  Usually, the most useful thing is to move changes, but we'll look at both cases.
+
+## Moving the content in a commit
+
+If you want to copy some or all of the files in a commit into your working copy, right-click the commit and select ![Apply content icon](apply_file.png)`Apply content`.  You'll then have to choose between:
+
+- ![All files icon](blank_folder.png)`all files into WC` copies every file from that commit into your working copy.
+	+ This will overwrite any changes already existing in your working copy, so DiffPlug will first make sure it is clean.
+- ![Some files icon](blank_file.png)`some files into WC` copies individual files one at a time into your working copy.
+
+![Demonstrate apply content](TODO.png)
+
 ## Moving the changes in a commit
 
-When you click a commit, you see the changes that took place between that commit and its parent.  To apply those same changes to your working copy, all you have to do is right-click the commit, select ![Apply delta icon](apply_delta.png)`Apply delta`, and then one of its children:
+When you click a commit, you see the changes that took place between that commit and its parent.  To apply those same changes to your WC, all you have to do is right-click the commit, select ![Apply delta icon](apply_delta.png)`Apply delta`, and then one of its children:
 
 - ![Commit icon](commit.png)`and commit`
-- ![WC icon](blank_folder.png)`all files into WC`
-- ![WC icon](blank_file.png)`some files into WC`
+- ![All files icon](blank_folder.png)`all files into WC`
+- ![Some files icon](blank_file.png)`some files into WC`
 
 This will create a patch for the changes in this commit, and then apply it as either a new commit (`and commit`), or as an uncommitted change in the working copy (`all files into WC` and `some files into WC`).  The distinction between `all files` and `some files` is whether you will apply every change, or just some of the changes.
 
