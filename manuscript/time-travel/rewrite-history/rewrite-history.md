@@ -10,7 +10,7 @@ We've touched on some of these techniques in passing before, but this is our cha
 
 The simplest history-simplification is to simply squash two or more commits together.  Ctrl-select the commits you want to squash, right-click, and select `Squash`.
 
-![Video of "oops, add this" squash.](TODO.png)
+![Video of "oops, add this" squash.](squash.mp4)
 
 ## Rewrite
 
@@ -22,39 +22,29 @@ If you drag the working copy branch backwards to a point on its history, you are
 
 This means that you have moved your project back in time, but you can easily see all the work you have done since then.
 
-![Video setting up a rewrite.](TODO.png)
+![Video setting up a rewrite.](rewrite-setup.mp4)
 
 You now have two options, a summary merge or a full rewrite.
 
 ### Summary merge
 
-If you'd like to keep every commit of your brainstorming but just provide a summary of the final result, you can use a summary merge.  We discussed this technique in more detail in the [merge section](../merge/merge.md).
+The summary merge keeps every single commit of your brainstorming, and supplements it with a summary of the final result.  We discussed this technique in more detail in the [merge section](../merge/merge.md).
 
-![Video resolving with a summary merge.](TODO.png)
+![Video resolving with a summary merge.](rewrite-summary-merge.mp4)
 
 ### Full rewrite
 
 You can also pick and choose which commits to include or exclude, and in which order.
 
-![Video resolving with a summary merge.](TODO.png)
+![Reorder and exclude commits.](rewrite-reorder-and-omit.mp4)
 
-<!---
-- Add a squirrel
-- Add a whale
-- Add a human
-- Make the squirrel blue
+It is also possible to split a large commit into multiple smaller ones, or vice-versa.
 
-- Add a whale
-- Add a squirrel
-(reorder)
-- Make the squirrel blue
-(squash)
-- omit adding the human entirely
--->
+![Break up a commit, combine others.](rewrite-split-and-combine.mp4)
 
 ## Durability is social
 
-Ancient cathedrals don't stand because stone is immortal - they stand because people understand their history and choose to maintain them.  Undiscovered temples rotting in the wilderness are not rotting because their stone was weak, they rot because humankind has forgotten their story.
+Ancient cathedrals don't stand because stone is immortal - they stand because people understand their history and choose to maintain them.  Undiscovered temples rotting in the wilderness do not rot because their stone is weak, they rot because humankind has forgotten their story.
 
 It may be that you are the only human that will look at your work, but even a week from now you will forget what you were thinking today.  Each of us is a society unto ourselves, and [when we are tired, we are attacked by ideas we conquered long ago](https://quoteinvestigator.com/2019/02/26/tired/).
 
