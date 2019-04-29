@@ -1,16 +1,13 @@
 # Move and undo commits and chains of commits
 
-There's a difference the *content* of a commit and the *changes* between a commit and its parent.  Usually, the most useful thing is to move changes, but we'll look at both cases.
+There's a difference between the *content* of a commit and the *changes* between a commit and its parent.  Usually, the most useful thing is to move changes, but we'll look at both cases.
 
 ## Moving the content in a commit
 
-If you want to copy some or all of the files in a commit into your working copy, right-click the commit and select ![Apply content icon](apply_file.png)`Apply content`.  You'll then have to choose between:
+If you want to copy some or all of the files in a commit into your working copy, right-click the commit and select ![Apply content icon](apply_file.png)`Apply content`.  You can choose between:
 
 - ![All files icon](blank_folder.png)`all files into WC` copies every file from that commit into your working copy.
-	+ This will overwrite any changes already existing in your working copy, so DiffPlug will first make sure it is clean.
 - ![Some files icon](blank_file.png)`some files into WC` copies individual files one at a time into your working copy.
-
-![Demonstrate apply content](TODO.png)
 
 ## Moving the changes in a commit
 
@@ -22,45 +19,37 @@ When you click a commit, you see the changes that took place between that commit
 
 This will create a patch for the changes in this commit, and then apply it as either a new commit (`and commit`), or as an uncommitted change in the working copy (`all files into WC` and `some files into WC`).  The distinction between `all files` and `some files` is whether you will apply every change, or just some of the changes.
 
-![Demonstrate apply delta](TODO.png)
-
 *Note: Vanilla git calls this "git cherry-pick".  See [departures from vanilla git](../../epilogue/departures/departures.md) for why we use a different name.*
 
 ## Undoing a commit
 
 Given that we can create a patch from a commit to its parent, we can use the exact same process to create a patch *from* the parent *to* the commit - the inverse patch.  By doing this, we will undo all the changes in that commit.  This is super useful because it works even if many other commits have happened in the meantime.
 
-![Demonstrate a revert](TODO.png)
-
 *Note: Vanilla git calls this "git revert".  See [departures from vanilla git](../../epilogue/departures/departures.md) for why we use a different name.*
 
 ## Move a chain of commits
 
-Lets say you have a series of commits like this:
+Let's say you have a series of commits like this:
 
-![Branch before rebasing](TODO.png)
+![Branch before rebasing](before-rebase.png)
 
 And you would prefer that they looked like this:
 
-![Branch after rebasing](TODO.png)
+![Branch after rebasing](after-rebase.png)
 
-Happens all the time.  The `ABC` branch is based off of the `common` commit, and you would rather it be based on the `3` commit.
+Happens all the time.  The `letters` branch is based off of the `common` commit, and you would rather it be based on the `3` commit.
 
 One way to do this is to right-click each commit, one at a time, and select ![Apply delta icon](apply_delta.png)`Apply delta`.
 
-![Demonstrate rebase one-at-a-time](TODO.png)
+![Demonstrate rebase one-at-a-time](rebase-by-cherry-picking.mp4)
 
 A faster way to accomplish this is the ![Rebase icon](rebase.png)`rebase` command.  Here's how it works:
 
 - checkout the branch you want to move
 - right-click the branch you'd like to change its base to
 - select ![Rebase icon](rebase.png)`rebase`
-- git will find the last common base between the branch you selected and your checked-out branch
-	- ![Highlight the common base](TODO.png)
-- git will then take every commit from that common base to your checked-out branch, and apply it on top of the branch you selected
-	- ![Redo each commit](TODO.png)
-- your checked-out branch will move to the tip of the new commits
-	- ![Move your branch](TODO.png)
+
+![Actual rebase](rebase-actual.mp4)
 
 ## Rebase onto origin/master
 
@@ -86,6 +75,6 @@ If you rebase `master`, there will be some duplicated commits!
 
 The final result of rebasing one branch onto another is *exactly* the same as the final result of merging those two branches, except for the history.
 
-![Compare a rebase to a merge](TODO.png)
+![Compare a rebase to a merge](rebase-compare-to-merge.mp4)
 
 The *only* difference is in the story that your history will tell.  So whether we like it or not, every time we choose either to merge or to rebase, we have made a subjective, editorial decision about what kind of history will tell a better story.  Which sets us up perfectly for our next topic: [rewriting history](../rewrite-history/rewrite-history.md).
