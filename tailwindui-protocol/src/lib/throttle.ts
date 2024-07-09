@@ -15,7 +15,7 @@ export function throttle(func: any , wait: number, options: {leading?: boolean, 
       result = func.apply(context, args);
       if (!timeout) context = args = null;
     };
-    return function() {
+    return function(this: Function) {
       var now = Date.now();
       if (!previous && options.leading === false) previous = now;
       var remaining = wait - (now - previous);
