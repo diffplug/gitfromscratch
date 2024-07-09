@@ -179,7 +179,8 @@ export const navigation = [
     title: "I don't know anything about git or version control",
     links: [
       { title: "How do I use git?", href: '/intro/how-to-use-git' },
-      { title: "Open an existing working copy", href: '/intro/open-working-copy' }
+      { title: "Open an existing working copy", href: '/intro/open-working-copy' },
+      { title: "Make and edit a commit", href: '/intro/commit' }
     ],
   }
 ]
