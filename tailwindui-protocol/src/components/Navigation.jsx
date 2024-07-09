@@ -184,6 +184,12 @@ export const navigation = [
       { title: "Init a new repository", href: '/intro/init' },
       { title: "Make and edit a commit", href: '/intro/commit' }
     ],
+  },
+  {
+    title: "I know how to commit, but I don't know how branches work",
+    links: [
+      { title: "How do branches work?", href: '/branches/how-do-branches-work' },
+    ]
   }
 ]
 
