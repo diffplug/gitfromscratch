@@ -170,50 +170,11 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
-    title: 'Getting started with DiffPlug',
+    title: 'Git from scratch',
     links: [
-      { title: "What's new in 2.10.0", href: '/' },
-      { title: 'Installation', href: '/installation' },
-      { title: 'Quickstart', href: '/quickstart' },
+      { title: "What is git?", href: '/' }
     ],
-  },
-  {
-    title: 'Platform features',
-    links: [
-      { title: 'KeyRing', href: '/keyring' },
-      { title: 'Command line (dp)', href: '/command-line' },
-      { title: 'Config library', href: '/config-library' },
-      { title: 'Error logging', href: '/error-logging' },
-      { title: 'License manager', href: '/license-manager' },
-    ],
-  },
-  {
-    title: 'Generic viewers / differs',
-    links: [
-      { title: 'Folder', href: '/folder' },
-      { title: 'Image', href: '/image' },
-      { title: 'Text', href: '/text' },
-    ],
-  },
-  {
-    title: 'Simulink viewer / differ',
-    links: [
-      { title: 'MDL/SLX files', href: '/mdl-slx-files' },
-      { title: 'MAT files', href: '/mat-files' },
-      { title: 'Signal tracing', href: '/signal-tracing' },
-      { title: 'Library links', href: '/library-links' },
-      { title: 'Track in MATLAB', href: '/track-in-matlab' },
-      { title: 'Custom masks', href: '/custom-masks' },
-      { title: 'Generate report', href: '/generate-report' },
-    ],
-  },
-  {
-    title: 'Legal',
-    links: [
-      { title: 'License agreement', href: '/license-agreement' },
-      { title: 'Export information', href: '/export-information' },
-    ],
-  },
+  }
 ]
 
 export function Navigation(props) {
