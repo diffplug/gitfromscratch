@@ -82,7 +82,7 @@ export function Video(props: VideoProps) {
       {showOverlay && (
         <div
           className={
-            'pointer-events-none absolute left-0 top-[3px] z-20 flex h-[394px] max-h-full w-[589px] max-w-full items-center justify-center bg-gray opacity-50'
+            'pointer-events-none absolute left-0 top-[3px] z-20 flex bottom-0 right-0 items-center justify-center bg-gray opacity-50'
           }
           onMouseEnter={hideOverlay}
         >
