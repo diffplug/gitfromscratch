@@ -23,7 +23,7 @@ function NavLink({ href, tag, active, isAnchorLink = false, children }) {
         isAnchorLink ? 'pl-7' : 'pl-4',
         active
           ? 'text-zinc-900 dark:text-white'
-          : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white'
+          : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white',
       )}
     >
       <span className="truncate">{children}</span>
@@ -42,15 +42,15 @@ function VisibleSectionHighlight({ group, pathname }) {
       useSectionStore((s) => s.sections),
       useSectionStore((s) => s.visibleSections),
     ],
-    useIsInsideMobileNavigation()
+    useIsInsideMobileNavigation(),
   )
 
   let isPresent = useIsPresent()
   let firstVisibleSectionIndex = Math.max(
     0,
     [{ id: '_top' }, ...sections].findIndex(
-      (section) => section.id === visibleSections[0]
-    )
+      (section) => section.id === visibleSections[0],
+    ),
   )
   let itemHeight = remToPx(2)
   let height = isPresent
@@ -97,10 +97,14 @@ function NavigationGroup({ group, className }) {
   let isInsideMobileNavigation = useIsInsideMobileNavigation()
   let [router, sections] = useInitialValue(
     [useRouter(), useSectionStore((s) => s.sections)],
-    isInsideMobileNavigation
+    isInsideMobileNavigation,
   )
 
+  let isRootGroupActive = group.group.href === router.pathname
+
   let isActiveGroup =
+    !isRootGroupActive &&
+    group.links &&
     group.links.findIndex((link) => link.href === router.pathname) !== -1
 
   return (
@@ -109,7 +113,13 @@ function NavigationGroup({ group, className }) {
         layout="position"
         className="text-xs font-semibold text-zinc-900 dark:text-white"
       >
-        {group.title}
+        <Link
+          href={group.group.href}
+          aria-current={isActiveGroup ? 'page' : undefined}
+          className={''}
+        >
+          {group.group.title}
+        </Link>
       </motion.h2>
       <div className="relative mt-3 pl-2">
         <AnimatePresence initial={!isInsideMobileNavigation}>
@@ -127,7 +137,7 @@ function NavigationGroup({ group, className }) {
           )}
         </AnimatePresence>
         <ul role="list" className="border-l border-transparent">
-          {group.links.map((link) => (
+          {group.links?.map((link) => (
             <motion.li key={link.href} layout="position" className="relative">
               <NavLink href={link.href} active={link.href === router.pathname}>
                 {link.title}
@@ -170,30 +180,79 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
-    title: 'Git from scratch',
+    group: { title: 'Git from scratch', href: '/' },
+  },
+  {
+    group: {
+      title: "I don't know anything about git or version control",
+      href: '/intro',
+    },
     links: [
-      { title: "What is git?", href: '/' }
+      {
+        title: 'Open an existing working copy',
+        href: '/intro/open-working-copy',
+      },
+      { title: 'Clone an existing repository', href: '/intro/clone' },
+      { title: 'Init a new repository', href: '/intro/init' },
+      { title: 'Make and edit a commit', href: '/intro/commit' },
     ],
   },
   {
-    title: "I don't know anything about git or version control",
+    group: {
+      title: "I know how to commit, but I don't know how branches work",
+      href: '/branches',
+    },
     links: [
-      { title: "How do I use git?", href: '/intro/how-to-use-git' },
-      { title: "Open an existing working copy", href: '/intro/open-working-copy' },
-      { title: "Clone an existing repository", href: '/intro/clone' },
-      { title: "Init a new repository", href: '/intro/init' },
-      { title: "Make and edit a commit", href: '/intro/commit' }
+      {
+        title: 'Sticky-notes and paintbrushes',
+        href: '/branches/sticky-notes-and-paintbrushes',
+      },
+      { title: 'Delete a commit, then get it back', href: '/branches/reflog' },
+      { title: 'Save work for later', href: '/branches/save-for-later' },
     ],
   },
   {
-    title: "I know how to commit, but I don't know how branches work",
+    group: {
+      title: 'I did some work. How do I share it?',
+      href: '/share',
+    },
     links: [
-      { title: "How do branches work?", href: '/branches/how-do-branches-work' },
-      { title: "Sticky-notes and paintbrushes", href: '/branches/sticky-notes-and-paintbrushes' },
-      { title: "Delete a commit, then get it back", href: '/branches/reflog' },
-      { title: "Save work for later", href: '/branches/save-for-later' },
-    ]
-  }
+      { title: 'Establish a connection', href: '/share/remotes' },
+      { title: 'Permanent branches (a.k.a. tags)', href: '/share/tags' },
+      { title: 'Collaborate on a moving target', href: '/share/branches' },
+    ],
+  },
+  {
+    group: {
+      title: 'My work can time-travel?',
+      href: '/time-travel',
+    },
+    links: [
+      { title: 'The merge', href: '/time-travel/merge' },
+      {
+        title: 'Patches are the "flux capacitor" of work',
+        href: '/time-travel/patch',
+      },
+      {
+        title: 'Move and undo commits and chains of commits',
+        href: '/time-travel/cherry-pick-and-rebase',
+      },
+      {
+        title: 'Rewrite history',
+        href: '/time-travel/rewrite-history',
+      },
+    ],
+  },
+  {
+    group: {
+      title: 'Epilogue',
+      href: '/epilogue',
+    },
+    link: {
+      title: 'Departures from vanilla git',
+      href: '/epilogue/departures',
+    },
+  },
 ]
 
 export function Navigation(props) {
@@ -202,7 +261,7 @@ export function Navigation(props) {
       <ul role="list">
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
-            key={group.title}
+            key={group.group.title}
             group={group}
             className={groupIndex === 0 && 'md:mt-0'}
           />

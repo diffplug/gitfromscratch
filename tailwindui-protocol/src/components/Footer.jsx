@@ -125,9 +125,11 @@ function PageLink({ label, page, previous = false }) {
 
 function PageNavigation() {
   let router = useRouter()
-  let allPages = navigation.flatMap((group) => group.links)
+  let allPages = navigation
+    .flatMap((group) => group.links)
+    .filter((page) => !!page)
   let currentPageIndex = allPages.findIndex(
-    (page) => page.href === router.pathname
+    (page) => page.href === router.pathname,
   )
 
   if (currentPageIndex === -1) {
