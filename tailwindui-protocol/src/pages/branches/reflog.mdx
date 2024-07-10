@@ -1,0 +1,61 @@
+import { Video } from '@/components/Video/Video'
+
+# Delete a commit, then get it back
+
+Have you ever slid your finger around a roll of tape, feeling for the little edge you can pry up?  If you wanna be sure to find it, you can put a sticky note on the tip.  Branches serve exactly that function in git.
+
+If you lose the tip of a chain of commits in git, they are effectively "deleted".  As an example, let's delete our life's work.
+
+1. Do your life's work.
+2. Commit it into git for safe keeping.
+3. Move the branch back by one commit, thus losing the "tip" that pointed to your life's work.
+4. Mission accomplished!
+
+<Video
+	poster="/branches/reflog/reflog-delete.png"
+	source="/branches/reflog/reflog-delete.mp4"
+/>
+
+## ... why am I using git, again?
+
+As it turns out, your life's work isn't deleted, it's just *unreachable*.  And there's an easy way to make it *reachable* again.  Here's how to know if a commit is reachable or not:
+
+1. Pick up a branch.
+2. Follow its commits, parent to parent, until you reach the very first commit.
+3. Repeat steps 1 and 2 on every branch.
+
+Any commit that the process above can touch is reachable.  Everything else is unreachable.  The unreachable commits are still there on your computer, there's just no way to find them, because there's no sticky note on their tip.
+
+## My work is still gone...
+
+Not for long!  Git has a mechanism called the reflog.  **Every change to a branch is logged to the reflog**.  This means that you can go into the reflog and see where a branch used to be.  Let's use the reflog to get back your life's work.
+
+<Video
+	poster="/branches/reflog/reflog-branch.png"
+	source="/branches/reflog/reflog-branch.mp4"
+/>
+
+This demonstrates that **if you committed it, you can get it back**.  So commit often!  Don't be embarrassed by unfinished or broken work - you can always make new, cleaner commits later (we'll show how in the [time-travel section](/time-travel)).
+
+## My branch's reflog is gone!
+
+There's a hiccup, which is that when you delete a branch, it also deletes that branch's reflog!  There's an easy fix, which is `HEAD`.  When you checkout a branch, it becomes the `HEAD`.  Every new commit that you create is to the `HEAD` branch.  And lucky for us, git keeps a reflog for `HEAD`, so that even if the branch we were using is now gone, we still have a record of those commits in `HEAD`.
+
+<Video
+	poster="/branches/reflog/reflog-head.png"
+	source="/branches/reflog/reflog-head.mp4"
+/>
+
+## Do commits ever get *actually* deleted?
+
+Yes! Every few days, git will do *garbage collection*.  That means that it will find all of the reachable commits, using the process we described before:
+
+1. Pick up a branch.
+2. Follow its commits, parent to parent, until you reach the very first commit.
+3. Repeat steps 1 and 2 on every branch.
+
+... and then it will permanently delete the unreachable ones that are more than two weeks old.  So if a commit that you care about (such as your life's work) is unreachable and more than two weeks old, then it is eligible for garbage collection, and it could be actually deleted.  So make sure that everything you care about has a branch pointing to it somewhere.
+
+But if you made a mistake and want to revive a commit from a few hours or days ago, no worries - your commit will definitely still be there.
+
+Using the reflog to delete and recover your work should definitely not be plan A.  There's a much better mechanism called "Save for later", which we'll [look at next](/branches/save-for-later.md).

@@ -190,6 +190,7 @@ export const navigation = [
     links: [
       { title: "How do branches work?", href: '/branches/how-do-branches-work' },
       { title: "Sticky-notes and paintbrushes", href: '/branches/sticky-notes-and-paintbrushes' },
+      { title: "Delete a commit, then get it back", href: '/branches/reflog' },
     ]
   }
 ]
