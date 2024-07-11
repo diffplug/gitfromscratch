@@ -248,10 +248,10 @@ export const navigation = [
       title: 'Epilogue',
       href: '/epilogue',
     },
-    link: {
+    links: [{
       title: 'Departures from vanilla git',
       href: '/epilogue/departures',
-    },
+    }],
   },
 ]
 
