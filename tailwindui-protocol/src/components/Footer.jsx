@@ -28,9 +28,9 @@ function PageLink({ label, page, previous = false }) {
 
 function PageNavigation() {
   let router = useRouter()
-  let allPages = navigation
-    .flatMap((group) => group.links)
-    .filter((page) => !!page)
+  let allPages = navigation.flatMap((group) =>
+    group.links ? [group.group, ...group.links] : group.group,
+  )
   let currentPageIndex = allPages.findIndex(
     (page) => page.href === router.pathname,
   )
