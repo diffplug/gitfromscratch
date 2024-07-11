@@ -1,5 +1,5 @@
 import { Button } from '@/components/Button'
-import { navigation } from '@/components/Navigation'
+import { navigation } from '@/components/Navigation/config'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
