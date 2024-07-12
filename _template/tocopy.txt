@@ -1,2 +1,0 @@
-assets/app.js
-assets/styles.css
