@@ -65,6 +65,7 @@ module.exports = {
           50: '#F0F9F1',
         },
         paper: '#FAFAFA',
+        text: '#363737',
         warning: '#CE0000',
         white: '#FFF',
       },
