@@ -7,28 +7,33 @@ module.exports = {
       '2xs': ['0.75rem', { lineHeight: '1.25rem' }],
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
-      base: ['19px', 
-        { 
-          fontFamily: 'serif',
-          fontWeight: 400, 
+      base: [
+        '19px',
+        {
+          fontFamily: 'var(--font-spectral)',
+          fontWeight: 400,
           lineHeight: '1.6em',
-          marginBottom: '20px'
-        }
+          marginBottom: '20px',
+        },
       ],
-      lg: ['1.625em',
-        { 
+      lg: [
+        '1.625em',
+        {
+          fontFamily: 'var(--font-lora)',
           fontWeight: 600,
           lineHeight: '1.16em',
           marginBottom: '0.625em',
-          marginTop: '1em'
-        }
+          marginTop: '1em',
+        },
       ],
       xl: ['1.25rem', { lineHeight: '1.75rem' }],
-      '2xl': ['32px', 
-        { 
+      '2xl': [
+        '32px',
+        {
+          fontFamily: 'var(--font-lora)',
           fontWeight: 600,
-          lineHeight: '36px' 
-        }
+          lineHeight: '36px',
+        },
       ],
       '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
       '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
@@ -68,9 +73,6 @@ module.exports = {
       },
       boxShadow: {
         glow: '0 0 4px rgb(0 0 0 / 0.1)',
-      },
-      fontFamily: {
-        serif: ['"Spectral"', 'serif'],
       },
       maxWidth: {
         lg: '33rem',

@@ -1,12 +1,12 @@
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Logo } from '@/components/Logo'
 import { Navigation } from '@/components/Navigation/Navigation'
 import { Prose } from '@/components/Prose'
 import { SectionProvider } from '@/components/SectionProvider'
+import { lora, spectral } from '@/lib/fonts'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export function Layout({ children, sections = [] }) {
   return (
@@ -31,7 +31,9 @@ export function Layout({ children, sections = [] }) {
             <Navigation className="hidden lg:mt-10 lg:block" />
           </div>
         </motion.header>
-        <div className="relative px-4 pt-14 sm:px-6 lg:px-8">
+        <div
+          className={`relative px-4 pt-14 sm:px-6 lg:px-8 ${spectral.variable} ${lora.variable}`}
+        >
           <main className="py-16">
             <Prose as="article">{children}</Prose>
           </main>

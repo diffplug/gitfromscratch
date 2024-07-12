@@ -1,5 +1,6 @@
 import { useIsInsideMobileNavigation } from '@/components/MobileNavigation'
 import { useSectionStore } from '@/components/SectionProvider'
+import { lora, spectral } from '@/lib/fonts'
 import { useInitialValue } from '@/lib/useInitialValue'
 import clsx from 'clsx/lite'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -39,7 +40,7 @@ export function NavGroup({ group, className }: NavGroupProps) {
         <Link
           href={group.group.href}
           aria-current={isActiveGroup ? 'page' : undefined}
-          className={''}
+          className={lora.className}
         >
           {group.group.title}
         </Link>
@@ -61,7 +62,11 @@ export function NavGroup({ group, className }: NavGroupProps) {
         </AnimatePresence>
         <ul role="list" className="border-l border-transparent">
           {group.links?.map((link) => (
-            <motion.li key={link.href} layout="position" className="relative">
+            <motion.li
+              key={link.href}
+              layout="position"
+              className={`relative ${spectral.className}`}
+            >
               <NavLink href={link.href} active={link.href === router.pathname}>
                 {link.title}
               </NavLink>
