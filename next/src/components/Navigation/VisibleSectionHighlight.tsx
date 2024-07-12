@@ -32,25 +32,22 @@ export function VisibleSectionHighlight({
   let height = 0
   let top = 0
   if (activeNavItem) {
-    top = activeNavItem?.offsetTop
-    height = activeNavItem?.offsetHeight + 8
+    if (visibleSections.length === 0) {
+      top = activeNavItem?.offsetTop
+      height = activeNavItem?.offsetHeight + 8
+    } else {
+      if (visibleSections[0] === '_top') {
+        top = activeNavItem?.offsetTop
+      } else {
+        top = sectionRefMap[visibleSections[0]]?.offsetTop
+        console.log({ here: top })
+      }
+      for (let i = 0; i < visibleSections.length; i++) {
+        height += sectionRefMap[visibleSections[i]]?.offsetHeight
+      }
+      height += 8
+    }
   }
-
-  console.log(navItemRefMap)
-  // let isPresent = useIsPresent()
-  // let firstVisibleSectionIndex = Math.max(
-  //   0,
-  //   [{ id: '_top' }, ...sections].findIndex(
-  //     (section) => section.id === visibleSections[0],
-  //   ),
-  // )
-  // let itemHeight = remToPx(2)
-  // let height = isPresent
-  //   ? Math.max(1, visibleSections.length) * itemHeight
-  //   : itemHeight
-  // let top =
-  //   group.links.findIndex((link) => link.href === pathname) * itemHeight +
-  //   firstVisibleSectionIndex * itemHeight
 
   return (
     <motion.div
@@ -68,9 +65,8 @@ export function VisibleSectionHighlight({
         'bottom-[4px]',
         'left-[-8px]',
         'right-0',
-        // 'bg-zinc-800/2.5',
-        // 'dark:bg-white/2.5',
-        'bg-black/55',
+        'bg-zinc-800/2.5',
+        'dark:bg-white/2.5',
       )}
       style={{
         borderRadius: 8,

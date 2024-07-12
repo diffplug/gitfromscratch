@@ -119,14 +119,14 @@ export function NavGroup({ group, className }: NavGroupProps) {
                     {sections.map((section: any) => (
                       <li
                         key={section.id}
-                        // ref={(el) => {
-                        //   el &&
-                        //     !sectionRefMap[section.id] &&
-                        //     setSectionRefMap({
-                        //       ...sectionRefMap,
-                        //       [link.href]: el,
-                        //     })
-                        // }}
+                        ref={(el) => {
+                          el &&
+                            !sectionRefMap[section.id] &&
+                            setSectionRefMap({
+                              ...sectionRefMap,
+                              [section.id]: el,
+                            })
+                        }}
                       >
                         <NavLink
                           href={`${link.href}#${section.id}`}
