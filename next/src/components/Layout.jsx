@@ -22,12 +22,11 @@ export function Layout({ children, sections = [] }) {
                 href="/"
                 aria-label="Home"
               >
-                <Logo className="h-[36px] mr-2" />
+                <Prose><h1 className={`${lora.variable} text-[24px] xl:text-[28px] m-0`}>Git from scratch</h1></Prose>
               </Link>
-              <Prose><h1 className={`${lora.variable} text-[24px] xl:text-[28px]`}>Git from scratch</h1></Prose>
             </div>
             <Header />
-            <Navigation className="hidden lg:mt-10 lg:block" />
+            <Navigation className="hidden lg:block" />
           </div>
         </motion.header>
         <div

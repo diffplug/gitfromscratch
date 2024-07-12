@@ -10,10 +10,6 @@ export interface NavigationGroup {
 
 export const navigation: NavigationGroup[] = [
   {
-    group: { title: 'Git from scratch', href: '/' },
-    links: [],
-  },
-  {
     group: {
       title: "I don't know anything about git or version control",
       href: '/intro',
