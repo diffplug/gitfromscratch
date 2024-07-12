@@ -21,11 +21,10 @@ export function Layout({ children, sections = [] }) {
               <Link
                 href="/"
                 aria-label="Home"
-                className="flex items-start text-base font-bold dark:text-white"
               >
-                <Logo className="h-6" />
-                iffPlug Documentation
+                <Logo className="h-[36px] mr-2" />
               </Link>
+              <Prose><h1 className={`${lora.variable} text-[28px]`}>Git from scratch</h1></Prose>
             </div>
             <Header />
             <Navigation className="hidden lg:mt-10 lg:block" />
