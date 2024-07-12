@@ -1,17 +1,16 @@
-import { forwardRef } from 'react'
-import Link from 'next/link'
-import clsx from 'clsx/lite'
-import { motion, useScroll, useTransform } from 'framer-motion'
-
-import { Button } from '@/components/Button'
-import { Logo } from '@/components/Logo'
 import {
   MobileNavigation,
   useIsInsideMobileNavigation,
+  useMobileNavigationStore,
 } from '@/components/MobileNavigation'
-import { useMobileNavigationStore } from '@/components/MobileNavigation'
 import { ModeToggle } from '@/components/ModeToggle'
+import { Prose } from '@/components/Prose'
 import { MobileSearch, Search } from '@/components/Search'
+import { lora } from '@/lib/fonts'
+import clsx from 'clsx/lite'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import Link from 'next/link'
+import { forwardRef } from 'react'
 
 function TopLevelNavItem({ href, children }) {
   return (
@@ -62,7 +61,7 @@ export const Header = forwardRef(function Header({ className }, ref) {
       <div className="flex items-center gap-5 lg:hidden">
         <MobileNavigation />
         <Link href="/" aria-label="Home">
-          <Logo className="h-6" />
+          <h1 className={`${lora.className} text-[16px] sm:text-[24px] xl:text-[28px] m-0`}>Git from scratch</h1>
         </Link>
       </div>
       <div className="flex items-center gap-5">
