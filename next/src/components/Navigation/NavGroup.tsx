@@ -65,7 +65,6 @@ export function NavGroup({ group, className }: NavGroupProps) {
         <AnimatePresence initial={!isInsideMobileNavigation}>
           {isActiveGroup && (
             <VisibleSectionHighlight
-              group={group}
               pathname={router.pathname}
               navItemRefMap={navItemRefMap}
               sectionRefMap={sectionRefMap}

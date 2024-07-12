@@ -1,26 +1,21 @@
 import { useIsInsideMobileNavigation } from '@/components/MobileNavigation'
 import { useSectionStore } from '@/components/SectionProvider'
-import { remToPx } from '@/lib/remToPx'
 import { useInitialValue } from '@/lib/useInitialValue'
-import { motion, useIsPresent } from 'framer-motion'
-import { NavigationGroup } from './config'
 import clsx from 'clsx/lite'
-import { CSSProperties } from 'react'
+import { motion } from 'framer-motion'
 
 interface VisibleSectionHighlightProps {
-  group: NavigationGroup
   pathname: string
   navItemRefMap: { [href: string]: HTMLElement }
   sectionRefMap: { [id: string]: HTMLElement }
 }
 
 export function VisibleSectionHighlight({
-  group,
   pathname,
   navItemRefMap,
   sectionRefMap,
 }: VisibleSectionHighlightProps) {
-  let [sections, visibleSections] = useInitialValue(
+  let [_, visibleSections] = useInitialValue(
     [
       useSectionStore((s: any) => s.sections),
       useSectionStore((s: any) => s.visibleSections),
