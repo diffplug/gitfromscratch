@@ -1,6 +1,7 @@
 import { Tag } from '@/components/Tag'
 import clsx from 'clsx/lite'
 import Link from 'next/link'
+import { forwardRef } from 'react'
 
 interface NavLinkProps {
   href: string
@@ -10,13 +11,10 @@ interface NavLinkProps {
   children: React.ReactNode
 }
 
-export function NavLink({
-  href,
-  tag,
-  active,
-  isAnchorLink = false,
-  children,
-}: NavLinkProps) {
+function NavLink(
+  { href, tag, active, isAnchorLink = false, children }: NavLinkProps,
+  ref: React.Ref<HTMLAnchorElement>,
+) {
   return (
     <Link
       href={href}
@@ -29,7 +27,7 @@ export function NavLink({
           : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white',
       )}
     >
-      <span>{children}</span>
+      <span ref={ref}>{children}</span>
       {tag && (
         <Tag variant="small" color="zinc">
           {tag}
@@ -38,3 +36,5 @@ export function NavLink({
     </Link>
   )
 }
+
+export default forwardRef(NavLink)

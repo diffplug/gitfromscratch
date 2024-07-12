@@ -6,9 +6,10 @@ import clsx from 'clsx/lite'
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 import { ActivePageMarker } from './ActivePageMarker'
 import { NavigationGroup } from './config'
-import { NavLink } from './NavLink'
+import NavLink from './NavLink'
 import { VisibleSectionHighlight } from './VisibleSectionHighlight'
 
 interface NavGroupProps {
@@ -17,6 +18,13 @@ interface NavGroupProps {
 }
 
 export function NavGroup({ group, className }: NavGroupProps) {
+  const [navItemRefMap, setNavItemRefMap] = useState<{
+    [href: string]: HTMLElement
+  }>({})
+  const [sectionRefMap, setSectionRefMap] = useState<{
+    [id: string]: HTMLElement
+  }>({})
+
   // If this is the mobile navigation then we always render the initial
   // state, so that the state does not change during the close animation.
   // The state will still update when we re-open (re-render) the navigation.
@@ -41,14 +49,27 @@ export function NavGroup({ group, className }: NavGroupProps) {
           href={group.group.href}
           aria-current={isActiveGroup ? 'page' : undefined}
           className={lora.className}
+          ref={(el) => {
+            el &&
+              !navItemRefMap[group.group.href] &&
+              setNavItemRefMap({
+                ...navItemRefMap,
+                [group.group.href]: el,
+              })
+          }}
         >
           {group.group.title}
         </Link>
       </motion.h2>
-      <div className="relative mt-3 pl-2">
+      <div className="mt-3 pl-2">
         <AnimatePresence initial={!isInsideMobileNavigation}>
           {isActiveGroup && (
-            <VisibleSectionHighlight group={group} pathname={router.pathname} />
+            <VisibleSectionHighlight
+              group={group}
+              pathname={router.pathname}
+              navItemRefMap={navItemRefMap}
+              sectionRefMap={sectionRefMap}
+            />
           )}
         </AnimatePresence>
         <motion.div
@@ -65,9 +86,20 @@ export function NavGroup({ group, className }: NavGroupProps) {
             <motion.li
               key={link.href}
               layout="position"
-              className={`relative ${spectral.className}`}
+              className={`${spectral.className}`}
             >
-              <NavLink href={link.href} active={link.href === router.pathname}>
+              <NavLink
+                href={link.href}
+                active={link.href === router.pathname}
+                ref={(el) => {
+                  el &&
+                    !navItemRefMap[link.href] &&
+                    setNavItemRefMap({
+                      ...navItemRefMap,
+                      [link.href]: el,
+                    })
+                }}
+              >
                 {link.title}
               </NavLink>
               <AnimatePresence mode="popLayout" initial={false}>
@@ -85,7 +117,17 @@ export function NavGroup({ group, className }: NavGroupProps) {
                     }}
                   >
                     {sections.map((section: any) => (
-                      <li key={section.id}>
+                      <li
+                        key={section.id}
+                        // ref={(el) => {
+                        //   el &&
+                        //     !sectionRefMap[section.id] &&
+                        //     setSectionRefMap({
+                        //       ...sectionRefMap,
+                        //       [link.href]: el,
+                        //     })
+                        // }}
+                      >
                         <NavLink
                           href={`${link.href}#${section.id}`}
                           tag={section.tag}
