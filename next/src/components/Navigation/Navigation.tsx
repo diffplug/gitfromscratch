@@ -2,9 +2,13 @@ import clsx from 'clsx/lite'
 import { navigation } from './config'
 import { NavGroup } from './NavGroup'
 
-export function Navigation() {
+interface NavigationProps {
+  className?: string;
+}
+
+export function Navigation(props: NavigationProps) {
   return (
-    <nav>
+    <nav {...props}>
       <ul role="list">
         {navigation.map((group, groupIndex) => (
           <NavGroup
