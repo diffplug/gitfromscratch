@@ -28,11 +28,12 @@ module.exports = {
       ],
       xl: ['1.25rem', { lineHeight: '1.75rem' }],
       '2xl': [
-        '32px',
+        '1.875em',
         {
           fontFamily: 'var(--font-lora)',
           fontWeight: 600,
           lineHeight: '36px',
+          marginBottom: '0.875em',
         },
       ],
       '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
