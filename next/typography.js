@@ -3,9 +3,9 @@ module.exports = ({ theme }) => ({
     css: {
       '--tw-prose-body': theme('colors.text'),
       '--tw-prose-headings': theme('colors.text'),
-      '--tw-prose-links': theme('colors.emerald.500'),
-      '--tw-prose-links-hover': theme('colors.emerald.600'),
-      '--tw-prose-links-underline': theme('colors.emerald.500 / 0.3'),
+      '--tw-prose-links': theme('colors.text'),
+      '--tw-prose-links-hover': theme('colors.text'),
+      '--tw-prose-links-underline': theme('colors.text'),
       '--tw-prose-bold': theme('colors..text'),
       '--tw-prose-counters': theme('colors.zinc.500'),
       '--tw-prose-bullets': theme('colors.zinc.300'),
@@ -279,15 +279,11 @@ module.exports = ({ theme }) => ({
       // Inline elements
       a: {
         color: 'var(--tw-prose-links)',
-        textDecoration: 'underline transparent',
+        textDecoration: 'underline',
         fontWeight: '500',
         transitionProperty: 'color, text-decoration-color',
         transitionDuration: theme('transitionDuration.DEFAULT'),
         transitionTimingFunction: theme('transitionTimingFunction.DEFAULT'),
-        '&:hover': {
-          color: 'var(--tw-prose-links-hover)',
-          textDecorationColor: 'var(--tw-prose-links-underline)',
-        },
       },
       ':is(h1, h2, h3) a': {
         fontWeight: 'inherit',
