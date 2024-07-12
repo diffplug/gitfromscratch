@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "bunx next dev",
+    "build": "bunx next build",
+    "start": "bunx next start"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
