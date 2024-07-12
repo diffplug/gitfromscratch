@@ -29,7 +29,7 @@ export function NavLink({
           : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white',
       )}
     >
-      <span className="truncate">{children}</span>
+      <span>{children}</span>
       {tag && (
         <Tag variant="small" color="zinc">
           {tag}
