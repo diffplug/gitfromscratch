@@ -24,11 +24,20 @@ export function VisibleSectionHighlight({
   let height = 0
   let top = 0
 
+  function renderAgain() {
+    setTimeout(() => {
+      setUselessCounter(uselessCounter + 1)
+    }, 100)
+  }
+
   const activeNavItem = document.getElementById(`${pathname}-link`)
   if (activeNavItem) {
     if (visibleSections[0] === '_top' || visibleSections.length === 0) {
       height = activeNavItem.offsetHeight
       top = activeNavItem.offsetTop
+      if (top === 0) {
+        renderAgain()
+      }
     } else {
       top = document.getElementById(`${visibleSections[0]}-li`)!.offsetTop
     }
@@ -41,9 +50,7 @@ export function VisibleSectionHighlight({
     height += 8
   } else {
     // Wait a bit and force a re-render. `activeNavItem` should exist
-    setTimeout(() => {
-      setUselessCounter(uselessCounter + 1)
-    }, 100)
+    renderAgain()
   }
 
   return (
