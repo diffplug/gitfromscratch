@@ -4,13 +4,20 @@ import { lora, spectral } from '@/lib/fonts'
 import { useInitialValue } from '@/lib/useInitialValue'
 import clsx from 'clsx/lite'
 import { AnimatePresence, motion } from 'framer-motion'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
 import { ActivePageMarker } from './ActivePageMarker'
 import { NavigationGroup } from './config'
 import NavLink from './NavLink'
-import { VisibleSectionHighlight } from './VisibleSectionHighlight'
+
+const VisibleSectionHighlight = dynamic(
+  () =>
+    import('./VisibleSectionHighlight').then(
+      (module) => module.VisibleSectionHighlight,
+    ),
+  { ssr: false },
+)
 
 interface NavGroupProps {
   group: NavigationGroup

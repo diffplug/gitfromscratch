@@ -2,7 +2,6 @@ import { Layout } from '@/components/Layout'
 import * as mdxComponents from '@/components/mdx'
 import { useMobileNavigationStore } from '@/components/MobileNavigation'
 import { MDXProvider } from '@mdx-js/react'
-import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { Router } from 'next/router'
 
@@ -16,7 +15,7 @@ function onRouteChange() {
 Router.events.on('routeChangeStart', onRouteChange)
 Router.events.on('hashChangeStart', onRouteChange)
 
-function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -31,8 +30,3 @@ function App({ Component, pageProps }) {
     </>
   )
 }
-
-// Disable SSR everywhere so we can use the document object normally
-export default dynamic(() => Promise.resolve(App), {
-  ssr: false,
-})
