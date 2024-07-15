@@ -4,20 +4,12 @@ import { lora, spectral } from '@/lib/fonts'
 import { useInitialValue } from '@/lib/useInitialValue'
 import clsx from 'clsx/lite'
 import { AnimatePresence, motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { ActivePageMarker } from './ActivePageMarker'
 import { NavigationGroup } from './config'
 import NavLink from './NavLink'
-
-const VisibleSectionHighlight = dynamic(
-  () =>
-    import('./VisibleSectionHighlight').then(
-      (module) => module.VisibleSectionHighlight,
-    ),
-  { ssr: false },
-)
+import { VisibleSectionHighlight } from './VisibleSectionHighlight'
+import { remToPx } from '@/lib/remToPx'
 
 interface NavGroupProps {
   group: NavigationGroup
@@ -38,6 +30,10 @@ export function NavGroup({ group, className }: NavGroupProps) {
     group.group.href === router.pathname ||
     (group.links &&
       group.links.findIndex((link) => link.href === router.pathname) !== -1)
+
+  const groupTitleHeight = document.getElementById(
+    `${group.group.href}-link`,
+  )?.offsetHeight
 
   return (
     <li className={clsx('relative mt-6', className)}>
@@ -61,14 +57,10 @@ export function NavGroup({ group, className }: NavGroupProps) {
           )}
         </AnimatePresence>
         <motion.div
+          animate={{ top: groupTitleHeight! + remToPx(1) }}
           layout
           className="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"
         />
-        <AnimatePresence initial={false}>
-          {isActiveGroup && group.group.href !== router.pathname && (
-            <ActivePageMarker group={group} pathname={router.pathname} />
-          )}
-        </AnimatePresence>
         <ul role="list" className="border-l border-transparent">
           {group.links?.map((link) => (
             <motion.li
