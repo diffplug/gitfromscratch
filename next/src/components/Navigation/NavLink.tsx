@@ -1,25 +1,25 @@
 import { Tag } from '@/components/Tag'
 import clsx from 'clsx/lite'
 import Link from 'next/link'
+import { forwardRef } from 'react'
 
 interface NavLinkProps {
   href: string
+  id?: string
   tag?: string
   active?: boolean
   isAnchorLink?: boolean
   children: React.ReactNode
 }
 
-export function NavLink({
-  href,
-  tag,
-  active,
-  isAnchorLink = false,
-  children,
-}: NavLinkProps) {
+function NavLink(
+  { href, id, tag, active, isAnchorLink = false, children }: NavLinkProps,
+  ref: React.Ref<HTMLAnchorElement>,
+) {
   return (
     <Link
       href={href}
+      id={id}
       aria-current={active ? 'page' : undefined}
       className={clsx(
         'flex justify-between gap-2 py-1 pr-3 text-sm transition',
@@ -29,7 +29,7 @@ export function NavLink({
           : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white',
       )}
     >
-      <span className="truncate">{children}</span>
+      <span ref={ref}>{children}</span>
       {tag && (
         <Tag variant="small" color="zinc">
           {tag}
@@ -38,3 +38,5 @@ export function NavLink({
     </Link>
   )
 }
+
+export default forwardRef(NavLink)

@@ -1,9 +1,14 @@
 import clsx from 'clsx/lite'
+import dynamic from 'next/dynamic'
 import { navigation } from './config'
-import { NavGroup } from './NavGroup'
+
+const NavGroup = dynamic(
+  () => import('./NavGroup').then((module) => module.NavGroup),
+  { ssr: false },
+)
 
 interface NavigationProps {
-  className?: string;
+  className?: string
 }
 
 export function Navigation(props: NavigationProps) {
