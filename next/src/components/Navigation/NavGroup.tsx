@@ -56,10 +56,9 @@ export function NavGroup({ group, className }: NavGroupProps) {
             <VisibleSectionHighlight pathname={router.pathname} />
           )}
         </AnimatePresence>
-        <motion.div
-          animate={{ top: groupTitleHeight! + remToPx(1) }}
-          layout
-          className="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"
+        <div
+          style={{ top: groupTitleHeight! + remToPx(1) }}
+          className="absolute bottom-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"
         />
         <ul role="list" className="border-l border-transparent">
           {group.links?.map((link) => (
