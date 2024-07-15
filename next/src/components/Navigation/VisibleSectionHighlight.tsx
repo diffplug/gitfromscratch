@@ -60,7 +60,7 @@ export function VisibleSectionHighlight({
         'bottom-[4px]',
         'left-[-8px]',
         'right-0',
-        'bg-zinc-800/2.5',
+        'bg-indigo-600/30',
         'dark:bg-white/2.5',
       )}
       style={{
