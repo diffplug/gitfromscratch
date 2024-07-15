@@ -21,9 +21,6 @@ export function NavGroup({ group, className }: NavGroupProps) {
   const [pageLinkRefMap, setPageLinkRefMap] = useState<{
     [href: string]: HTMLElement
   }>({})
-  const [sectionLinkRefMap, setSectionLinkRefMap] = useState<{
-    [id: string]: HTMLElement
-  }>({})
 
   // If this is the mobile navigation then we always render the initial
   // state, so that the state does not change during the close animation.
@@ -67,7 +64,6 @@ export function NavGroup({ group, className }: NavGroupProps) {
             <VisibleSectionHighlight
               pathname={router.pathname}
               pageLinkRefMap={pageLinkRefMap}
-              sectionLinkRefMap={sectionLinkRefMap}
             />
           )}
         </AnimatePresence>
@@ -116,17 +112,7 @@ export function NavGroup({ group, className }: NavGroupProps) {
                     }}
                   >
                     {sections.map((section: any) => (
-                      <li
-                        key={section.id}
-                        ref={(el) => {
-                          el &&
-                            !sectionLinkRefMap[section.id] &&
-                            setSectionLinkRefMap({
-                              ...sectionLinkRefMap,
-                              [section.id]: el,
-                            })
-                        }}
-                      >
+                      <li id={`${section.id}-li`} key={section.id}>
                         <NavLink
                           href={`${link.href}#${section.id}`}
                           tag={section.tag}

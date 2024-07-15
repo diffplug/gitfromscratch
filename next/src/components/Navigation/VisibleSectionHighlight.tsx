@@ -3,18 +3,15 @@ import { useSectionStore } from '@/components/SectionProvider'
 import { useInitialValue } from '@/lib/useInitialValue'
 import clsx from 'clsx/lite'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
 
 interface VisibleSectionHighlightProps {
   pathname: string
   pageLinkRefMap: { [href: string]: HTMLElement }
-  sectionLinkRefMap: { [id: string]: HTMLElement }
 }
 
 export function VisibleSectionHighlight({
   pathname,
   pageLinkRefMap,
-  sectionLinkRefMap,
 }: VisibleSectionHighlightProps) {
   let [_, visibleSections] = useInitialValue(
     [
@@ -33,11 +30,13 @@ export function VisibleSectionHighlight({
       height = activeNavItem.offsetHeight
       top = activeNavItem.offsetTop
     } else {
-      top = sectionLinkRefMap[visibleSections[0]].offsetTop
+      top = document.getElementById(`${visibleSections[0]}-li`)!.offsetTop
     }
     for (let i = 0; i < visibleSections.length; i++) {
       if (visibleSections[i] === '_top') continue
-      height += sectionLinkRefMap[visibleSections[i]].offsetHeight
+      height += document.getElementById(
+        `${visibleSections[i]}-li`,
+      )!.offsetHeight
     }
     height += 8
   }
