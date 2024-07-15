@@ -3,15 +3,14 @@ import { useSectionStore } from '@/components/SectionProvider'
 import { useInitialValue } from '@/lib/useInitialValue'
 import clsx from 'clsx/lite'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 interface VisibleSectionHighlightProps {
   pathname: string
-  pageLinkRefMap: { [href: string]: HTMLElement }
 }
 
 export function VisibleSectionHighlight({
   pathname,
-  pageLinkRefMap,
 }: VisibleSectionHighlightProps) {
   let [_, visibleSections] = useInitialValue(
     [
@@ -21,10 +20,11 @@ export function VisibleSectionHighlight({
     useIsInsideMobileNavigation(),
   )
 
-  let top = 0
+  const [uselessCounter, setUselessCounter] = useState<number>(0)
   let height = 0
+  let top = 0
 
-  const activeNavItem = pageLinkRefMap[pathname]
+  const activeNavItem = document.getElementById(`${pathname}-link`)
   if (activeNavItem) {
     if (visibleSections[0] === '_top' || visibleSections.length === 0) {
       height = activeNavItem.offsetHeight
@@ -39,6 +39,11 @@ export function VisibleSectionHighlight({
       )!.offsetHeight
     }
     height += 8
+  } else {
+    // Wait a bit and force a re-render. `activeNavItem` should exist
+    setTimeout(() => {
+      setUselessCounter(uselessCounter + 1)
+    }, 100)
   }
 
   return (

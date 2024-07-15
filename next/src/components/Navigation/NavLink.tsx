@@ -5,6 +5,7 @@ import { forwardRef } from 'react'
 
 interface NavLinkProps {
   href: string
+  id?: string
   tag?: string
   active?: boolean
   isAnchorLink?: boolean
@@ -12,12 +13,13 @@ interface NavLinkProps {
 }
 
 function NavLink(
-  { href, tag, active, isAnchorLink = false, children }: NavLinkProps,
+  { href, id, tag, active, isAnchorLink = false, children }: NavLinkProps,
   ref: React.Ref<HTMLAnchorElement>,
 ) {
   return (
     <Link
       href={href}
+      id={id}
       aria-current={active ? 'page' : undefined}
       className={clsx(
         'flex justify-between gap-2 py-1 pr-3 text-sm transition',

@@ -18,10 +18,6 @@ interface NavGroupProps {
 }
 
 export function NavGroup({ group, className }: NavGroupProps) {
-  const [pageLinkRefMap, setPageLinkRefMap] = useState<{
-    [href: string]: HTMLElement
-  }>({})
-
   // If this is the mobile navigation then we always render the initial
   // state, so that the state does not change during the close animation.
   // The state will still update when we re-open (re-render) the navigation.
@@ -43,17 +39,10 @@ export function NavGroup({ group, className }: NavGroupProps) {
         className="text-xs font-semibold text-zinc-900 dark:text-white"
       >
         <Link
+          id={`${group.group.href}-link`}
           href={group.group.href}
           aria-current={isActiveGroup ? 'page' : undefined}
           className={lora.className}
-          ref={(el) => {
-            el &&
-              !pageLinkRefMap[group.group.href] &&
-              setPageLinkRefMap({
-                ...pageLinkRefMap,
-                [group.group.href]: el,
-              })
-          }}
         >
           {group.group.title}
         </Link>
@@ -61,10 +50,7 @@ export function NavGroup({ group, className }: NavGroupProps) {
       <div className="mt-3 pl-2">
         <AnimatePresence initial={!isInsideMobileNavigation}>
           {isActiveGroup && (
-            <VisibleSectionHighlight
-              pathname={router.pathname}
-              pageLinkRefMap={pageLinkRefMap}
-            />
+            <VisibleSectionHighlight pathname={router.pathname} />
           )}
         </AnimatePresence>
         <motion.div
@@ -84,16 +70,9 @@ export function NavGroup({ group, className }: NavGroupProps) {
               className={`${spectral.className}`}
             >
               <NavLink
+                id={`${link.href}-link`}
                 href={link.href}
                 active={link.href === router.pathname}
-                ref={(el) => {
-                  el &&
-                    !pageLinkRefMap[link.href] &&
-                    setPageLinkRefMap({
-                      ...pageLinkRefMap,
-                      [link.href]: el,
-                    })
-                }}
               >
                 {link.title}
               </NavLink>
