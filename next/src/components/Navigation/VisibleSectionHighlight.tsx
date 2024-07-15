@@ -3,17 +3,18 @@ import { useSectionStore } from '@/components/SectionProvider'
 import { useInitialValue } from '@/lib/useInitialValue'
 import clsx from 'clsx/lite'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 interface VisibleSectionHighlightProps {
   pathname: string
-  navItemRefMap: { [href: string]: HTMLElement }
-  sectionRefMap: { [id: string]: HTMLElement }
+  pageLinkRefMap: { [href: string]: HTMLElement }
+  sectionLinkRefMap: { [id: string]: HTMLElement }
 }
 
 export function VisibleSectionHighlight({
   pathname,
-  navItemRefMap,
-  sectionRefMap,
+  pageLinkRefMap,
+  sectionLinkRefMap,
 }: VisibleSectionHighlightProps) {
   let [_, visibleSections] = useInitialValue(
     [
@@ -23,25 +24,22 @@ export function VisibleSectionHighlight({
     useIsInsideMobileNavigation(),
   )
 
-  const activeNavItem = navItemRefMap[pathname]
-  let height = 0
   let top = 0
+  let height = 0
+
+  const activeNavItem = pageLinkRefMap[pathname]
   if (activeNavItem) {
-    if (visibleSections.length === 0) {
-      top = activeNavItem?.offsetTop
-      height = activeNavItem?.offsetHeight + 8
+    if (visibleSections[0] === '_top' || visibleSections.length === 0) {
+      height = activeNavItem.offsetHeight
+      top = activeNavItem.offsetTop
     } else {
-      if (visibleSections[0] === '_top') {
-        top = activeNavItem?.offsetTop
-      } else {
-        top = sectionRefMap[visibleSections[0]]?.offsetTop
-        console.log({ here: top })
-      }
-      for (let i = 0; i < visibleSections.length; i++) {
-        height += sectionRefMap[visibleSections[i]]?.offsetHeight
-      }
-      height += 8
+      top = sectionLinkRefMap[visibleSections[0]].offsetTop
     }
+    for (let i = 0; i < visibleSections.length; i++) {
+      if (visibleSections[i] === '_top') continue
+      height += sectionLinkRefMap[visibleSections[i]].offsetHeight
+    }
+    height += 8
   }
 
   return (

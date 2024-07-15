@@ -18,10 +18,10 @@ interface NavGroupProps {
 }
 
 export function NavGroup({ group, className }: NavGroupProps) {
-  const [navItemRefMap, setNavItemRefMap] = useState<{
+  const [pageLinkRefMap, setPageLinkRefMap] = useState<{
     [href: string]: HTMLElement
   }>({})
-  const [sectionRefMap, setSectionRefMap] = useState<{
+  const [sectionLinkRefMap, setSectionLinkRefMap] = useState<{
     [id: string]: HTMLElement
   }>({})
 
@@ -51,9 +51,9 @@ export function NavGroup({ group, className }: NavGroupProps) {
           className={lora.className}
           ref={(el) => {
             el &&
-              !navItemRefMap[group.group.href] &&
-              setNavItemRefMap({
-                ...navItemRefMap,
+              !pageLinkRefMap[group.group.href] &&
+              setPageLinkRefMap({
+                ...pageLinkRefMap,
                 [group.group.href]: el,
               })
           }}
@@ -66,8 +66,8 @@ export function NavGroup({ group, className }: NavGroupProps) {
           {isActiveGroup && (
             <VisibleSectionHighlight
               pathname={router.pathname}
-              navItemRefMap={navItemRefMap}
-              sectionRefMap={sectionRefMap}
+              pageLinkRefMap={pageLinkRefMap}
+              sectionLinkRefMap={sectionLinkRefMap}
             />
           )}
         </AnimatePresence>
@@ -92,9 +92,9 @@ export function NavGroup({ group, className }: NavGroupProps) {
                 active={link.href === router.pathname}
                 ref={(el) => {
                   el &&
-                    !navItemRefMap[link.href] &&
-                    setNavItemRefMap({
-                      ...navItemRefMap,
+                    !pageLinkRefMap[link.href] &&
+                    setPageLinkRefMap({
+                      ...pageLinkRefMap,
                       [link.href]: el,
                     })
                 }}
@@ -120,9 +120,9 @@ export function NavGroup({ group, className }: NavGroupProps) {
                         key={section.id}
                         ref={(el) => {
                           el &&
-                            !sectionRefMap[section.id] &&
-                            setSectionRefMap({
-                              ...sectionRefMap,
+                            !sectionLinkRefMap[section.id] &&
+                            setSectionLinkRefMap({
+                              ...sectionLinkRefMap,
                               [section.id]: el,
                             })
                         }}
