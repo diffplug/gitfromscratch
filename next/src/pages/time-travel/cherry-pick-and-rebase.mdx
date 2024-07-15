@@ -7,18 +7,18 @@ There's a difference between the *content* of a commit and the *changes* between
 
 ## Moving the content in a commit
 
-If you want to copy some or all of the files in a commit into your working copy, right-click the commit and select <Image alt="Apply content icon" src="/time-travel/cherry-pick-and-rebase/apply_file.png" className="inline" width={16} height={16} />`Apply content`.  You can choose between:
+If you want to copy some or all of the files in a commit into your working copy, right-click the commit and select <Image alt="Apply content icon" src="/time-travel/cherry-pick-and-rebase/apply_file.png" className="inline m-0" width={16} height={16} />`Apply content`.  You can choose between:
 
-- <Image alt="All files icon" src="/time-travel/cherry-pick-and-rebase/blank_folder.png" className="inline" width={16} height={16} />`all files into WC` copies every file from that commit into your working copy.
-- <Image alt="Some files icon" src="/time-travel/cherry-pick-and-rebase/blank_file.png" className="inline" width={16} height={16} />`some files into WC` copies individual files one at a time into your working copy.
+- <Image alt="All files icon" src="/time-travel/cherry-pick-and-rebase/blank_folder.png" className="inline m-0" width={16} height={16} />`all files into WC` copies every file from that commit into your working copy.
+- <Image alt="Some files icon" src="/time-travel/cherry-pick-and-rebase/blank_file.png" className="inline m-0" width={16} height={16} />`some files into WC` copies individual files one at a time into your working copy.
 
 ## Moving the changes in a commit
 
-When you click a commit, you see the changes that took place between that commit and its parent.  To apply those same changes to your WC, all you have to do is right-click the commit, select <Image alt="Apply delta icon" src="/time-travel/cherry-pick-and-rebase/apply_delta.png" className="inline" width={16} height={16} />`Apply delta`, and then one of its children:
+When you click a commit, you see the changes that took place between that commit and its parent.  To apply those same changes to your WC, all you have to do is right-click the commit, select <Image alt="Apply delta icon" src="/time-travel/cherry-pick-and-rebase/apply_delta.png" className="inline m-0" width={16} height={16} />`Apply delta`, and then one of its children:
 
-- <Image alt="Commit icon" src="/time-travel/cherry-pick-and-rebase/commit.png" className="inline" width={16} height={16} />`and commit`
-- <Image alt="All files icon" src="/time-travel/cherry-pick-and-rebase/blank_folder.png" className="inline" width={16} height={16} />`all files into WC`
-- <Image alt="Some files icon" src="/time-travel/cherry-pick-and-rebase/blank_file.png" className="inline" width={16} height={16} />`some files into WC`
+- <Image alt="Commit icon" src="/time-travel/cherry-pick-and-rebase/commit.png" className="inline m-0" width={16} height={16} />`and commit`
+- <Image alt="All files icon" src="/time-travel/cherry-pick-and-rebase/blank_folder.png" className="inline m-0" width={16} height={16} />`all files into WC`
+- <Image alt="Some files icon" src="/time-travel/cherry-pick-and-rebase/blank_file.png" className="inline m-0" width={16} height={16} />`some files into WC`
 
 This will create a patch for the changes in this commit, and then apply it as either a new commit (`and commit`), or as an uncommitted change in the working copy (`all files into WC` and `some files into WC`).  The distinction between `all files` and `some files` is whether you will apply every change, or just some of the changes.
 
@@ -52,18 +52,18 @@ And you would prefer that they looked like this:
 
 Happens all the time.  The `letters` branch is based off of the `common` commit, and you would rather it be based on the `3` commit.
 
-One way to do this is to right-click each commit, one at a time, and select <Image alt="Apply delta icon" src="/time-travel/cherry-pick-and-rebase/apply_delta.png" className="inline" width={16} height={16} />`Apply delta`.
+One way to do this is to right-click each commit, one at a time, and select <Image alt="Apply delta icon" src="/time-travel/cherry-pick-and-rebase/apply_delta.png" className="inline m-0" width={16} height={16} />`Apply delta`.
 
 <Video
   poster="/time-travel/cherry-pick-and-rebase/rebase-by-cherry-picking.png"
   source="/time-travel/cherry-pick-and-rebase/rebase-by-cherry-picking.mp4"
 />
 
-A faster way to accomplish this is the <Image alt="Rebase icon" src="/time-travel/cherry-pick-and-rebase/rebase.png" className="inline" width={16} height={16} />`rebase` command.  Here's how it works:
+A faster way to accomplish this is the <Image alt="Rebase icon" src="/time-travel/cherry-pick-and-rebase/rebase.png" className="inline m-0" width={16} height={16} />`rebase` command.  Here's how it works:
 
 - checkout the branch you want to move
 - right-click the branch you'd like to change its base to
-- select <Image alt="Rebase icon" src="/time-travel/cherry-pick-and-rebase/rebase.png" className="inline" width={16} height={16} />`rebase`
+- select <Image alt="Rebase icon" src="/time-travel/cherry-pick-and-rebase/rebase.png" className="inline m-0" width={16} height={16} />`rebase`
 
 <Video
   poster="/time-travel/cherry-pick-and-rebase/rebase-actual.png"

@@ -1,5 +1,6 @@
 import { Button } from '@/components/Button'
 import { navigation } from '@/components/Navigation/config'
+import { lora } from '@/lib/fonts'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -18,7 +19,7 @@ function PageLink({ label, page, previous = false }) {
         href={page.href}
         tabIndex={-1}
         aria-hidden="true"
-        className="text-base font-semibold text-zinc-900 transition hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300"
+        className={`text-base font-semibold text-zinc-900 transition hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300 ${lora.className}`}
       >
         {page.title}
       </Link>
