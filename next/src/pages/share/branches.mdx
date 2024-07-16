@@ -1,5 +1,5 @@
+import { BranchCasesTable } from '@/components/Tables/BranchCasesTable'
 import { Image } from '@/components/Image'
-import { TableStyle } from '@/components/TableStyle'
 import { Video } from '@/components/Video/Video'
 
 # Collaborate on a moving target
@@ -24,16 +24,7 @@ If you have a local branch with the same name as the remote branch, then DiffPlu
 
 Here are the possible cases:
 
-<TableStyle cols={3} />
-
-| Situation                                                                                        | Description                                                                                                                                                                                                                                                                              | Available actions                                                                                                |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| <Image src="/share/branches/case-synced.png" alt="Synced" width={180} height={18} />             | <div className="h-full">The local and remote branches are synchronized.</div>                                                                                                                                                                                                            | <Image src="/share/branches/case-synced-actions.png" alt="Synced actions" width={485} height={28} />             |
-| <Image src="/share/branches/case-local-only.png" alt="Local only" width={82} height={18} />      | You have a branch that the server doesn't have.                                                                                                                                                                                                                                          | <Image src="/share/branches/case-local-only-actions.png" alt="Local only actions" width={485} height={28} />     |
-| <Image src="/share/branches/case-remote-only.png" alt="Remote only" width={116} height={18} />   | The server has a branch that you don't have.                                                                                                                                                                                                                                             | <Image src="/share/branches/case-remote-only-actions.png" alt="Remote only actions" width={485} height={72} />   |
-| <Image src="/share/branches/case-local-new.png" alt="Local has new" width={116} height={56} />   | You made some commits and haven't uploaded them yet.                                                                                                                                                                                                                                     | <Image src="/share/branches/case-local-new-actions.png" alt="Local has new actions" width={485} height={50} />   |
-| <Image src="/share/branches/case-remote-new.png" alt="Remote has new" width={135} height={56} /> | The server has some new commits which you haven't accepted yet.                                                                                                                                                                                                                          | <Image src="/share/branches/case-remote-new-actions.png" alt="Remote has new actions" width={485} height={72} /> |
-| <Image src="/share/branches/case-both.png" alt="Both have new" width={135} height={56} />        | Both you and the server have some new commits. Congratulations! You're going to have to redo your work on top of the new latest version from the team. Git has a smorgasbord of options available to you, which we cover in the [time travel](../../time-travel/time-travel.md) section. | <Image src="/share/branches/case-both-actions.png" alt="Both have new actions" width={485} height={94} />        |
+<BranchCasesTable />
 
 ## Warning! Do not back up! Severe tire damage!
 
