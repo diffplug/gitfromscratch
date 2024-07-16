@@ -1,4 +1,4 @@
-import { Image } from '@/components/Image'
+import { TagsTable } from '@/components/Tables/TagsTable'
 
 # Permanent branches (a.k.a. tags)
 
@@ -6,10 +6,7 @@ There are lots of ways to move a branch. This makes them great for tracking a mo
 
 There are two kinds of tag, and you can make either one by right-clicking the commit you want to tag.
 
-| Kind of tag | How to make one                                                                                              | What they look like                                                                                            |
-| ----------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| Lightweight | <Image src="/share/tags/tag-dialog-lightweight.png" alt="Lightweight tag dialog" width={564} height={230} /> | <Image src="/share/tags/tag-view-lightweight.png" alt="Lightweight tag right-click" width={365} height={91} /> |
-| Annotated   | <Image src="/share/tags/tag-dialog-annotated.png" alt="Annotated tag dialog" width={564} height={230} />     | <Image src="/share/tags/tag-view-annotated.png" alt="Annotated tag right-click" width={365} height={91} />     |
+<TagsTable />
 
 ## Sharing tags
 
