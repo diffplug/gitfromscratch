@@ -38,9 +38,23 @@ export function NavGroup({ group, className }: NavGroupProps) {
         <Link
           href={group.group.href}
           aria-current={isActiveGroup ? 'page' : undefined}
-          className={lora.className}
+          className={`${lora.className} relative block`}
         >
-          {group.group.title}
+          {group.group.title}{' '}
+          {group.group.href === router.pathname && (
+            <div
+              className={clsx(
+                'absolute',
+                'top-[-4px]',
+                'bottom-[-4px]',
+                'left-[-8px]',
+                'right-0',
+                'bg-indigo-600/30',
+                'dark:bg-white/2.5',
+                'rounded-[8px]',
+              )}
+            />
+          )}
         </Link>
       </motion.h2>
       <div className="relative mt-3 pl-2">
@@ -54,6 +68,20 @@ export function NavGroup({ group, className }: NavGroupProps) {
             >
               <NavLink href={link.href} active={link.href === router.pathname}>
                 {link.title}
+                {link.href === router.pathname && (
+                  <div
+                    className={clsx(
+                      'absolute',
+                      'top-[-4px]',
+                      'bottom-[-4px]',
+                      'left-[-16px]',
+                      'right-0',
+                      'bg-indigo-600/30',
+                      'dark:bg-white/2.5',
+                      'rounded-[8px]',
+                    )}
+                  />
+                )}
               </NavLink>
               <AnimatePresence mode="popLayout" initial={false}>
                 {link.href === router.pathname && sections.length > 0 && (
