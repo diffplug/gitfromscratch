@@ -8,8 +8,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { NavigationGroup } from './config'
 import NavLink from './NavLink'
-import { VisibleSectionHighlight } from './VisibleSectionHighlight'
-import { remToPx } from '@/lib/remToPx'
 
 interface NavGroupProps {
   group: NavigationGroup
@@ -25,15 +23,10 @@ export function NavGroup({ group, className }: NavGroupProps) {
     [useRouter(), useSectionStore((s: any) => s.sections)],
     isInsideMobileNavigation,
   )
-
   let isActiveGroup =
     group.group.href === router.pathname ||
     (group.links &&
       group.links.findIndex((link) => link.href === router.pathname) !== -1)
-
-  const groupTitleHeight = document.getElementById(
-    `${group.group.href}-link`,
-  )?.offsetHeight
 
   return (
     <li className={clsx('relative mt-6', className)}>
@@ -42,24 +35,29 @@ export function NavGroup({ group, className }: NavGroupProps) {
         className="text-xs font-semibold text-zinc-900 dark:text-white"
       >
         <Link
-          id={`${group.group.href}-link`}
           href={group.group.href}
           aria-current={isActiveGroup ? 'page' : undefined}
-          className={lora.className}
+          className={`${lora.className} relative block`}
         >
-          {group.group.title}
+          {group.group.title}{' '}
+          {group.group.href === router.pathname && (
+            <div
+              className={clsx(
+                'absolute',
+                'top-[-4px]',
+                'bottom-[-4px]',
+                'left-[-8px]',
+                'right-0',
+                'bg-indigo-600/30',
+                'dark:bg-white/2.5',
+                'rounded-[8px]',
+              )}
+            />
+          )}
         </Link>
       </motion.h2>
-      <div className="mt-3 pl-2">
-        <AnimatePresence initial={!isInsideMobileNavigation}>
-          {isActiveGroup && (
-            <VisibleSectionHighlight pathname={router.pathname} />
-          )}
-        </AnimatePresence>
-        <div
-          style={{ top: groupTitleHeight! + remToPx(1) }}
-          className="absolute bottom-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"
-        />
+      <div className="relative mt-3 pl-2">
+        <div className="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5" />
         <ul role="list" className="border-l border-transparent">
           {group.links?.map((link) => (
             <motion.li
@@ -67,12 +65,22 @@ export function NavGroup({ group, className }: NavGroupProps) {
               layout="position"
               className={`${spectral.className}`}
             >
-              <NavLink
-                id={`${link.href}-link`}
-                href={link.href}
-                active={link.href === router.pathname}
-              >
+              <NavLink href={link.href} active={link.href === router.pathname}>
                 {link.title}
+                {link.href === router.pathname && (
+                  <div
+                    className={clsx(
+                      'absolute',
+                      'top-[-4px]',
+                      'bottom-[-4px]',
+                      'left-[-16px]',
+                      'right-0',
+                      'bg-indigo-600/30',
+                      'dark:bg-white/2.5',
+                      'rounded-[8px]',
+                    )}
+                  />
+                )}
               </NavLink>
               <AnimatePresence mode="popLayout" initial={false}>
                 {link.href === router.pathname && sections.length > 0 && (
@@ -89,7 +97,7 @@ export function NavGroup({ group, className }: NavGroupProps) {
                     }}
                   >
                     {sections.map((section: any) => (
-                      <li id={`${section.id}-li`} key={section.id}>
+                      <li key={section.id}>
                         <NavLink
                           href={`${link.href}#${section.id}`}
                           tag={section.tag}
