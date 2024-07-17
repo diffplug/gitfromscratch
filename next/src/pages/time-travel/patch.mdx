@@ -1,4 +1,6 @@
 import { Image } from '@/components/Image'
+import { RecipeFollowTable } from '@/components/Tables/RecipeFollowTable'
+import { RecipeInferTable } from '@/components/Tables/RecipeInferTable'
 
 # Patches are the "flux capacitor" of work
 
@@ -22,11 +24,7 @@ The objective of a patch is to **redo your work for you, automatically**.  This 
 
 Our final goal is to have a recipe we can apply to a newer version of the project, so let's start there.  Somehow, we figure out that all of your work simplifies down to `Add 'whale.jpg'`.  Let's apply that recipe to a few different projects.
 
-| Before                                                                                                     | After `Add 'whale.jpg'`                                                                          |
-|--                                                                                                          | --                                                                                               |
-| <Image alt="Docs before" src="/time-travel/patch/patch-docs-before.png" width={136} height={78} />         | <Image alt="Docs after" src="/time-travel/patch/patch-docs-after.png" width={136} height={78} /> |
-| <Image alt="C before" src="/time-travel/patch/patch-c-before.png" width={136} height={78} />               | <Image alt="C after" src="/time-travel/patch/patch-c-after.png" width={136} height={78} />       |
-| <Image alt="Conflict before" src="/time-travel/patch/patch-conflict-before.png" width={136} height={78} /> | Unclear                                                                                          |
+<RecipeFollowTable />
 
 {/*
 docs:
@@ -49,10 +47,7 @@ The first two examples have wildly different content, but we can still easily ap
 
 Applying the recipe is usually easy, but where does it come from?  Well, let's take a look at each of the before and afters above, and use that to create a diff.
 
-| Before                                                                                             | After                                                                                            | Diff                                                                                           |
-|--                                                                                                  | --                                                                                               | --                                                                                             |
-| <Image alt="Docs before" src="/time-travel/patch/patch-docs-before.png" width={136} height={78} /> | <Image alt="Docs after" src="/time-travel/patch/patch-docs-after.png" width={136} height={78} /> | <Image alt="Docs diff" src="/time-travel/patch/patch-docs-diff.png" width={136} height={78} /> |
-| <Image alt="C before" src="/time-travel/patch/patch-c-before.png" width={136} height={78} />       | <Image alt="C after" src="/time-travel/patch/patch-c-after.png" width={136} height={78} />       | <Image alt="C diff" src="/time-travel/patch/patch-c-diff.png" width={136} height={78} />       |
+<RecipeInferTable />
 
 It turns out that a diff *is* a recipe - there's a 1:1 correspondence between the diff and the recipe we followed above.
 
