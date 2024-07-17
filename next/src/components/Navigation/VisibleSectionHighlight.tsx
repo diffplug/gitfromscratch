@@ -3,55 +3,35 @@ import { useSectionStore } from '@/components/SectionProvider'
 import { useInitialValue } from '@/lib/useInitialValue'
 import clsx from 'clsx/lite'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 interface VisibleSectionHighlightProps {
-  pathname: string
+  sectionIdsToBoxes: { [key: string]: { height: number; top: number } }
 }
 
 export function VisibleSectionHighlight({
-  pathname,
+  sectionIdsToBoxes,
 }: VisibleSectionHighlightProps) {
-  let [_, visibleSections] = useInitialValue(
-    [
-      useSectionStore((s: any) => s.sections),
-      useSectionStore((s: any) => s.visibleSections),
-    ],
+  let visibleSections = useInitialValue(
+    useSectionStore((s: any) => s.visibleSections),
     useIsInsideMobileNavigation(),
   )
 
-  const [uselessCounter, setUselessCounter] = useState<number>(0)
-  let height = 0
-  let top = 0
+  const [height, setHeight] = useState<number>(0)
+  const [top, setTop] = useState<number>(0)
 
-  function renderAgain() {
-    setTimeout(() => {
-      setUselessCounter(uselessCounter + 1)
-    }, 100)
-  }
-
-  const activeNavItem = document.getElementById(`${pathname}-link`)
-  if (activeNavItem) {
-    if (visibleSections[0] === '_top' || visibleSections.length === 0) {
-      height = activeNavItem.offsetHeight
-      top = activeNavItem.offsetTop
-      if (top === 0) {
-        renderAgain()
+  useLayoutEffect(() => {
+    let _height: number = 0
+    if (visibleSections.length && Object.keys(sectionIdsToBoxes).length > 0) {
+      const _top = sectionIdsToBoxes[visibleSections[0]].top
+      for (let i = 0; i < visibleSections.length; i++) {
+        _height += sectionIdsToBoxes[visibleSections[i]].height
       }
-    } else {
-      top = document.getElementById(`${visibleSections[0]}-li`)!.offsetTop
+      _height += 8
+      setHeight(_height)
+      setTop(_top)
     }
-    for (let i = 0; i < visibleSections.length; i++) {
-      if (visibleSections[i] === '_top') continue
-      height += document.getElementById(
-        `${visibleSections[i]}-li`,
-      )!.offsetHeight
-    }
-    height += 8
-  } else {
-    // Wait a bit and force a re-render. `activeNavItem` should exist
-    renderAgain()
-  }
+  }, [sectionIdsToBoxes, visibleSections])
 
   return (
     <motion.div

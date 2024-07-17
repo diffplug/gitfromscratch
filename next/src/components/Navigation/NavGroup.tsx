@@ -10,7 +10,7 @@ import clsx from 'clsx/lite'
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useEffect, useRef, useState } from 'react'
 import { NavigationGroup } from './config'
 import NavLink from './NavLink'
 import { VisibleSectionHighlight } from './VisibleSectionHighlight'
@@ -38,10 +38,25 @@ export function NavGroup({ group, className }: NavGroupProps) {
 
   const groupTitleRef = useRef<HTMLAnchorElement>(null)
   const [groupTitleHeight, setGroupTitleHeight] = useState(0)
+  const sectionRefMap = useRef(new Map<string, HTMLElement>())
+  const [sectionIdsToBoxes, setSectionIdsToBoxes] = useState<{
+    [key: string]: { height: number; top: number }
+  }>({})
 
   useLayoutEffect(() => {
-    const { height } = groupTitleRef.current!.getBoundingClientRect()
-    setGroupTitleHeight(height)
+    if (isInsideMobileNavigation && !isOpen) return
+    setGroupTitleHeight(groupTitleRef.current!.offsetHeight)
+    const _sectionIdsToBoxes: {
+      [key: string]: { height: number; top: number }
+    } = {}
+    for (const key of sectionRefMap.current.keys()) {
+      const sectionSpan = sectionRefMap.current.get(key)!
+      _sectionIdsToBoxes[key] = {
+        height: sectionSpan.offsetHeight,
+        top: sectionSpan.offsetTop,
+      }
+    }
+    setSectionIdsToBoxes(_sectionIdsToBoxes)
   }, [isOpen])
 
   return (
@@ -61,8 +76,8 @@ export function NavGroup({ group, className }: NavGroupProps) {
       </motion.h2>
       <div className="mt-3 pl-2">
         <AnimatePresence initial={!isInsideMobileNavigation}>
-          {isActiveGroup && (
-            <VisibleSectionHighlight pathname={router.pathname} />
+          {isActiveGroup && (!isInsideMobileNavigation || isOpen) && (
+            <VisibleSectionHighlight sectionIdsToBoxes={sectionIdsToBoxes} />
           )}
         </AnimatePresence>
         <div
@@ -77,7 +92,11 @@ export function NavGroup({ group, className }: NavGroupProps) {
               className={`${spectral.className}`}
             >
               <NavLink
-                id={`${link.href}-link`}
+                ref={(el) => {
+                  if (el && link.href === router.pathname) {
+                    sectionRefMap.current.set('_top', el!)
+                  }
+                }}
                 href={link.href}
                 active={link.href === router.pathname}
               >
@@ -98,7 +117,12 @@ export function NavGroup({ group, className }: NavGroupProps) {
                     }}
                   >
                     {sections.map((section: any) => (
-                      <li id={`${section.id}-li`} key={section.id}>
+                      <li
+                        ref={(el) => {
+                          if (el) sectionRefMap.current.set(section.id, el!)
+                        }}
+                        key={section.id}
+                      >
                         <NavLink
                           href={`${link.href}#${section.id}`}
                           tag={section.tag}
