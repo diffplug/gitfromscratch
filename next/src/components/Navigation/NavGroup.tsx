@@ -1,7 +1,6 @@
 import { useIsInsideMobileNavigation } from '@/components/MobileNavigation'
 import { useSectionStore } from '@/components/SectionProvider'
 import { lora, spectral } from '@/lib/fonts'
-import { remToPx } from '@/lib/remToPx'
 import { useInitialValue } from '@/lib/useInitialValue'
 import clsx from 'clsx/lite'
 import { AnimatePresence, motion } from 'framer-motion'
