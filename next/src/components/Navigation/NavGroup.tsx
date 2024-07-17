@@ -1,15 +1,19 @@
-import { useIsInsideMobileNavigation } from '@/components/MobileNavigation'
+import {
+  useIsInsideMobileNavigation,
+  useMobileNavigationStore,
+} from '@/components/MobileNavigation'
 import { useSectionStore } from '@/components/SectionProvider'
 import { lora, spectral } from '@/lib/fonts'
+import { remToPx } from '@/lib/remToPx'
 import { useInitialValue } from '@/lib/useInitialValue'
 import clsx from 'clsx/lite'
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { NavigationGroup } from './config'
 import NavLink from './NavLink'
 import { VisibleSectionHighlight } from './VisibleSectionHighlight'
-import { remToPx } from '@/lib/remToPx'
 
 interface NavGroupProps {
   group: NavigationGroup
@@ -25,15 +29,20 @@ export function NavGroup({ group, className }: NavGroupProps) {
     [useRouter(), useSectionStore((s: any) => s.sections)],
     isInsideMobileNavigation,
   )
+  let { isOpen } = useMobileNavigationStore()
 
   let isActiveGroup =
     group.group.href === router.pathname ||
     (group.links &&
       group.links.findIndex((link) => link.href === router.pathname) !== -1)
 
-  const groupTitleHeight = document.getElementById(
-    `${group.group.href}-link`,
-  )?.offsetHeight
+  const groupTitleRef = useRef<HTMLAnchorElement>(null)
+  const [groupTitleHeight, setGroupTitleHeight] = useState(0)
+
+  useLayoutEffect(() => {
+    const { height } = groupTitleRef.current!.getBoundingClientRect()
+    setGroupTitleHeight(height)
+  }, [isOpen])
 
   return (
     <li className={clsx('relative mt-6', className)}>
@@ -42,7 +51,7 @@ export function NavGroup({ group, className }: NavGroupProps) {
         className="text-xs font-semibold text-zinc-900 dark:text-white"
       >
         <Link
-          id={`${group.group.href}-link`}
+          ref={groupTitleRef}
           href={group.group.href}
           aria-current={isActiveGroup ? 'page' : undefined}
           className={lora.className}
@@ -57,7 +66,7 @@ export function NavGroup({ group, className }: NavGroupProps) {
           )}
         </AnimatePresence>
         <div
-          style={{ top: groupTitleHeight! + remToPx(1) }}
+          style={{ top: groupTitleHeight + remToPx(1) }}
           className="absolute bottom-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"
         />
         <ul role="list" className="border-l border-transparent">
