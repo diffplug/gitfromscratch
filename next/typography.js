@@ -308,6 +308,7 @@ module.exports = ({ theme }) => ({
         boxShadow: 'inset 0 0 0 1px var(--tw-prose-code-ring)',
         backgroundColor: 'var(--tw-prose-code-bg)',
         fontSize: theme('fontSize.2xs'),
+        overflowWrap: 'break-word',
       },
       ':is(a, h1, h2, h3, blockquote, thead th) code': {
         color: 'inherit',
