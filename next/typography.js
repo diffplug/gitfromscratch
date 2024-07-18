@@ -277,6 +277,9 @@ module.exports = ({ theme }) => ({
       },
 
       // Inline elements
+      img: {
+        maxWidth: '100%',
+      },
       a: {
         color: 'var(--tw-prose-links)',
         textDecoration: 'underline',
