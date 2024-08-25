@@ -1,10 +1,11 @@
 import { Button } from '@/components/Button'
 import { navigation } from '@/components/Navigation/config'
 import { lora } from '@/lib/fonts'
+import clsx from 'clsx/lite'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-function PageLink({ label, page, previous = false }) {
+function PageLink({ label, page, previous = false, isRight = false }) {
   return (
     <>
       <Button
@@ -19,7 +20,17 @@ function PageLink({ label, page, previous = false }) {
         href={page.href}
         tabIndex={-1}
         aria-hidden="true"
-        className={`text-base font-semibold text-zinc-900 transition hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300 ${lora.className}`}
+        className={clsx(
+          'text-base',
+          'font-semibold',
+          'text-zinc-900',
+          'transition',
+          'hover:text-zinc-600',
+          'dark:text-white',
+          'dark:hover:text-zinc-300',
+          lora.className,
+          isRight && 'text-right',
+        )}
       >
         {page.title}
       </Link>
@@ -56,7 +67,7 @@ function PageNavigation() {
       )}
       {nextPage && (
         <div className="ml-auto flex flex-col items-end gap-3">
-          <PageLink label="Next" page={nextPage} />
+          <PageLink label="Next" page={nextPage} isRight />
         </div>
       )}
     </div>
