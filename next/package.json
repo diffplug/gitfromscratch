@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "assets": "node src/assets/assets-index-gen.mjs",
     "dev": "bunx next dev",
     "build": "bunx next build",
     "start": "bunx next start"
