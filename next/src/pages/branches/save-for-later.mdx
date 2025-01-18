@@ -1,14 +1,11 @@
-import { Image } from '@/components/Image'
+import { Inline } from '@/components/Inline'
 import { Video } from '@/components/Video/Video'
 
 # Save work for later
 
 It's common to make some changes in your working copy that end up looking like a dead end. It's tempting to just delete them and start over, but git makes it so easy to save them for later.
 
-<Video
-	poster="/branches/save-for-later/save-for-later.png"
-	source="/branches/save-for-later/save-for-later.mp4"
-/>
+<Video mp4="branches/save-for-later/save-for-later.mp4"/>
 
 *Images by Mr. Gray, Morio, Terri Monahan, Rama, and Gmhofmann under various CCSA licenses, see [here for full credits](https://github.com/diffplug/gitfromscratch/blob/main/next/src/pages/branches/licenses.md).*
 
@@ -73,12 +70,7 @@ This gives you a fresh start, but you still have easy access to your work-in-pro
 
 *Hint 1: To quickly save all files in the working copy, you can use the dropdown next to Commit.*
 
-<Image 
-	src="/branches/save-for-later/save-all-for-later.png" 
-	alt="Stash"
-	width={206}
-	height={95}
-/>
+![Stash](branches/save-for-later/save-all-for-later.png)
 
 *Hint 2: If you're an experienced git user who already uses the "git stash" command, see the [departures from vanilla git](/epilogue/departures) section for more info.*
 

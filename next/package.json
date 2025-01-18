@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "assets": "node src/assets/assets-index-gen.mjs",
     "dev": "bunx next dev",
     "build": "bunx next build",
     "start": "bunx next start"
@@ -10,10 +11,10 @@
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
     "@algolia/autocomplete-core": "^1.17.2",
-    "@headlessui/react": "^2.1.2",
+    "@headlessui/react": "^2.2.0",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
-    "@next/mdx": "^14.2.4",
+    "@next/mdx": "^15.0.4",
     "@sindresorhus/slugify": "^2.1.1",
     "@tailwindcss/typography": "^0.5.13",
     "acorn": "^8.12.1",
@@ -22,14 +23,14 @@
     "fast-glob": "^3.2.12",
     "flexsearch": "^0.7.43",
     "focus-visible": "^5.2.0",
-    "framer-motion": "^11.2.13",
+    "framer-motion": "^12.0.0-alpha.2",
     "mdast-util-to-string": "^4.0.0",
     "mdx-annotations": "^0.1.4",
-    "next": "^14.2.4",
+    "next": "^15.0.4",
     "postcss-focus-visible": "^9.0.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-highlight-words": "^0.20.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-highlight-words": "^0.21.0",
     "recma-nextjs-static-props": "^2.0.1",
     "rehype-mdx-title": "^3.1.0",
     "remark": "^15.0.1",
@@ -43,8 +44,9 @@
     "zustand": "^4.5.4"
   },
   "devDependencies": {
+    "@types/node": "22.10.7",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
-    "typescript": "5.5.3"
+    "typescript": "^5.7.2"
   }
 }

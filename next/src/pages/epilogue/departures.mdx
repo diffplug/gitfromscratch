@@ -1,4 +1,4 @@
-import { Image } from '@/components/Image'
+import { Inline } from '@/components/Inline'
 
 # Departures from vanilla git
 
@@ -26,12 +26,7 @@ Here are just a few of the commands needed to manage this "index" mechanism:
 
 In DiffPlug, we ignore the index entirely.  If a file is checked in the commit window, then it will be put into the commit.  Simple as that.
 
-<Image
-  alt="DiffPlug's staging area alternative"
-  src="/epilogue/departures/no-index.png"
-  width={253}
-  height={205}
-/>
+![DiffPlug's staging area alternative](epilogue/departures/no-index.png)
 
 ## No stash
 
@@ -39,12 +34,7 @@ It's common to have a situation where you've done a bunch of work that you'd lik
 
 Vanilla git handles this with `git stash`.  Because there are two places where changes can be - the working copy folder and the index - git has to do something pretty complicated.  It makes one commit to save the index, and a second merge commit which saves the working copy and references the index commit.
 
-<Image
-  alt="git stash"
-  src="/epilogue/departures/stash.png"
-  width={323}
-  height={49}
-/>
+![git stash](epilogue/departures/stash.png)
 
 It stores these as "refs/stash".  If you call `git stash` a second time, it uses the reflog to keep the first stash around for a while.
 

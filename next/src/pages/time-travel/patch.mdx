@@ -1,4 +1,4 @@
-import { Image } from '@/components/Image'
+import { Inline } from '@/components/Inline'
 import { RecipeFollowTable } from '@/components/Tables/RecipeFollowTable'
 import { RecipeInferTable } from '@/components/Tables/RecipeInferTable'
 
@@ -75,39 +75,19 @@ Earlier, we realized that any diff is a recipe that we can follow.  **The defini
 
 Let's try to merge these two branches.
 
-<Image 
-  alt="Fork the animals" 
-  src="/time-travel/patch/animals-split.png" 
-  width={620} 
-  height={298}
-/>
+![Fork the animals](time-travel/patch/animals-split.png)
 
 Using the preconditions we just learned about, we can generate these patches for each side:
 
-<Image
-  alt="Patch for each fork"
-  src="/time-travel/patch/animals-patch.png"
-  width={620}
-  height={285}
-/>
+![Patch for each fork](time-travel/patch/animals-patch.png)
 
 Because the patches don't touch the same files, their order doesn't matter.  Whether we start with the dog,
 
-<Image
-  alt="Apply the dog then the whale"
-  src="/time-travel/patch/patch-dog-then-whale.png"
-  width={620}
-  height={558}
-/>
+![Apply the dog then the whale](time-travel/patch/patch-dog-then-whale.png)
 
 or we start with the whale,
 
-<Image
-  alt="Apply the whale then the dog"
-  src="/time-travel/patch/patch-whale-then-dog.png"
-  width={620}
-  height={558}
-/>
+![Apply the whale then the dog](time-travel/patch/patch-whale-then-dog.png)
 
 we get the exact same final result.  This only works if the patches don't touch the same file, and it always works if the patches don't touch the same file.
 
@@ -115,21 +95,11 @@ we get the exact same final result.  This only works if the patches don't touch 
 
 Let's say that instead, we have these branches:
 
-<Image
-  alt="Fork the animals.zip"
-  src="/time-travel/patch/zip-animals-split.png"
-  width={620}
-  height={298}
-/>
+![Fork the animals.zip](time-travel/patch/zip-animals-split.png)
 
 Which gives us these patches:
 
-<Image
-  alt="Patch for each fork"
-  src="/time-travel/patch/zip-animals-patch.png"
-  width={620}
-  height={285}
-/>
+![Patch for each fork](time-travel/patch/zip-animals-patch.png)
 
 There's no way to apply both patches, because once we have applied one, we have violated the preconditions for the other.  If we can put a man on the moon, we should be able to fix this.  Instead of treating `animals.zip` as an indivisible entity, we ought to be able to refer to its contents just like we refer to the contents of our project, right?
 
@@ -144,12 +114,7 @@ In order for our patches to share the zip file, we need to:
 
 Then our patches could look like this:
 
-<Image
-  alt="Shared patch for each fork"
-  src="/time-travel/patch/zip-animals-patch-shared.png"
-  width={620}
-  height={320}
-/>
+![Shared patch for each fork](time-travel/patch/zip-animals-patch-shared.png)
 
 Vanilla git treats zip files as indivisible, so it's not able to do this.  But it is able to do this for text files.
 
@@ -159,12 +124,7 @@ Making patches to a tree of files is fairly easy because it's easy to identify a
 
 Let's look at this scenario:
 
-<Image
-  alt="Conflict with text files"
-  src="/time-travel/patch/TODO.png"
-  width={120}
-  height={134}
-/>
+![Conflict with text files](time-travel/patch/TODO.png)
 {/*
 The Merry Versions of Vindsor
 Act II, Scene 2
@@ -177,12 +137,7 @@ Git: Not a byte.
 
 One way we could try to identify pieces is with line numbers.  Let's try that:
 
-<Image
-  alt="Resolve with line numbers"
-  src="/time-travel/patch/TODO.png"
-  width={120}
-  height={134}
-/>
+![Resolve with line numbers](time-travel/patch/TODO.png)
 
 Hmmm... relying on position alone is not very robust.  Let's instead try using the content of the line above and below what we're trying to change.
 

@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { Inline } from '@/components/Inline'
 
 export function RecipeFollowTable() {
   return (
@@ -14,53 +14,23 @@ export function RecipeFollowTable() {
       <tbody>
         <tr>
           <td>
-            <Image
-              alt="Docs before"
-              src="/time-travel/patch/patch-docs-before.png"
-              width={136}
-              height={78}
-              className="m-0"
-            />
+            <Inline alt="Docs before" src="time-travel/patch/patch-docs-before.png" />
           </td>
           <td>
-            <Image
-              alt="Docs after"
-              src="/time-travel/patch/patch-docs-after.png"
-              width={136}
-              height={78}
-              className="m-0"
-            />
+            <Inline alt="Docs after" src="time-travel/patch/patch-docs-after.png" />
           </td>
         </tr>
         <tr>
           <td>
-            <Image
-              alt="C before"
-              src="/time-travel/patch/patch-c-before.png"
-              width={136}
-              height={78}
-              className="m-0"
-            />
+            <Inline alt="C before" src="time-travel/patch/patch-c-before.png" />
           </td>
           <td>
-            <Image
-              alt="C after"
-              src="/time-travel/patch/patch-c-after.png"
-              width={136}
-              height={78}
-              className="m-0"
-            />
+            <Inline alt="C after" src="time-travel/patch/patch-c-after.png" />
           </td>
         </tr>
         <tr>
           <td>
-            <Image
-              alt="Conflict before"
-              src="/time-travel/patch/patch-conflict-before.png"
-              width={136}
-              height={78}
-              className="m-0"
-            />
+            <Inline alt="Conflict before" src="time-travel/patch/patch-conflict-before.png" />
           </td>
           <td className="align-top">Unclear</td>
         </tr>

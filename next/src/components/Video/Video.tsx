@@ -2,10 +2,17 @@ import { CSSProperties, useEffect, useState } from 'react'
 import { useVideoRef } from './useVideoRef'
 import { throttle } from '../../lib/throttle'
 import { PlayButton } from '../icons/PlayButton'
+import { assetPathFor, assetH, assetW } from '../../assets/assets.mjs'
 
 type VideoProps = {
-  poster: string
-  source: string // must be mp4 video
+  mp4: string
+}
+
+function mp4_to_png(mp4: string): string {
+  if (!mp4.endsWith(".mp4")) {
+    throw Error("Expected to end with `.mp4`, was " + mp4)
+  }
+  return mp4.slice(0, mp4.length - "mp4".length) + "png"
 }
 
 export function Video(props: VideoProps) {
@@ -78,41 +85,47 @@ export function Video(props: VideoProps) {
   }, [])
 
   return (
-    <div className={'relative w-[589px] max-w-full'}>
-      {showOverlay && (
-        <div
-          className={
-            'pointer-events-none absolute left-0 top-[3px] z-20 flex bottom-0 right-0 items-center justify-center bg-gray opacity-50'
-          }
-          onMouseEnter={hideOverlay}
-        >
-          <PlayButton />
+    <div>
+      <span className={'inline-block relative'}>
+        {showOverlay && (
+          <div
+            className={
+              'pointer-events-none absolute left-0 top-[3px] z-20 flex bottom-0 right-0 items-center justify-center bg-gray opacity-50'
+            }
+            onMouseEnter={hideOverlay}
+          >
+            <PlayButton />
+          </div>
+        )}
+        <div className="relative z-10 h-1">
+          <div className="h-full bg-blue-700" style={progressBarStyle}></div>
         </div>
-      )}
-      <div className="relative z-10 h-1">
-        <div className="h-full bg-blue-700" style={progressBarStyle}></div>
-      </div>
-      <video
-        muted={true}
-        className="relative z-10 m-0 cursor-play"
-        width={589}
-        height={394}
-        poster={props.poster}
-        loop={true}
-        ref={videoRefCallback}
-        playsInline={true}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        onTimeUpdate={onTimeUpdate}
-        onMouseDown={onMouseDown}
-        onMouseUp={onMouseUp}
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-        onMouseMove={isScrubbing ? throttle(onMouseMove, 100, {}) : undefined}
-      >
-        <source src={props.source} type="video/mp4" />
-        <img className="video__alt" src={props.poster} />
-      </video>
+        <video
+          muted={true}
+          className="relative z-10 m-0 cursor-play"
+          width={assetW(mp4_to_png(props.mp4))}
+          height={assetH(mp4_to_png(props.mp4))}
+          poster={assetPathFor(mp4_to_png(props.mp4))}
+          loop={true}
+          ref={videoRefCallback}
+          playsInline={true}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          onTimeUpdate={onTimeUpdate}
+          onMouseDown={onMouseDown}
+          onMouseUp={onMouseUp}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+          onMouseMove={isScrubbing ? throttle(onMouseMove, 100) : undefined}
+        >
+          <source src={assetPathFor(props.mp4)} type="video/mp4" />
+          <img
+            className="video__alt"
+            src={assetPathFor(mp4_to_png(props.mp4))}
+            width={assetW(mp4_to_png(props.mp4))}
+            height={assetH(mp4_to_png(props.mp4))} />
+        </video>
+      </span>
     </div>
   )
 }

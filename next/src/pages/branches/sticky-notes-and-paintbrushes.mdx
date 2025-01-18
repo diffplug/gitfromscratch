@@ -1,28 +1,18 @@
 import { BranchTable } from '@/components/Tables/BranchTable'
-import { Image } from '@/components/Image'
+import { Inline } from '@/components/Inline'
 import { Video } from '@/components/Video/Video'
 
 # Sticky-notes and paintbrushes
 
 You might think this is a branch:
 
-<Image
-  src="/branches/sticky-notes-and-paintbrushes/simple-branch.png"
-  alt="Feature branch"
-  width={120}
-  height={134}
-/>
+![Feature branch](branches/sticky-notes-and-paintbrushes/simple-branch.png)
 
 ...but a branch is actually _much_ simpler than that. **A branch is a name that points to a commit**. Commits have weird names - `518a9d2blahblahblah`. Branches let us use an easy-to-read name to mark a commit.
 
 Technically, the correct term here is a git "ref", of which there are three types - local branch, remote branch, and tag. They all work the same way - a name that points to a commit - but they have different rules for how they can move. In the history table, they look like this:
 
-<Image
-  src="/branches/sticky-notes-and-paintbrushes/local-branch-remote-branch-tag.png"
-  alt="Branch, remote branch, and tag"
-  width={210}
-  height={18}
-/>
+![Branch, remote branch, and tag](branches/sticky-notes-and-paintbrushes/local-branch-remote-branch-tag.png)
 
 <BranchTable />
 
@@ -30,10 +20,7 @@ Remote branches and tags are both primarily about team communication, so we'll w
 
 Branches are easy to manipulate. Right-click a commit to create a new branch. You can drag-and-drop to move it around. Right-click the branch again to delete it.
 
-<Video
-  poster="/branches/sticky-notes-and-paintbrushes/branch-drag.png"
-  source="/branches/sticky-notes-and-paintbrushes/branch-drag.mp4"
-/>
+<Video mp4="branches/sticky-notes-and-paintbrushes/branch-drag.mp4"/>
 
 We can use a branch in two ways:
 
@@ -48,10 +35,7 @@ Remember that a commit is a snapshot of every single file in your project folder
 
 **The `HEAD` branch determines the starting point for the next commit.** When the next commit is made, the `HEAD` branch will automatically move so that it points to the new commit. Here's an example of what that looks like in practice:
 
-<Video
-  poster="/branches/sticky-notes-and-paintbrushes/branch-create-fork.png"
-  source="/branches/sticky-notes-and-paintbrushes/branch-create-fork.mp4"
-/>
+<Video mp4="branches/sticky-notes-and-paintbrushes/branch-create-fork.mp4"/>
 
 Here's what happened in the video above:
 
@@ -74,9 +58,6 @@ As far as the files in your working copy are concerned, the only commits that ma
 
 The tips section is useful for searching for branches and navigating history. When you hover the mouse over a branch, it will scroll the history window to show you where that branch is. When you stop hovering, it will scroll back to where you were. When you click a branch, it will scroll the history window there and stop.
 
-<Video
-  poster="/branches/sticky-notes-and-paintbrushes/branch-hover-vs-click.png"
-  source="/branches/sticky-notes-and-paintbrushes/branch-hover-vs-click.mp4"
-/>
+<Video mp4="branches/sticky-notes-and-paintbrushes/branch-hover-vs-click.mp4"/>
 
 Now that we can make commits, we'll look at how they can be [deleted and recovered](/branches/reflog).
