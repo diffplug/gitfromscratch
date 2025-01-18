@@ -1,0 +1,748 @@
+{
+  "assets": {
+    "command-line/install-win-set-path.png": {
+      "ext": "png",
+      "width": 820,
+      "height": 1120
+    },
+    "command-line/install-win-set-path.svg": {
+      "ext": "svg"
+    },
+    "command-line/install-win-system.png": {
+      "ext": "png",
+      "width": 431,
+      "height": 680
+    },
+    "command-line/log-all-calls-to-dp-open.png": {
+      "ext": "png",
+      "width": 229,
+      "height": 129
+    },
+    "command-line/log-all-calls-to-dp.png": {
+      "ext": "png",
+      "width": 586,
+      "height": 434
+    },
+    "command-line/perforce-diff.png": {
+      "ext": "png",
+      "width": 790,
+      "height": 495
+    },
+    "command-line/perforce-merge.png": {
+      "ext": "png",
+      "width": 790,
+      "height": 495
+    },
+    "command-line/perforce-view.png": {
+      "ext": "png",
+      "width": 790,
+      "height": 495
+    },
+    "command-line/sourcetree-external-diff.png": {
+      "ext": "png",
+      "width": 439,
+      "height": 181
+    },
+    "command-line/sourcetree-options-diff-tab.png": {
+      "ext": "png",
+      "width": 681,
+      "height": 463
+    },
+    "command-line/sourcetree-tools-options.png": {
+      "ext": "png",
+      "width": 495,
+      "height": 134
+    },
+    "command-line/tortoisegit-diff.png": {
+      "ext": "png",
+      "width": 773,
+      "height": 612
+    },
+    "command-line/tortoisegit-merge.png": {
+      "ext": "png",
+      "width": 773,
+      "height": 612
+    },
+    "command-line/tortoisesvn-diff.png": {
+      "ext": "png",
+      "width": 773,
+      "height": 536
+    },
+    "command-line/tortoisesvn-merge.png": {
+      "ext": "png",
+      "width": 773,
+      "height": 536
+    },
+    "config-library/config.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "config-library/delete.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "config-library/folder-diff-builtin-presets.mp4": {
+      "ext": "mp4"
+    },
+    "config-library/folder-diff-builtin-presets.png": {
+      "ext": "png",
+      "width": 508,
+      "height": 363
+    },
+    "config-library/folder-diff-content-based.mp4": {
+      "ext": "mp4"
+    },
+    "config-library/folder-diff-content-based.png": {
+      "ext": "png",
+      "width": 508,
+      "height": 363
+    },
+    "config-library/save.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "config-library/simulink-diff-config.png": {
+      "ext": "png",
+      "width": 874,
+      "height": 715
+    },
+    "custom-masks/custom-masks-dialog.mp4": {
+      "ext": "mp4"
+    },
+    "custom-masks/custom-masks-dialog.png": {
+      "ext": "png",
+      "width": 586,
+      "height": 443
+    },
+    "custom-masks/custom-masks-right-click.png": {
+      "ext": "png",
+      "width": 324,
+      "height": 246
+    },
+    "error-logging/error-log.png": {
+      "ext": "png",
+      "width": 618,
+      "height": 394
+    },
+    "error-logging/error-typical.png": {
+      "ext": "png",
+      "width": 620,
+      "height": 387
+    },
+    "error-logging/stacktrace-dialog.png": {
+      "ext": "png",
+      "width": 545,
+      "height": 421
+    },
+    "favicon.ico": {
+      "ext": "ico"
+    },
+    "folder/3way.png": {
+      "ext": "png",
+      "width": 581,
+      "height": 413
+    },
+    "folder/differ.png": {
+      "ext": "png",
+      "width": 589,
+      "height": 397
+    },
+    "folder/viewer.png": {
+      "ext": "png",
+      "width": 589,
+      "height": 397
+    },
+    "generate-report/simulink-generate-report-config.png": {
+      "ext": "png",
+      "width": 359,
+      "height": 269
+    },
+    "generate-report/simulink-generate-report-first-page-word.png": {
+      "ext": "png",
+      "width": 953,
+      "height": 821
+    },
+    "generate-report/simulink-generate-report-image-per-difference.png": {
+      "ext": "png",
+      "width": 954,
+      "height": 759
+    },
+    "image/Adjacent.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 16
+    },
+    "image/ImageViewerDiffer-compare-modes.png": {
+      "ext": "png",
+      "width": 97,
+      "height": 109
+    },
+    "image/ImageViewerDiffer-config.png": {
+      "ext": "png",
+      "width": 600,
+      "height": 400
+    },
+    "image/ImageViewerDiffer-flip1.png": {
+      "ext": "png",
+      "width": 142,
+      "height": 253
+    },
+    "image/ImageViewerDiffer-flip2.png": {
+      "ext": "png",
+      "width": 785,
+      "height": 350
+    },
+    "image/ImageViewerDiffer-image3.png": {
+      "ext": "png",
+      "width": 735,
+      "height": 336
+    },
+    "image/ImageViewerDiffer-image4.png": {
+      "ext": "png",
+      "width": 735,
+      "height": 336
+    },
+    "image/ImageViewerDiffer-image5.png": {
+      "ext": "png",
+      "width": 615,
+      "height": 336
+    },
+    "image/ImageViewerDiffer-image6.png": {
+      "ext": "png",
+      "width": 735,
+      "height": 342
+    },
+    "image/ImageViewerDiffer-image7.png": {
+      "ext": "png",
+      "width": 735,
+      "height": 263
+    },
+    "image/ImageViewerDiffer-viewer.png": {
+      "ext": "png",
+      "width": 878,
+      "height": 572
+    },
+    "image/ImageViewerDiffer-wipe-horiz.png": {
+      "ext": "png",
+      "width": 785,
+      "height": 350
+    },
+    "image/ImageViewerDiffer-wipe-vert.png": {
+      "ext": "png",
+      "width": 785,
+      "height": 350
+    },
+    "image/InstallerAdvanced.png": {
+      "ext": "png",
+      "width": 750,
+      "height": 525
+    },
+    "image/MatchPoints.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 16
+    },
+    "image/Overlap.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 16
+    },
+    "image/ZoomFitBoth.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 16
+    },
+    "installation/install-mac-dmg.png": {
+      "ext": "png",
+      "width": 704,
+      "height": 567
+    },
+    "keyring/command-console-icon.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "keyring/credential-request-key-selected.png": {
+      "ext": "png",
+      "width": 466,
+      "height": 130
+    },
+    "keyring/credential-request-otherurl.png": {
+      "ext": "png",
+      "width": 466,
+      "height": 130
+    },
+    "keyring/credential-request-two-options.png": {
+      "ext": "png",
+      "width": 554,
+      "height": 130
+    },
+    "keyring/credential-request-use-keyring.png": {
+      "ext": "png",
+      "width": 466,
+      "height": 130
+    },
+    "keyring/credential-request.png": {
+      "ext": "png",
+      "width": 466,
+      "height": 130
+    },
+    "keyring/keyring-add-key-typed.png": {
+      "ext": "png",
+      "width": 354,
+      "height": 145
+    },
+    "keyring/keyring-add-key.png": {
+      "ext": "png",
+      "width": 354,
+      "height": 145
+    },
+    "keyring/keyring-add-testcanary.png": {
+      "ext": "png",
+      "width": 286,
+      "height": 145
+    },
+    "keyring/keyring-change-master-password.png": {
+      "ext": "png",
+      "width": 370,
+      "height": 440
+    },
+    "keyring/keyring-not-setup.png": {
+      "ext": "png",
+      "width": 312,
+      "height": 62
+    },
+    "keyring/keyring-setup.png": {
+      "ext": "png",
+      "width": 312,
+      "height": 404
+    },
+    "library-links/library-link-browser.png": {
+      "ext": "png",
+      "width": 586,
+      "height": 443
+    },
+    "library-links/library-link-diff.png": {
+      "ext": "png",
+      "width": 574,
+      "height": 155
+    },
+    "library-links/library-link-menu.png": {
+      "ext": "png",
+      "width": 322,
+      "height": 272
+    },
+    "library-links/library-link-options.svg": {
+      "ext": "svg"
+    },
+    "library-links/library-link-subdiff-options.png": {
+      "ext": "png",
+      "width": 784,
+      "height": 398
+    },
+    "library-links/library-link-subdiff-options.svg": {
+      "ext": "svg"
+    },
+    "library-links/library-link-subdiff-setup.png": {
+      "ext": "png",
+      "width": 901,
+      "height": 636
+    },
+    "license-manager/activated-float_2x.png": {
+      "ext": "png",
+      "width": 1290,
+      "height": 574
+    },
+    "license-manager/activated-locked_2x.png": {
+      "ext": "png",
+      "width": 1290,
+      "height": 574
+    },
+    "license-manager/copy-paste-finish_2x.png": {
+      "ext": "png",
+      "width": 1290,
+      "height": 696
+    },
+    "license-manager/copy-paste-start_2x.png": {
+      "ext": "png",
+      "width": 2344,
+      "height": 1510
+    },
+    "license-manager/emergency-activation_2x.png": {
+      "ext": "png",
+      "width": 1060,
+      "height": 694
+    },
+    "license-manager/get-license_2x.png": {
+      "ext": "png",
+      "width": 1290,
+      "height": 542
+    },
+    "license-manager/hamburger_2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "license-manager/how-to-open_2x.png": {
+      "ext": "png",
+      "width": 908,
+      "height": 592
+    },
+    "license-manager/missing-license_2x.png": {
+      "ext": "png",
+      "width": 1798,
+      "height": 870
+    },
+    "license-manager/more-options_2x.png": {
+      "ext": "png",
+      "width": 1290,
+      "height": 542
+    },
+    "license-manager/proxy-dialog_2x.png": {
+      "ext": "png",
+      "width": 1456,
+      "height": 596
+    },
+    "mat-file/mat-differ-addition.png": {
+      "ext": "png",
+      "width": 791,
+      "height": 182
+    },
+    "mat-file/mat-differ.png": {
+      "ext": "png",
+      "width": 806,
+      "height": 544
+    },
+    "mat-file/mat-viewer-struct-and-cell.png": {
+      "ext": "png",
+      "width": 340,
+      "height": 242
+    },
+    "mat-file/mat-viewer.png": {
+      "ext": "png",
+      "width": 573,
+      "height": 473
+    },
+    "quickstart/DiffPlugLogo_16.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "quickstart/command-console.mp4": {
+      "ext": "mp4"
+    },
+    "quickstart/command-console.png": {
+      "ext": "png",
+      "width": 589,
+      "height": 394
+    },
+    "quickstart/diff-list.mp4": {
+      "ext": "mp4"
+    },
+    "quickstart/diff-list.png": {
+      "ext": "png",
+      "width": 589,
+      "height": 394
+    },
+    "quickstart/diff-schemas.mp4": {
+      "ext": "mp4"
+    },
+    "quickstart/diff-schemas.png": {
+      "ext": "png",
+      "width": 587,
+      "height": 394
+    },
+    "quickstart/entity-console.mp4": {
+      "ext": "mp4"
+    },
+    "quickstart/entity-console.png": {
+      "ext": "png",
+      "width": 589,
+      "height": 394
+    },
+    "signal-tracing/trace-input-extend.png": {
+      "ext": "png",
+      "width": 901,
+      "height": 639
+    },
+    "signal-tracing/trace-input-extended-1.png": {
+      "ext": "png",
+      "width": 901,
+      "height": 639
+    },
+    "signal-tracing/trace-input-extended-2.png": {
+      "ext": "png",
+      "width": 901,
+      "height": 639
+    },
+    "signal-tracing/trace-input-start.png": {
+      "ext": "png",
+      "width": 901,
+      "height": 639
+    },
+    "signal-tracing/trace-input-traced.png": {
+      "ext": "png",
+      "width": 901,
+      "height": 639
+    },
+    "signal-tracing/trace-output-followed.png": {
+      "ext": "png",
+      "width": 901,
+      "height": 639
+    },
+    "signal-tracing/trace-output-start.png": {
+      "ext": "png",
+      "width": 901,
+      "height": 639
+    },
+    "signal-tracing/trace-output-traced.png": {
+      "ext": "png",
+      "width": 901,
+      "height": 639
+    },
+    "simulink/icons/arrow_up.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "simulink/icons/arrow_up@2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "simulink/icons/ignore_one.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "simulink/icons/ignore_one@2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "simulink/icons/log.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "simulink/icons/log@2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "simulink/icons/reference_16.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "simulink/icons/reference_16@2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "simulink/icons/split_monitors.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "simulink/icons/split_monitors@2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "simulink/icons/split_vertical.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "simulink/icons/split_vertical@2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "simulink/icons/toggle_colors.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "simulink/icons/toggle_colors@2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "simulink/icons/zoom_100.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "simulink/icons/zoom_100@2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "simulink/icons/zoom_fit.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "simulink/icons/zoom_fit@2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "simulink/icons/zoom_in.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "simulink/icons/zoom_in@2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "simulink/icons/zoom_out.png": {
+      "ext": "png",
+      "width": 16,
+      "height": 16
+    },
+    "simulink/icons/zoom_out@2x.png": {
+      "ext": "png",
+      "width": 32,
+      "height": 32
+    },
+    "simulink/simulink-differ-config-btn.png": {
+      "ext": "png",
+      "width": 346,
+      "height": 82
+    },
+    "simulink/simulink-differ-config-gainonly.png": {
+      "ext": "png",
+      "width": 550,
+      "height": 389
+    },
+    "simulink/simulink-differ-config.png": {
+      "ext": "png",
+      "width": 550,
+      "height": 380
+    },
+    "simulink/simulink-differ-simulink.png": {
+      "ext": "png",
+      "width": 898,
+      "height": 633
+    },
+    "simulink/simulink-differ-stateflow-ignore-result.png": {
+      "ext": "png",
+      "width": 898,
+      "height": 633
+    },
+    "simulink/simulink-differ-stateflow-ignore.png": {
+      "ext": "png",
+      "width": 420,
+      "height": 84
+    },
+    "simulink/simulink-differ-stateflow.png": {
+      "ext": "png",
+      "width": 898,
+      "height": 633
+    },
+    "simulink/simulink-viewer-eml.png": {
+      "ext": "png",
+      "width": 898,
+      "height": 632
+    },
+    "simulink/simulink-viewer-matdata.png": {
+      "ext": "png",
+      "width": 898,
+      "height": 633
+    },
+    "simulink/simulink-viewer-simulink.png": {
+      "ext": "png",
+      "width": 898,
+      "height": 632
+    },
+    "simulink/simulink-viewer-stateflow.png": {
+      "ext": "png",
+      "width": 898,
+      "height": 633
+    },
+    "text/CustomSyntax-results-all.png": {
+      "ext": "png",
+      "width": 194,
+      "height": 100
+    },
+    "text/CustomSyntax-results-endofline.png": {
+      "ext": "png",
+      "width": 194,
+      "height": 100
+    },
+    "text/CustomSyntax-results-keyword.png": {
+      "ext": "png",
+      "width": 194,
+      "height": 100
+    },
+    "text/CustomSyntax-results-multiline.png": {
+      "ext": "png",
+      "width": 194,
+      "height": 100
+    },
+    "text/CustomSyntax-results-none.png": {
+      "ext": "png",
+      "width": 194,
+      "height": 100
+    },
+    "text/CustomSyntax-results-singleline.png": {
+      "ext": "png",
+      "width": 194,
+      "height": 100
+    },
+    "text/CustomSyntax-rules-endofline.png": {
+      "ext": "png",
+      "width": 462,
+      "height": 100
+    },
+    "text/CustomSyntax-rules-keyword.png": {
+      "ext": "png",
+      "width": 462,
+      "height": 100
+    },
+    "text/CustomSyntax-rules-multiline.png": {
+      "ext": "png",
+      "width": 462,
+      "height": 100
+    },
+    "text/CustomSyntax-rules-singleline.png": {
+      "ext": "png",
+      "width": 462,
+      "height": 100
+    },
+    "text/CustomSyntax-syntaxmanager-annotated.png": {
+      "ext": "png",
+      "width": 887,
+      "height": 655
+    },
+    "text/CustomSyntaxManager-syntaxmanager.svg": {
+      "ext": "svg"
+    },
+    "text/differ.png": {
+      "ext": "png",
+      "width": 896,
+      "height": 631
+    },
+    "text/viewer.png": {
+      "ext": "png",
+      "width": 896,
+      "height": 631
+    },
+    "track-in-matlab/track-in-matlab-demo.mp4": {
+      "ext": "mp4"
+    },
+    "track-in-matlab/track-in-matlab-demo.png": {
+      "ext": "png",
+      "width": 1298,
+      "height": 644
+    }
+  }
+}
