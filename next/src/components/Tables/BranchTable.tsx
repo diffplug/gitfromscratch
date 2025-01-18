@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { Inline } from '@/components/Inline'
 
 export function BranchTable() {
   return (
@@ -12,13 +12,7 @@ export function BranchTable() {
       <tbody>
         <tr>
           <td>
-            <Image
-              alt="Branch"
-              width="16"
-              height="16"
-              className="m-0 inline"
-              src="/branches/sticky-notes-and-paintbrushes/local-branch.png"
-            />{' '}
+            <Inline alt="Branch" src="branches/sticky-notes-and-paintbrushes/local-branch.png"  />{' '}
             Local branch
           </td>
           <td>
@@ -28,13 +22,7 @@ export function BranchTable() {
         </tr>
         <tr>
           <td>
-            <Image
-              alt="Remote Branch"
-              width="16"
-              height="16"
-              className="m-0 inline"
-              src="/branches/sticky-notes-and-paintbrushes/remote-branch.png"
-            />{' '}
+            <Inline alt="Remote Branch" src="branches/sticky-notes-and-paintbrushes/remote-branch.png" />{' '}
             Remote branch
           </td>
           <td>
@@ -45,13 +33,7 @@ export function BranchTable() {
         </tr>
         <tr>
           <td>
-            <Image
-              alt="Tag"
-              width="16"
-              height="16"
-              className="m-0 inline"
-              src="/branches/sticky-notes-and-paintbrushes/tag.png"
-            />{' '}
+            <Inline alt="Tag" src="branches/sticky-notes-and-paintbrushes/tag.png" />{' '}
             Tag
           </td>
           <td>

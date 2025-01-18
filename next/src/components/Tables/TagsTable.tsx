@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { Inline } from '@/components/Inline'
 
 export function TagsTable() {
   return (
@@ -14,43 +14,19 @@ export function TagsTable() {
         <tr>
           <td className="align-top">Lightweight</td>
           <td className="p-0 align-top">
-            <Image
-              src="/share/tags/tag-dialog-lightweight.png"
-              alt="Lightweight tag dialog"
-              width={564}
-              height={230}
-              className="m-0"
-            />
+            <Inline alt="Lightweight tag dialog" src="share/tags/tag-dialog-lightweight.png" />
           </td>
           <td className="p-0 align-top">
-            <Image
-              src="/share/tags/tag-view-lightweight.png"
-              alt="Lightweight tag right-click"
-              width={365}
-              height={91}
-              className="m-0"
-            />
+            <Inline alt="Lightweight tag right-click" src="share/tags/tag-view-lightweight.png" />
           </td>
         </tr>
         <tr>
           <td className="align-top">Annotated</td>
           <td className="p-0 align-top">
-            <Image
-              src="/share/tags/tag-dialog-annotated.png"
-              alt="Annotated tag dialog"
-              width={564}
-              height={230}
-              className="m-0"
-            />
+            <Inline alt="Annotated tag dialog" src="share/tags/tag-dialog-annotated.png" />
           </td>
           <td className="p-0 align-top">
-            <Image
-              src="/share/tags/tag-view-annotated.png"
-              alt="Annotated tag right-click"
-              width={365}
-              height={91}
-              className="m-0"
-            />
+            <Inline alt="Annotated tag right-click" src="share/tags/tag-view-annotated.png" />
           </td>
         </tr>
       </tbody>
