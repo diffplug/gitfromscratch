@@ -12,17 +12,16 @@ export function useVideoRef() {
     setVideoBox(boundingBox)
   }, [])
 
-  function handleResize() {
+  const handleResize = useCallback(() => {
     videoRefCallback(videoRef.current!)
-  }
+  }, [videoRefCallback])
 
-  // Recalculate the videoBox when the window is resized
   useEffect(() => {
     window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [])
+  }, [handleResize])
 
   return { videoBox, videoRef, videoRefCallback }
 }
