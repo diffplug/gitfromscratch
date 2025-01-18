@@ -98,12 +98,7 @@ In the worst-case, a merge conflict will end up producing _four_ versions of the
 
 The full commit history producing this situation might be complex, but if we focus on a single conflicted file, we can ignore all the intermediate changes and describe the relationships between the relevant versions in a simple diamond.
 
-<Image
-  src="/time-travel/merge/merge-conflict.png"
-  alt="Merge conflict"
-  width={241}
-  height={78}
-/>
+![Merge conflict](time-travel/merge/merge-conflict.png)
 
 At this point, the tools have done everything they can to give you the context for the conflict, and it's your job to figure out what the working copy ought to be. Once you have made the working copy the way that you want, you declare to git "I have resolved this conflict, accept my gospel" and you can go on with your work.
 

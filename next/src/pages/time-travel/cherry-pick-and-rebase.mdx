@@ -34,21 +34,11 @@ Given that we can create a patch from a commit to its parent, we can use the exa
 
 Let's say you have a series of commits like this:
 
-<Image
-  alt="Branch before rebasing"
-  src="/time-travel/cherry-pick-and-rebase/before-rebase.png"
-  width={125}
-  height={153}
-/>
+![Branch before rebasing](time-travel/cherry-pick-and-rebase/before-rebase.png)
 
 And you would prefer that they looked like this:
 
-<Image
-  alt="Branch after rebasing"
-  src="/time-travel/cherry-pick-and-rebase/after-rebase.png"
-  width={125}
-  height={153}
-/>
+![Branch after rebasing](time-travel/cherry-pick-and-rebase/after-rebase.png)
 
 Happens all the time.  The `letters` branch is based off of the `common` commit, and you would rather it be based on the `3` commit.
 
@@ -68,39 +58,19 @@ A faster way to accomplish this is the <Image alt="Rebase icon" src="/time-trave
 
 The scenario above happens especially often in a team setting - somebody else uploaded their changes before you did.  Because it's so common, there's a shortcut for exactly this case:
 
-<Image
-  alt="Rebase onto origin/master"
-  src="/time-travel/cherry-pick-and-rebase/TODO.png"
-  width={120}
-  height={134}
-/>
+![Rebase onto origin/master](time-travel/cherry-pick-and-rebase/TODO.png)
 
 But you need to be careful about rebasing branches which you have shared.  When your branch moves to the new tip after a rebase, your old commits are [lost](/branches/reflog).
 
-<Image
-  alt="Rebase deletes commits"
-  src="/time-travel/cherry-pick-and-rebase/TODO.png"
-  width={120}
-  height={134}
-/>
+![Rebase deletes commits](time-travel/cherry-pick-and-rebase/TODO.png)
 
 That's fine if you haven't shared those commits with anyone else, but it's not good if you already have.  In the situation below, for example, the commits in `master` have already been published to `origin/sharedFeature`.
 
-<Image
-  alt="Not good to rebase"
-  src="/time-travel/cherry-pick-and-rebase/TODO.png"
-  width={120}
-  height={134}
-/>
+![Not good to rebase](time-travel/cherry-pick-and-rebase/TODO.png)
 
 If you rebase `master`, there will be some duplicated commits!
 
-<Image
-  alt="Duplicated commits"
-  src="/time-travel/cherry-pick-and-rebase/TODO.png"
-  width={120}
-  height={134}
-/>
+![Duplicated commits](time-travel/cherry-pick-and-rebase/TODO.png)
 
 [Merging](/time-travel/merge) is never bad, only use rebase when you haven't shared the commits with anyone else.
 

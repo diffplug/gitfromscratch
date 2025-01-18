@@ -6,23 +6,13 @@ import { Video } from '@/components/Video/Video'
 
 You might think this is a branch:
 
-<Image
-  src="/branches/sticky-notes-and-paintbrushes/simple-branch.png"
-  alt="Feature branch"
-  width={120}
-  height={134}
-/>
+![Feature branch](branches/sticky-notes-and-paintbrushes/simple-branch.png)
 
 ...but a branch is actually _much_ simpler than that. **A branch is a name that points to a commit**. Commits have weird names - `518a9d2blahblahblah`. Branches let us use an easy-to-read name to mark a commit.
 
 Technically, the correct term here is a git "ref", of which there are three types - local branch, remote branch, and tag. They all work the same way - a name that points to a commit - but they have different rules for how they can move. In the history table, they look like this:
 
-<Image
-  src="/branches/sticky-notes-and-paintbrushes/local-branch-remote-branch-tag.png"
-  alt="Branch, remote branch, and tag"
-  width={210}
-  height={18}
-/>
+![Branch, remote branch, and tag](branches/sticky-notes-and-paintbrushes/local-branch-remote-branch-tag.png)
 
 <BranchTable />
 
