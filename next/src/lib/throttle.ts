@@ -4,35 +4,15 @@
 // as much as it can, without ever going more than once per `wait` duration;
 // but if you'd like to disable the execution on the leading edge, pass
 // `{leading: false}`. To disable execution on the trailing edge, ditto.
-export function throttle(func: any , wait: number, options: {leading?: boolean, trailing?: boolean}) {
-    var context: Function | null, args: any, result: any;
-    var timeout: number | null = null;
-    var previous = 0;
-    if (!options) options = {};
-    var later = function() {
-      previous = options.leading === false ? 0 : Date.now();
-      timeout = null;
-      result = func.apply(context, args);
-      if (!timeout) context = args = null;
-    };
-    return function(this: Function) {
-      var now = Date.now();
-      if (!previous && options.leading === false) previous = now;
-      var remaining = wait - (now - previous);
-      context = this;
-      args = arguments;
-      if (remaining <= 0 || remaining > wait) {
-        if (timeout) {
-          clearTimeout(timeout);
-          timeout = null;
-        }
-        previous = now;
-        result = func.apply(context, args);
-        if (!timeout) context = args = null;
-      } else if (!timeout && options.trailing !== false) {
-        timeout = window.setTimeout(later, remaining);
+export function throttle(callback: Function, limit: number) {
+  var waiting = false;                      // Initially, we're not waiting
+  return function throttled() {                      // We return a throttled function
+      if (!waiting) {                       // If we're not waiting
+          callback.apply(throttled, arguments);  // Execute users function
+          waiting = true;                   // Prevent future invocations
+          setTimeout(function () {          // After a period of time
+              waiting = false;              // And allow future invocations
+          }, limit);
       }
-      return result;
-    };
-  };
-  
+  }
+}
