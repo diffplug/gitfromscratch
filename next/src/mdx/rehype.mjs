@@ -6,25 +6,35 @@ import { toString } from 'mdast-util-to-string'
 import * as acorn from 'acorn'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
 
+// Move highlighter initialization outside the plugin
+let highlighter
+let theme
+
+// Initialize these in an async function
+async function initializeHighlighter() {
+  if (!highlighter) {
+    theme = await shiki.loadTheme('themes/github-light.json')
+    highlighter = await shiki.getHighlighter({ theme })
+  }
+  return highlighter
+}
+
 function rehypeParseCodeBlocks() {
   return (tree) => {
     visit(tree, 'element', (node, _nodeIndex, parentNode) => {
       if (node.tagName === 'code' && node.properties.className) {
         parentNode.properties.language = node.properties.className[0]?.replace(
           /^language-/,
-          ''
+          '',
         )
       }
     })
   }
 }
 
-let highlighter
-
 function rehypeShiki() {
   return async (tree) => {
-    highlighter =
-      highlighter ?? (await shiki.getHighlighter({ theme: 'css-variables' }))
+    const highlighter = await initializeHighlighter()
 
     visit(tree, 'element', (node) => {
       if (node.tagName === 'pre' && node.children[0]?.tagName === 'code') {
@@ -36,7 +46,7 @@ function rehypeShiki() {
         if (node.properties.language) {
           let tokens = highlighter.codeToThemedTokens(
             textNode.value,
-            node.properties.language
+            node.properties.language,
           )
 
           textNode.value = shiki.renderToHtml(tokens, {
