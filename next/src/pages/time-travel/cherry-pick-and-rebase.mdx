@@ -54,10 +54,7 @@ Happens all the time.  The `letters` branch is based off of the `common` commit,
 
 One way to do this is to right-click each commit, one at a time, and select <Image alt="Apply delta icon" src="/time-travel/cherry-pick-and-rebase/apply_delta.png" className="inline m-0" width={16} height={16} />`Apply delta`.
 
-<Video
-  poster="/time-travel/cherry-pick-and-rebase/rebase-by-cherry-picking.png"
-  source="/time-travel/cherry-pick-and-rebase/rebase-by-cherry-picking.mp4"
-/>
+<Video mp4="time-travel/cherry-pick-and-rebase/rebase-by-cherry-picking.mp4"/>
 
 A faster way to accomplish this is the <Image alt="Rebase icon" src="/time-travel/cherry-pick-and-rebase/rebase.png" className="inline m-0" width={16} height={16} />`rebase` command.  Here's how it works:
 
@@ -65,10 +62,7 @@ A faster way to accomplish this is the <Image alt="Rebase icon" src="/time-trave
 - right-click the branch you'd like to change its base to
 - select <Image alt="Rebase icon" src="/time-travel/cherry-pick-and-rebase/rebase.png" className="inline m-0" width={16} height={16} />`rebase`
 
-<Video
-  poster="/time-travel/cherry-pick-and-rebase/rebase-actual.png"
-  source="/time-travel/cherry-pick-and-rebase/rebase-actual.mp4"
-/>
+<Video mp4="time-travel/cherry-pick-and-rebase/rebase-actual.mp4"/>
 
 ## Rebase onto origin/master
 
@@ -114,9 +108,6 @@ If you rebase `master`, there will be some duplicated commits!
 
 The final result of rebasing one branch onto another is *exactly* the same as the final result of merging those two branches, except for the history.
 
-<Video
-  poster="/time-travel/cherry-pick-and-rebase/rebase-compare-to-merge.png"
-  source="/time-travel/cherry-pick-and-rebase/rebase-compare-to-merge.mp4"
-/>
+<Video mp4="time-travel/cherry-pick-and-rebase/rebase-compare-to-merge.mp4"/>
 
 The *only* difference is in the story that your history will tell.  So whether we like it or not, every time we choose either to merge or to rebase, we have made a subjective, editorial decision about what kind of history will tell a better story.  Which sets us up perfectly for our next topic: [rewriting history](/time-travel/rewrite-history).

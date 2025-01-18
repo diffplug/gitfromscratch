@@ -7,26 +7,17 @@ To merge two lines of commits back into a single line, you must create a merge c
 
 To perform a merge, first we checkout the branch that we would consider to be "our" side of the merge. Then we right-click the other branch (which git calls "their" side), and select `Merge`.
 
-<Video
-  poster="/time-travel/merge/merge-create.png"
-  source="/time-travel/merge/merge-create.mp4"
-/>
+<Video mp4="time-travel/merge/merge-create.mp4"/>
 
 Remember that the branch which we have checked out, `ABC`, is the paintbrush that we use to make new commits. That is why it moves to the newly created merge commit, while the other branch is unchanged. We can always undo a merge by just dragging our branch back to where it was.
 
-<Video
-  poster="/time-travel/merge/merge-undo.png"
-  source="/time-travel/merge/merge-undo.mp4"
-/>
+<Video mp4="time-travel/merge/merge-undo.mp4"/>
 
 ## How do I look at a merge?
 
 When you click a commit with one parent, you see a comparison between the snapshot of that commit and its parent. But what about when you click a commit with multiple parents? At first, you're looking at the difference between the commit and its first parent, but you can compare against other commits by clicking the `+`.
 
-<Video
-  poster="/time-travel/merge/merge-pick-parent.png"
-  source="/time-travel/merge/merge-pick-parent.mp4"
-/>
+<Video mp4="time-travel/merge/merge-pick-parent.mp4"/>
 
 Answering the question "What changed in this commit?" is tricky for a merge commit - which is why you don't want to use them to make changes! **A merge commit should not introduce new changes; it should only combine the work of existing commits.** A merge commit which violates this rule is known as an "evil merge".
 
@@ -48,10 +39,7 @@ As we learned back when we [made our first commit](/intro/commit), **a commit is
 
 Let's say we have only one branch, and we're doing some quick brainstorming. Each time we do something vaguely interesting, we make a commit. After a few such commits, we finally get to something useful. Because we made a commit each time we did something interesting, whether it was good or bad, we've recorded our entire thought process, but it's a little messy...
 
-<Video
-  poster="/time-travel/merge/merge-brainstorm.png"
-  source="/time-travel/merge/merge-brainstorm.mp4"
-/>
+<Video mp4="time-travel/merge/merge-brainstorm.mp4"/>
 
 {/*
 - Whale >> squirrel, delete squirrel
@@ -64,26 +52,17 @@ Let's say we have only one branch, and we're doing some quick brainstorming. Eac
 
 We spent a lot of time making and coloring a squirrel, but in the end we removed it from our project entirely. If we're going to share this work with someone else, it might be wasteful for them to read up on all our squirrel thoughts, since all they really need to know is the blue whale. One way for us to clean up this work is to **squash it**.
 
-<Video
-  poster="/time-travel/merge/merge-squash.png"
-  source="/time-travel/merge/merge-squash.mp4"
-/>
+<Video mp4="time-travel/merge/merge-squash.mp4"/>
 
 Our new squashed commit has the exact same snapshot that the `Whale >> squirrel, delete squirrel` commit had. We just changed the commit's message and parents so that the history tells a more concise summary of our thought process.
 
 The potential problem with this approach is that we've lost the history of our brainstorming. If we wanted to keep this history, while also summarizing our final result concisely, we can use a **summary merge**.
 
-<Video
-  poster="/time-travel/merge/merge-summary.png"
-  source="/time-travel/merge/merge-summary.mp4"
-/>
+<Video mp4="time-travel/merge/merge-summary.mp4"/>
 
 Let's compare the final result of the "squash" with the final result of the "summary merge".
 
-<Video
-  poster="/time-travel/merge/merge-squash-vs-summary.png"
-  source="/time-travel/merge/merge-squash-vs-summary.mp4"
-/>
+<Video mp4="time-travel/merge/merge-squash-vs-summary.mp4"/>
 
 There's a lot about these commits which are _exactly_ the same.
 
